@@ -1,0 +1,24 @@
+/* Khuôn lịch và thông tin: tờ lịch tháng đánh dấu ngày, thẻ thông tin có biểu tượng (giờ, hình thức, nơi, điều nhận được).
+ * Gốc: bố cục quảng bá khoá học phổ biến. */
+.khuon-lich { --le: 5.5; }
+.khuon-lich .vung { gap: calc(var(--co) * 2.6cqmin); }
+.khuon-lich .dau { display: flex; flex-direction: column; align-items: center; text-align: center; gap: calc(var(--co) * 1cqmin); }
+.khuon-lich .logo { height: calc(var(--co) * 6cqmin); }
+.khuon-lich .tieu-de { display: flex; flex-direction: column; align-items: center; line-height: 1.12; }
+.khuon-lich .td1 { font-size: calc(var(--co) * 5.4cqmin); }
+.khuon-lich .td2 { font-size: calc(var(--co) * 7.6cqmin); font-variant-numeric: lining-nums; }
+.khuon-lich .dau .vach-mo { width: 90%; }
+.khuon-lich .than { flex: 1 1 auto; min-height: 0; display: grid; grid-template-columns: 1.25fr 1fr; gap: 3cqmin; align-items: center; }
+.khuon-lich .thong-tin { padding: 3cqmin 2.8cqmin; display: flex; flex-direction: column; gap: calc(var(--co) * 1.2cqmin); align-items: flex-start; }
+.khuon-lich .the-ngay { font-size: calc(var(--co) * 4cqmin); }
+.khuon-lich .nhan-ngay { font-size: calc(var(--co) * 1.8cqmin); color: var(--nhanSang); }
+.khuon-lich .ds-tt { display: flex; flex-direction: column; width: 100%; margin-top: 1cqmin; }
+.khuon-lich .dong-tt { display: flex; gap: 2cqmin; align-items: flex-start; padding: 1.6cqmin 0; border-top: max(1px, 0.12cqmin) solid var(--vienThe); }
+.khuon-lich .bt-vong.bt { font-size: calc(var(--co) * 3cqmin); color: var(--nhan); padding: 1cqmin; box-sizing: content-box; border: max(1px, 0.14cqmin) solid var(--vach); border-radius: 50%; background-origin: content-box; -webkit-mask-origin: content-box; mask-origin: content-box; -webkit-mask-clip: content-box; }
+.khuon-lich .bt-vong { width: 3cqmin; height: 3cqmin; }
+.khuon-lich .o-nhan { font-size: calc(var(--co) * 2.9cqmin); }
+.khuon-lich .tt-phu { font-size: calc(var(--co) * 2.3cqmin); color: var(--chu); line-height: 1.35; }
+.khuon-lich .cta-hang { display: flex; justify-content: center; }
+.khuon-lich[data-nhom="doc"] .than, .khuon-lich[data-nhom="doc-nhe"] .than { grid-template-columns: 1fr; align-content: start; min-height: auto; flex: 0 1 auto; }
+.khuon-lich[data-nhom="doc"] .vung, .khuon-lich[data-nhom="doc-nhe"] .vung { justify-content: space-between; }
+.khuon-lich[data-nhom="doc"] .lich { margin: 0 12cqmin; }

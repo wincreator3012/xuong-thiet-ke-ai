@@ -1,0 +1,19 @@
+/* Khuôn trích dẫn, chiêm nghiệm thuần chữ: nhiều khoảng thở [ma], một câu lớn, tác giả, câu hỏi mở cuối trang.
+ * Mặc định hợp họ giấy-mực và than-đồng. */
+.khuon-trich-dan { --le: 9; }
+.khuon-trich-dan .nen-toa { background: radial-gradient(ellipse 90% 70% at 30% 35%, var(--nenToa), var(--nen) 70%, var(--nenSau)); }
+.khuon-trich-dan .vung { justify-content: space-between; }
+.khuon-trich-dan .kicker { font-size: calc(var(--co) * 2.2cqmin); }
+.khuon-trich-dan .giua-trang { display: flex; flex-direction: column; gap: calc(var(--co) * 2.4cqmin); }
+.khuon-trich-dan .ngoac { font-size: calc(var(--co) * 14cqmin); }
+.khuon-trich-dan .trich { margin: 0; font-family: var(--phong-tieu-de), serif; font-weight: 500; font-size: calc(var(--co) * 6.4cqmin); line-height: 1.28; color: var(--chu); text-wrap: pretty; }
+.khuon-trich-dan .trich em { color: var(--nhan); font-style: italic; }
+.khuon-trich-dan[data-toi="1"] .trich em { background: var(--kimLoai); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.khuon-trich-dan .tac-gia { display: flex; flex-direction: column; gap: 0.4cqmin; }
+.khuon-trich-dan .ten-nguoi { font-size: calc(var(--co) * 3cqmin); }
+.khuon-trich-dan .nguon-tg { font-size: calc(var(--co) * 2.3cqmin); color: var(--chuPhu); }
+.khuon-trich-dan .chan { display: flex; align-items: flex-end; justify-content: space-between; gap: 4cqmin; }
+.khuon-trich-dan .logo { height: calc(var(--co) * 5.4cqmin); }
+.khuon-trich-dan .cau-hoi-mo { font-family: var(--phong-tieu-de), serif; font-style: italic; font-size: calc(var(--co) * 2.7cqmin); color: var(--chuPhu); text-align: right; max-width: 60%; line-height: 1.4; }
+.khuon-trich-dan[data-nhom="doc"] .trich { font-size: calc(var(--co) * 7.4cqmin); }
+.khuon-trich-dan[data-nhom="ngang"] .trich, .khuon-trich-dan[data-nhom="bang"] .trich { max-width: 150cqmin; }

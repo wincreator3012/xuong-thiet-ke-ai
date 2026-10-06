@@ -1,0 +1,41 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "so-do-tri-thuc",
+  "thuongHieu": "mau",
+  "chuDe": "dem-vang",
+  "theThuc": [
+    "ig-4x5",
+    "ngang-16x9"
+  ],
+  "noiDung": {
+    "kicker": "Bạn nhận được gì",
+    "tieuDe1": "Tám tuần",
+    "tieuDe2": "thực hành cùng nhau",
+    "soDo": {
+      "loai": "the-luoi",
+      "the": [
+        {
+          "bieuTuong": "sach",
+          "nhan": "Sổ tay 8 tuần",
+          "phu": "bài tập nghe và phản hồi"
+        },
+        {
+          "bieuTuong": "may-quay",
+          "nhan": "8 buổi trực tuyến",
+          "phu": "qua Zoom, có ghi hình"
+        },
+        {
+          "bieuTuong": "nhom",
+          "nhan": "Nhóm nhỏ",
+          "phu": "một trợ giảng cho sáu người"
+        },
+        {
+          "bieuTuong": "muc-tieu",
+          "nhan": "Kế hoạch riêng",
+          "phu": "một thói quen nghe mới mỗi tuần"
+        }
+      ]
+    },
+    "ketLuan": "Sau tám tuần, bạn muốn **mang theo** điều gì?"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "cau-hoi-chan-dung",
+  "thuongHieu": "mau",
+  "chuDe": "dem-vang",
+  "theThuc": [
+    "doc-9x16",
+    "ig-4x5",
+    "ngang-16x9"
+  ],
+  "noiDung": {
+    "chuongTrinh1": "Giao tiếp tỉnh thức",
+    "chuongTrinh2": "Khoá 3",
+    "nhanDac": "Khai giảng 15.10.2026",
+    "nhanPhu": "Trực tuyến qua Zoom",
+    "ngoac": "“",
+    "cauHoi": "Bạn nghe để trả lời, hay *nghe để hiểu?*",
+    "anhTach": {
+      "src": "kho:khuon/_chung/nguoi-mau-tach.png"
+    },
+    "ten": "TS~Nguyễn~Minh~An",
+    "chucDanh": "Chuyên gia tâm lý học thực hành",
+    "cta": "Đăng ký tư vấn"
+  }
+}

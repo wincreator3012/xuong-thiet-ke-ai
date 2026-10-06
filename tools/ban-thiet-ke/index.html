@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Bàn thiết kế</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/kho/fonts/fonts.css">
+<link rel="stylesheet" href="ban.css">
+</head>
+<body>
+<header class="thanh-tren">
+  <div class="ten-ban">Bàn thiết kế</div>
+  <select id="chon-an-pham" title="Chọn ấn phẩm"></select>
+  <span id="ten-an-pham" class="nhat"></span>
+  <div class="gian"></div>
+  <span id="trang-thai" class="nhat">Chưa có thay đổi</span>
+  <button id="nut-hoan-tac" title="Hoàn tác (Cmd+Z)">Hoàn tác</button>
+  <button id="nut-luu" class="chinh" title="Lưu (Cmd+S)">Lưu</button>
+</header>
+<main>
+  <aside class="ben-trai">
+    <h3>Thể thức</h3>
+    <div id="ds-the-thuc" class="ds-nut"></div>
+    <div class="hang"><select id="them-the-thuc"><option value="">+ thêm thể thức...</option></select></div>
+    <h3>Xem</h3>
+    <label class="hop-chon"><input type="checkbox" id="xem-an-toan" checked> Vùng an toàn</label>
+    <label class="hop-chon"><input type="checkbox" id="xem-luoi"> Lưới căn</label>
+    <h3>Toàn ấn phẩm</h3>
+    <label>Chủ đề màu <select id="chon-chu-de"></select></label>
+    <label>Thương hiệu <select id="chon-thuong-hieu"></select></label>
+    <h3>Xuất</h3>
+    <button id="nut-xuat-mot">Xuất thể thức này</button>
+    <button id="nut-xuat-het">Xuất mọi thể thức</button>
+    <div id="ket-qua-xuat" class="nho"></div>
+  </aside>
+  <section class="giua" id="vung-giua">
+    <div class="khung-xem" id="khung-xem">
+      <iframe id="khung" title="Ấn phẩm"></iframe>
+      <div class="lop-an-toan" id="lop-an-toan"></div>
+    </div>
+    <div class="goi-y">Bấm một phần tử để chọn, kéo để dời, kéo góc để đổi cỡ, kéo chấm tròn để xoay. Bấm đúp vào chữ để sửa (giữ được cú pháp *nghiêng nhấn*, **đậm nhấn**, ~ giữ cụm từ). Esc để bỏ chọn.</div>
+  </section>
+  <aside class="ben-phai">
+    <h3>Phần tử đang chọn</h3>
+    <div id="thuoc-tinh" class="nhat">Chưa chọn phần tử nào.</div>
+    <h3>Cảnh báo kiểm</h3>
+    <div id="canh-bao" class="nho"></div>
+  </aside>
+</main>
+<input type="file" id="chon-tep" accept="image/*" hidden>
+<script src="ban.js"></script>
+</body>
+</html>

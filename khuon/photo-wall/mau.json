@@ -1,0 +1,17 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "photo-wall",
+  "thuongHieu": "mau",
+  "chuDe": "dem-vang",
+  "theThuc": [
+    "photo-wall-25x23"
+  ],
+  "noiDung": {
+    "logoLap": [
+      "mau:nenToi"
+    ],
+    "kicker": "Lễ khai giảng",
+    "tieuDe": "Giao tiếp tỉnh thức\nKhoá 3",
+    "hashtag": "#GiaoTiepTinhThuc · #LangNgheTronVen"
+  }
+}

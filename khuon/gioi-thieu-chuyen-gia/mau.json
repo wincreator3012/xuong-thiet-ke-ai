@@ -1,0 +1,95 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "gioi-thieu-chuyen-gia",
+  "thuongHieu": "mau",
+  "chuDe": "dem-vang",
+  "theThuc": [
+    "doc-1x2",
+    "vuong",
+    "ngang-16x9"
+  ],
+  "noiDung": {
+    "nguoi": [
+      {
+        "anh": {
+          "src": "kho:khuon/_chung/anh-mau.jpg",
+          "tieuDiem": [
+            0.5,
+            0.2
+          ]
+        },
+        "kicker": "Giảng viên khoá 3",
+        "vai": "Lắng nghe",
+        "ten": "TS~Nguyễn~Minh~An",
+        "chucDanh": "Chuyên gia tâm lý học thực hành\nTác giả sách Lắng nghe trọn vẹn",
+        "loiHua": "Giúp bạn nghe được cả điều chưa nói: **cảm xúc, nhu cầu, điều người kia cần.**",
+        "nhanh": [
+          {
+            "chu": "Lắng nghe phản chiếu"
+          },
+          {
+            "chu": "Phản hồi rõ ràng"
+          }
+        ]
+      }
+    ],
+    "chuongTrinh": "Giao tiếp tỉnh thức · Khoá 3",
+    "ngay": "Khai giảng 15.10",
+    "cta": "Đăng ký tư vấn"
+  },
+  "theoNhom": {
+    "vuong": {
+      "noiDung": {
+        "nguoi": [
+          {
+            "anh": {
+              "src": "kho:khuon/_chung/anh-mau.jpg",
+              "tieuDiem": [
+                0.5,
+                0.2
+              ]
+            },
+            "kicker": "Giảng viên",
+            "vai": "Lắng nghe",
+            "ten": "TS~Nguyễn~Minh~An",
+            "chucDanh": "Chuyên gia tâm lý học thực hành",
+            "loiHua": "Giúp bạn nghe được cả điều chưa nói: **cảm xúc, nhu cầu, điều người kia cần.**",
+            "nhanh": [
+              {
+                "chu": "Lắng nghe phản chiếu"
+              },
+              {
+                "chu": "Phản hồi rõ ràng"
+              }
+            ]
+          },
+          {
+            "anh": {
+              "src": "kho:khuon/_chung/anh-mau.jpg",
+              "tieuDiem": [
+                0.5,
+                0.2
+              ]
+            },
+            "kicker": "Giảng viên",
+            "vai": "Kết nối",
+            "ten": "ThS~Trần~Thu~Hà",
+            "chucDanh": "Chuyên gia phát triển tổ chức",
+            "loiHua": "Giúp nhóm làm việc nói thật với nhau: **an toàn tâm lý trong từng cuộc họp.**",
+            "nhanh": [
+              {
+                "chu": "An toàn tâm lý"
+              },
+              {
+                "chu": "Họp hiệu quả"
+              },
+              {
+                "chu": "Phản hồi 360"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

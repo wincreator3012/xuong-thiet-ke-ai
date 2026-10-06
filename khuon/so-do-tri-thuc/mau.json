@@ -1,0 +1,64 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "so-do-tri-thuc",
+  "thuongHieu": "mau",
+  "chuDe": "dem-vang",
+  "theThuc": [
+    "vuong",
+    "doc-9x16",
+    "ngang-16x9"
+  ],
+  "noiDung": {
+    "tieuDe1": "Bánh xe năng lực",
+    "tieuDe2": "người lắng nghe",
+    "ketLuan": "Mỗi người một hình dạng: **mạnh ở đâu, hụt ở đâu?**",
+    "nguon": "Công cụ tự đánh giá minh hoạ (giả định)",
+    "soDo": {
+      "loai": "radar",
+      "truc": [
+        {
+          "ma": "C",
+          "nhan": "Chú tâm",
+          "phu": "ở lại với người nói",
+          "gt": 0.82
+        },
+        {
+          "ma": "K",
+          "nhan": "Kiên nhẫn",
+          "phu": "không chen lời",
+          "gt": 0.55
+        },
+        {
+          "ma": "T",
+          "nhan": "Tò mò",
+          "phu": "hỏi để hiểu",
+          "gt": 0.7
+        },
+        {
+          "ma": "P",
+          "nhan": "Phản chiếu",
+          "phu": "nói lại điều đã nghe",
+          "gt": 0.62
+        },
+        {
+          "ma": "Đ",
+          "nhan": "Đồng cảm",
+          "phu": "cảm cùng người kia",
+          "gt": 0.35
+        },
+        {
+          "ma": "R",
+          "nhan": "Rõ ràng",
+          "phu": "phản hồi cụ thể",
+          "gt": 0.9
+        },
+        {
+          "ma": "G",
+          "nhan": "Giữ ranh giới",
+          "phu": "không gánh thay",
+          "gt": 0.6
+        }
+      ]
+    }
+  }
+}

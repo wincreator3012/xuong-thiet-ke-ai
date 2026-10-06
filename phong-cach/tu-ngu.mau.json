@@ -1,0 +1,9 @@
+{
+  "_huong-dan": "Luật chữ RIÊNG của bạn cho bước kiểm chữ tự động của tools/ve.py (đi cùng phong-cach/PHONG-CACH.md mục 4). tuCam: luôn sai, máy báo 'tu-ngu'. tuNenTranh: nên tránh, máy báo 'goi-y-chu' để cân nhắc theo ngữ cảnh. 'mau' là biểu thức chính quy (không phân biệt hoa thường), 'lyDo' là lời nhắc hiện ra. Luật chung cho mọi người (gạch dài, ba chấm Unicode, khung đua tranh, nêu số ghế, sáo ngữ văn AI) đã có sẵn trong ve.py. Nói với Claude 'từ nay không dùng chữ X, dùng Y' là Claude thêm vào đây.",
+  "_vi-du": {
+    "mau": "\\bkhách hàng tiềm năng\\b",
+    "lyDo": "dùng \"người quan tâm\" cho ấn phẩm giáo dục"
+  },
+  "tuCam": [],
+  "tuNenTranh": []
+}

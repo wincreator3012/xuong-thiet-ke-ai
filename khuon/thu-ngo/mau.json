@@ -1,0 +1,34 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "thu-ngo",
+  "thuongHieu": "mau",
+  "chuDe": "dem-vang",
+  "theThuc": [
+    "vuong",
+    "doc-9x16"
+  ],
+  "noiDung": {
+    "chuongTrinh1": "Giao tiếp tỉnh thức",
+    "chuongTrinh2": "Khoá 3",
+    "nhanDac": "Khai giảng 15.10.2026",
+    "nhanPhu": "Trực tuyến qua Zoom",
+    "anhTach": {
+      "src": "kho:khuon/_chung/nguoi-mau-tach.png"
+    },
+    "kicker": "Thư gửi người hay phải nói chuyện khó",
+    "loiChao": "Gửi bạn,",
+    "doan": [
+      {
+        "chu": "Có những cuộc trò chuyện ta tập trước cả tuần, rồi vẫn nói khác hẳn điều mình muốn nói."
+      },
+      {
+        "chu": "Tám tuần, tôi và ThS Trần Thu Hà sẽ cùng bạn tập *nghe trọn vẹn trước khi trả lời.*"
+      }
+    ],
+    "chuKy": "Nguyễn Minh An",
+    "ten": "TS~Nguyễn~Minh~An",
+    "chungChi": "",
+    "chucDanh": "Chuyên gia tâm lý học thực hành",
+    "cta": "Đăng ký tư vấn"
+  }
+}

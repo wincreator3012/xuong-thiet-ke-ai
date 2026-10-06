@@ -1,0 +1,41 @@
+/* Khuôn hỏi đáp, danh sách thẻ: tiêu đề, thanh lịch, nhãn mục, 2-5 thẻ (câu hỏi, lợi ích, bước), hàng người trả lời.
+ * Gốc: bố cục quảng bá khoá học phổ biến. Ký hiệu đầu thẻ: "?" mặc định, hoặc số, hoặc chữ bất kỳ qua trường "dau". */
+.khuon-hoi-dap { --le: 5.2; }
+.khuon-hoi-dap .vung { gap: calc(var(--co) * 1.9cqmin); }
+.khuon-hoi-dap .dau { display: flex; flex-direction: column; align-items: center; text-align: center; gap: calc(var(--co) * 0.6cqmin); }
+.khuon-hoi-dap .logo { height: calc(var(--co) * 6cqmin); margin-bottom: 0.6cqmin; }
+.khuon-hoi-dap .td0 { font-family: var(--phong-tieu-de), serif; font-weight: 700; font-size: calc(var(--co) * 5cqmin); line-height: 1.1; }
+.khuon-hoi-dap .tieu-de { font-size: calc(var(--co) * 6.6cqmin); line-height: 1.12; }
+.khuon-hoi-dap .phu-de { font-size: calc(var(--co) * 2.7cqmin); }
+.khuon-hoi-dap .dau .vach-mo { width: 86%; margin-top: 1cqmin; }
+.khuon-hoi-dap .dong-lich { display: flex; align-items: center; gap: 2.4cqmin; padding: 1.8cqmin 2.6cqmin; }
+.khuon-hoi-dap .dong-lich .the-ngay { font-size: calc(var(--co) * 3.9cqmin); }
+.khuon-hoi-dap .dong-lich .kicker { font-size: calc(var(--co) * 1.8cqmin); color: var(--nhanSang); }
+.khuon-hoi-dap .gio { margin-left: auto; font-weight: 600; font-size: calc(var(--co) * 2.4cqmin); }
+.khuon-hoi-dap .gio strong { color: var(--nhanSang); font-weight: 800; }
+.khuon-hoi-dap .nhan-muc { display: flex; align-items: center; gap: 1.6cqmin; margin-top: 0.8cqmin; }
+.khuon-hoi-dap .nhan-muc .kicker { font-size: calc(var(--co) * 2.3cqmin); letter-spacing: 0.14em; }
+.khuon-hoi-dap .nhan-muc-phu { font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; font-size: calc(var(--co) * 1.75cqmin); color: var(--chu); padding-left: 1.6cqmin; border-left: max(1px, 0.14cqmin) solid var(--vienThe); }
+.khuon-hoi-dap .ds-the { display: flex; flex-direction: column; gap: calc(var(--co) * 1.4cqmin); flex: 1 1 auto; justify-content: center; min-height: 0; }
+.khuon-hoi-dap .the-muc { display: flex; align-items: center; gap: 2.4cqmin; padding: 1.9cqmin 2.6cqmin; }
+.khuon-hoi-dap .dau-muc { flex: none; display: grid; place-items: center; width: 5.4cqmin; height: 5.4cqmin; border-radius: 50%;
+  border: max(1px, 0.18cqmin) solid var(--vach); color: var(--nhanSang); font-weight: 800; font-size: calc(var(--co) * 2.6cqmin);
+  background: radial-gradient(circle, color-mix(in srgb, var(--nhan) 18%, transparent), transparent 70%); font-variant-numeric: lining-nums; }
+.khuon-hoi-dap .the-muc:not(:has(.dau-muc:not(.an))) .dau-muc { display: grid !important; }
+.khuon-hoi-dap .so-muc { font-size: calc(var(--co) * 1.65cqmin); color: var(--nhanSang); margin-bottom: 0.5cqmin; }
+.khuon-hoi-dap .noi-muc { font-weight: 500; font-size: calc(var(--co) * 3cqmin); line-height: 1.35; }
+.khuon-hoi-dap .nguoi-ds { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 3cqmin; }
+.khuon-hoi-dap .nguoi-ngang { display: flex; align-items: center; gap: 2.2cqmin; }
+.khuon-hoi-dap .anh-tron { width: 13cqmin; flex: none; }
+.khuon-hoi-dap .nguoi-ngang .nhan-vien { font-size: calc(var(--co) * 1.6cqmin); padding: 0.7cqmin 1.1cqmin; margin-bottom: 0.6cqmin; }
+.khuon-hoi-dap .nguoi-ngang .ten-nguoi { font-size: calc(var(--co) * 3cqmin); }
+.khuon-hoi-dap .nguoi-ngang .chuc-danh { font-size: calc(var(--co) * 1.95cqmin); }
+.khuon-hoi-dap[data-nhom="doc"] .nguoi-ds { grid-auto-flow: row; }
+.khuon-hoi-dap[data-nhom="ngang"] .vung, .khuon-hoi-dap[data-nhom="bang"] .vung { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); grid-template-rows: auto auto 1fr auto; column-gap: 5cqmin; row-gap: 1.8cqmin;
+  grid-template-areas: "dau nhan" "lich ds" ". ds" "nguoi ds"; }
+.khuon-hoi-dap[data-nhom="ngang"] .dau, .khuon-hoi-dap[data-nhom="bang"] .dau { grid-area: dau; align-items: flex-start; text-align: left; }
+.khuon-hoi-dap[data-nhom="ngang"] .dong-lich, .khuon-hoi-dap[data-nhom="bang"] .dong-lich { grid-area: lich; flex-wrap: wrap; }
+.khuon-hoi-dap[data-nhom="ngang"] .nhan-muc, .khuon-hoi-dap[data-nhom="bang"] .nhan-muc { grid-area: nhan; align-self: end; }
+.khuon-hoi-dap[data-nhom="ngang"] .ds-the, .khuon-hoi-dap[data-nhom="bang"] .ds-the { grid-area: ds; }
+.khuon-hoi-dap[data-nhom="ngang"] .nguoi-ds, .khuon-hoi-dap[data-nhom="bang"] .nguoi-ds { grid-area: nguoi; grid-auto-flow: row; gap: 1.6cqmin; }
+.khuon-hoi-dap[data-nhom="ngang"] .vach-mo, .khuon-hoi-dap[data-nhom="bang"] .vach-mo { display: none; }

@@ -1,0 +1,39 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "so-do-tri-thuc",
+  "thuongHieu": "mau",
+  "chuDe": "dem-xanh",
+  "theThuc": [
+    "ig-4x5",
+    "ngang-16x9"
+  ],
+  "noiDung": {
+    "kicker": "Học từ trải nghiệm",
+    "tieuDe1": "Bốn nhịp của",
+    "tieuDe2": "một vòng học thật",
+    "soDo": {
+      "loai": "vong-lap",
+      "tam": "học là một vòng, không phải một đường",
+      "buoc": [
+        {
+          "nhan": "Trải nghiệm",
+          "phu": "làm, cảm nhận cụ thể"
+        },
+        {
+          "nhan": "Phản tư",
+          "phu": "quan sát lại điều đã xảy ra"
+        },
+        {
+          "nhan": "Khái niệm hoá",
+          "phu": "rút ra nguyên lý"
+        },
+        {
+          "nhan": "Thử nghiệm",
+          "phu": "áp dụng vào tình huống mới"
+        }
+      ]
+    },
+    "ketLuan": "Bạn hay dừng ở nhịp nào?",
+    "nguon": "Mô hình học tập trải nghiệm - David Kolb (1984)"
+  }
+}

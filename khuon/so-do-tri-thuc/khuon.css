@@ -1,0 +1,26 @@
+/* Khuôn sơ đồ tri thức: tiêu đề nói thông điệp, một sơ đồ vẽ bằng code (minh-hoa/so-do.js), câu đọng, nguồn và tác giả.
+ * Gốc: bố cục quảng bá khoá học phổ biến. Theo chuan/06-minh-hoa-tri-thuc.md. */
+.khuon-so-do { --le: 5.5; }
+.khuon-so-do .vung { gap: calc(var(--co) * 2cqmin); }
+.khuon-so-do .dau { display: flex; flex-direction: column; align-items: center; text-align: center; gap: calc(var(--co) * 0.9cqmin); flex: none; }
+.khuon-so-do .logo { height: calc(var(--co) * 6cqmin); }
+.khuon-so-do .tieu-de { display: flex; flex-direction: column; align-items: center; line-height: 1.1; }
+.khuon-so-do .td1 { font-size: calc(var(--co) * 5.2cqmin); }
+.khuon-so-do .td2 { font-size: calc(var(--co) * 7.6cqmin); padding-bottom: 0.1em; }
+.khuon-so-do .dan-nhap { font-size: calc(var(--co) * 2.5cqmin); max-width: 80cqmin; }
+.khuon-so-do .dau .vach-mo { width: 90%; }
+.khuon-so-do .so-do { flex: 1 1 auto; min-height: 30cqmin; }
+.khuon-so-do .chan { flex: none; text-align: center; display: flex; flex-direction: column; gap: 0.8cqmin; align-items: center; }
+.khuon-so-do .ket { margin: 0; font-weight: 600; font-size: calc(var(--co) * 3cqmin); line-height: 1.35; text-wrap: balance; max-width: 86cqmin; }
+.khuon-so-do .ket strong { color: var(--nhanSang); }
+.khuon-so-do .nguon { margin: 0; font-size: calc(var(--co) * 1.9cqmin); color: var(--chuMo); }
+.khuon-so-do[data-nhom="doc"] .td2 { font-size: calc(var(--co) * 8.4cqmin); }
+.khuon-so-do[data-nhom="doc"] .ket { font-size: calc(var(--co) * 3.4cqmin); }
+.khuon-so-do[data-nhom="ngang"] .vung, .khuon-so-do[data-nhom="bang"] .vung {
+  display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); grid-template-rows: auto 1fr auto; column-gap: 5cqmin;
+  grid-template-areas: "dau so" ". so" "chan so"; }
+.khuon-so-do[data-nhom="ngang"] .dau, .khuon-so-do[data-nhom="bang"] .dau { grid-area: dau; align-items: flex-start; text-align: left; }
+.khuon-so-do[data-nhom="ngang"] .tieu-de, .khuon-so-do[data-nhom="bang"] .tieu-de { align-items: flex-start; }
+.khuon-so-do[data-nhom="ngang"] .so-do, .khuon-so-do[data-nhom="bang"] .so-do { grid-area: so; }
+.khuon-so-do[data-nhom="ngang"] .chan, .khuon-so-do[data-nhom="bang"] .chan { grid-area: chan; text-align: left; align-items: flex-start; }
+.khuon-so-do[data-nhom="ngang"] .vach-mo, .khuon-so-do[data-nhom="bang"] .vach-mo { display: none; }

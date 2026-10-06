@@ -1,0 +1,43 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "so-do-tri-thuc",
+  "thuongHieu": "mau",
+  "chuDe": "dem-vang",
+  "theThuc": [
+    "ngang-16x9",
+    "vuong"
+  ],
+  "noiDung": {
+    "kicker": "Tư duy thiết kế",
+    "tieuDe1": "Năm chặng",
+    "tieuDe2": "giải một vấn đề thật",
+    "soDo": {
+      "loai": "hanh-trinh",
+      "mucNhan": 2,
+      "tram": [
+        {
+          "nhan": "Thấu hiểu",
+          "phu": "nghe người dùng"
+        },
+        {
+          "nhan": "Xác định",
+          "phu": "gọi đúng vấn đề"
+        },
+        {
+          "nhan": "Ý tưởng",
+          "phu": "mở rộng phương án"
+        },
+        {
+          "nhan": "Mẫu thử",
+          "phu": "làm nhanh, rẻ"
+        },
+        {
+          "nhan": "Thử nghiệm",
+          "phu": "học từ phản hồi"
+        }
+      ]
+    },
+    "ketLuan": "Mỗi chặng một câu hỏi, không chặng nào đi tắt.",
+    "nguon": "Quy trình tư duy thiết kế - Stanford d.school"
+  }
+}

@@ -1,0 +1,47 @@
+/* Khuôn câu hỏi soi chiếu và chân dung: một câu hỏi lớn chạm vào người xem, chân dung thật (ảnh nền đầy khung hoặc
+ * người tách nền), thẻ tên, nút kêu gọi. Gốc: bố cục quảng bá khoá học phổ biến. Biến thể: bienThe "the" (thẻ tên có khung). */
+.khuon-cau-hoi { --le: 7; }
+.khuon-cau-hoi .vung { gap: calc(var(--co) * 1.8cqmin); z-index: 2; }
+.khuon-cau-hoi .nen-anh { z-index: 0; }
+.khuon-cau-hoi .tach { position: absolute; right: -4%; bottom: 0; height: 62%; width: auto; max-width: 70%; z-index: 1;
+  -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent 100%); mask-image: linear-gradient(180deg, #000 80%, transparent 100%); }
+.khuon-cau-hoi .khung-vien { z-index: 2; }
+.khuon-cau-hoi .nen-man-tren { background: linear-gradient(180deg, var(--manAnh) 0%, color-mix(in srgb, var(--manAnh) 82%, transparent) 26%, transparent 52%); }
+.khuon-cau-hoi .ngoac { margin-top: calc(var(--co) * 2cqmin); }
+.khuon-cau-hoi .cau-hoi { font-size: calc(var(--co) * 7.6cqmin); line-height: 1.12; text-wrap: balance; text-shadow: 0 0.3cqmin 1.6cqmin color-mix(in srgb, var(--manAnh) 60%, transparent); }
+.khuon-cau-hoi .cau-hoi em { font-weight: 700; }
+.khuon-cau-hoi .nguoi-the { display: flex; flex-direction: column; gap: calc(var(--co) * 0.6cqmin); align-items: flex-start; }
+.khuon-cau-hoi .nguoi-the::before { content: ""; width: 7cqmin; height: max(1px, 0.18cqmin); background: var(--nhan); margin-bottom: 1.4cqmin; }
+.khuon-cau-hoi .nguoi-the .vai { font-size: calc(var(--co) * 1.9cqmin); padding: 0.8cqmin 1.3cqmin; }
+.khuon-cau-hoi .ten-nguoi { font-size: calc(var(--co) * 3.7cqmin); }
+.khuon-cau-hoi .chuc-danh { font-size: calc(var(--co) * 2.45cqmin); max-width: 54cqmin; }
+.khuon-cau-hoi .cta-hang { display: flex; padding-top: calc(var(--co) * 1cqmin); }
+.khuon-cau-hoi .nut { align-self: flex-start; }
+
+/* biến thể thẻ tên có khung */
+.khuon-cau-hoi[data-bien-the~="the"] .nguoi-the { display: grid; grid-template-columns: auto 1fr; column-gap: 2cqmin; align-items: center;
+  padding: 2cqmin 2.6cqmin; border-left: max(2px, 0.35cqmin) solid var(--nhan); border-radius: 0.6cqmin 1.4cqmin 1.4cqmin 0.6cqmin;
+  background: linear-gradient(180deg, var(--the), var(--theDam)); border-top: max(1px, 0.12cqmin) solid var(--vienThe); border-right: max(1px, 0.12cqmin) solid var(--vienThe); border-bottom: max(1px, 0.12cqmin) solid var(--vienThe); align-self: stretch; }
+.khuon-cau-hoi[data-bien-the~="the"] .nguoi-the::before { display: none; }
+.khuon-cau-hoi[data-bien-the~="the"] .chuc-danh { grid-column: 1 / -1; max-width: none; }
+
+/* vuông, 4:5: câu hỏi trên, người giữa, thẻ dưới */
+.khuon-cau-hoi[data-nhom="vuong"] .cau-hoi, .khuon-cau-hoi[data-nhom="doc-nhe"] .cau-hoi { font-size: calc(var(--co) * 6.4cqmin); }
+.khuon-cau-hoi[data-nhom="vuong"] .tach { height: 58%; right: 4%; }
+.khuon-cau-hoi[data-nhom="vuong"] .ngoac, .khuon-cau-hoi[data-nhom="doc-nhe"] .ngoac { display: none; }
+.khuon-cau-hoi[data-nhom="doc-nhe"] .tach { height: 56%; right: 0; }
+
+/* dọc: câu hỏi rất lớn */
+.khuon-cau-hoi[data-nhom="doc"] { --le: 6.5; }
+.khuon-cau-hoi[data-nhom="doc"] .cau-hoi { font-size: calc(var(--co) * 8.6cqmin); }
+.khuon-cau-hoi[data-nhom="doc"] .tach { height: 52%; right: -8%; }
+.khuon-cau-hoi[data-nhom="doc"] .nguoi-the { max-width: 60%; }
+.khuon-cau-hoi[data-nhom="doc"][data-bien-the~="the"] .nguoi-the { max-width: none; }
+
+/* ngang: chữ trái, người phải */
+.khuon-cau-hoi[data-nhom="ngang"] .vung, .khuon-cau-hoi[data-nhom="bang"] .vung { right: 46%; }
+.khuon-cau-hoi[data-nhom="ngang"] .cau-hoi { font-size: calc(var(--co) * 7cqmin); }
+.khuon-cau-hoi[data-nhom="bang"] .cau-hoi { font-size: calc(var(--co) * 8cqmin); }
+.khuon-cau-hoi[data-nhom="ngang"] .tach, .khuon-cau-hoi[data-nhom="bang"] .tach { height: 94%; right: 3%; max-width: 46%; }
+.khuon-cau-hoi[data-nhom="ngang"] .nen-man-tren, .khuon-cau-hoi[data-nhom="bang"] .nen-man-tren { background: linear-gradient(90deg, var(--manAnh) 0%, color-mix(in srgb, var(--manAnh) 85%, transparent) 38%, transparent 66%); }
+.khuon-cau-hoi[data-nhom="ngang"] .ngoac, .khuon-cau-hoi[data-nhom="bang"] .ngoac { display: none; }

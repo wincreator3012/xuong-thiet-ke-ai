@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Khuôn: photo wall, logo lặp</title>
+<link rel="stylesheet" href="../../he-thong/khung.css">
+<link rel="stylesheet" href="khuon.css">
+</head>
+<body>
+<div class="canvas khuon-photo-wall">
+  <div class="lop-nen nen-toa"></div>
+  <div class="luoi-logo trang-tri"></div>
+  <div class="vung">
+    <div class="bang-giua the" data-id="bangGiua">
+      <img class="logo" data-logo="tu-dong" alt="">
+      <div class="kicker" data-o="kicker"></div>
+      <div class="tieu-de kim" data-o="tieuDe" data-vua="2"></div>
+      <div class="hashtag" data-o="hashtag"></div>
+    </div>
+  </div>
+</div>
+<script src="../../he-thong/khung.js"></script>
+<script>
+/* lặp logo so le nửa ô mỗi hàng, cỡ logo theo kích thước thật 20-30 cm (đã tính trong khung ở tỉ lệ thiết kế) */
+(function () {
+  const goc = window.XUONG.dung;
+  window.XUONG.dung = async function (goi) {
+    const el = document.querySelector('.luoi-logo');
+    const logo = document.querySelector('.bang-giua .logo');
+    const ds = ((goi.spec.noiDung || {}).logoLap || ['tu-dong']);
+    const tt = goi.theThuc;
+    const cotThat = tt.loai === 'in' ? Math.max(3, Math.round(tt.wMm / 420)) : 6;
+    const hangThat = tt.loai === 'in' ? Math.max(3, Math.round(tt.hMm / 330)) : 5;
+    let h = '';
+    for (let r = 0; r < hangThat + 1; r++) {
+      h += `<div class="hang-lap${r % 2 ? ' le' : ''}" style="--cot:${cotThat}">`;
+      for (let c = 0; c < cotThat + 1; c++) h += `<img class="logo-lap trang-tri" data-logo="${ds[(r + c) % ds.length]}" alt="">`;
+      h += '</div>';
+    }
+    el.innerHTML = h;
+    return goc(goi);
+  };
+})();
+</script>
+</body>
+</html>

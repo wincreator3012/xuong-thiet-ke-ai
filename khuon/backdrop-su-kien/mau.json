@@ -1,0 +1,21 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "backdrop-su-kien",
+  "thuongHieu": "mau",
+  "theThuc": [
+    "backdrop-6x3",
+    "tu-do:1536x768"
+  ],
+  "noiDung": {
+    "logoPhu": [
+      {
+        "logo": "mau:nenToi"
+      }
+    ],
+    "kicker": "Lễ khai giảng",
+    "tieuDe1": "Giao tiếp tỉnh thức",
+    "tieuDe2": "Khoá 3",
+    "phuDe": "Lắng nghe để hiểu, nói để kết nối",
+    "thongTin": "**15.10.2026** · 19:30 · Trực tuyến và tại TP.HCM"
+  }
+}

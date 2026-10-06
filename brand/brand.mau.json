@@ -1,0 +1,263 @@
+{
+  "_huong-dan": "Hồ sơ thương hiệu của NGƯỜI DÙNG, Claude điền ở bước thiết lập (skill skills/thiet-ke-thiet-lap) theo phong-cach/PHONG-CACH.md. Ba phần: 'chuDe' (họ màu và phông, gọi theo VAI chứ không theo tên màu; sáu họ khởi đầu, thêm họ riêng của bạn bằng cách chép một họ rồi đổi mã màu), 'thuongHieu' (logo, chủ đề mặc định, câu chữ cố định của từng thương hiệu: 'chinh' là thương hiệu của bạn; 'mau' là thương hiệu giả định chỉ để kiểm khuôn, đừng xoá), 'nhanVat' (tên, học vị, chức danh nguyên văn). Khuôn chỉ dùng biến vai (--nen, --chu, --nhan...), nên đổi chủ đề là đổi cả bộ mà nghĩa giữ nguyên. Đổi giá trị dùng chung ở đây ảnh hưởng mọi ấn phẩm về sau; nhu cầu của một ấn phẩm thì ghi đè trong file ấn phẩm (mauRieng, phongRieng).",
+  "cap-nhat": "[ngày thiết lập]",
+  "thuongHieuMacDinh": "chinh",
+  "chuDe": {
+    "dem-vang": {
+      "ten": "Đêm xanh thẫm và vàng kim",
+      "khiNao": "chương trình cao cấp, sự kiện buổi tối, giới thiệu giảng viên, quảng bá khoá học; hợp sân khấu dưới đèn",
+      "toi": true,
+      "mau": {
+        "nen": "#071839",
+        "nenSau": "#040E25",
+        "nenToa": "#17346F",
+        "the": "rgba(28, 54, 112, 0.50)",
+        "theDam": "rgba(14, 32, 74, 0.82)",
+        "vienThe": "rgba(150, 172, 220, 0.30)",
+        "chu": "#FFFFFF",
+        "chuPhu": "#C9D2E3",
+        "chuMo": "#8D9AB6",
+        "nhan": "#D6B26A",
+        "nhanDam": "#B08A3E",
+        "nhanSang": "#F4E2B0",
+        "nhanChu": "#0E1730",
+        "vach": "rgba(214, 178, 106, 0.55)",
+        "vachMo": "rgba(214, 178, 106, 0.22)",
+        "kimLoai": "linear-gradient(180deg, #F8E9BC 0%, #E6C77F 42%, #C29A4C 78%, #A98236 100%)",
+        "kimLoaiNgang": "linear-gradient(90deg, #B98B42 0%, #E9CF8E 30%, #F6E6B6 52%, #DDBA74 74%, #B48740 100%)",
+        "manAnh": "#071839"
+      },
+      "phong": {
+        "tieuDe": "Playfair Display",
+        "noiDung": "Be Vietnam Pro",
+        "kicker": "Be Vietnam Pro"
+      },
+      "hoaTiet": [
+        "vong-cung",
+        "nui-xa",
+        "vach-vang",
+        "goc-khung"
+      ],
+      "inAn": {
+        "ghiChu": "Vàng kim in CMYK thành vàng đất đục: in thật cần mực pha nhũ hoặc ép kim; không có thì đổi chữ vàng sang màu đất ấm và kiểm lại tương phản."
+      }
+    },
+    "giay-muc": {
+      "ten": "Giấy ngà và mực, nhấn lục trầm",
+      "khiNao": "bài tri thức, chiêm nghiệm, handout, workbook, nội dung ban ngày",
+      "toi": false,
+      "mau": {
+        "nen": "#FAF7F1",
+        "nenSau": "#F1ECE2",
+        "nenToa": "#FFFFFF",
+        "the": "#FFFFFF",
+        "theDam": "#F3EEE4",
+        "vienThe": "#D8D2C6",
+        "chu": "#23282D",
+        "chuPhu": "#5C6168",
+        "chuMo": "#6A6F75",
+        "nhan": "#2F5D50",
+        "nhanDam": "#244A40",
+        "nhanSang": "#6E9A8C",
+        "nhanChu": "#FAF7F1",
+        "vach": "#2F5D50",
+        "vachMo": "#D8D2C6",
+        "kimLoai": "linear-gradient(180deg, #2F5D50 0%, #2F5D50 100%)",
+        "kimLoaiNgang": "linear-gradient(90deg, #2F5D50 0%, #2F5D50 100%)",
+        "manAnh": "#23282D",
+        "phu1": "#2F5D50",
+        "phu2": "#B0663F",
+        "phu3": "#B98A2E"
+      },
+      "phong": {
+        "tieuDe": "Lora",
+        "noiDung": "Be Vietnam Pro",
+        "kicker": "Be Vietnam Pro"
+      },
+      "hoaTiet": [
+        "vach-mau"
+      ]
+    },
+    "than-dong": {
+      "ten": "Than và đồng ấm",
+      "khiNao": "nội dung trầm, chiêm nghiệm buổi tối, trích dẫn, thông điệp sâu",
+      "toi": true,
+      "mau": {
+        "nen": "#15181C",
+        "nenSau": "#0E1013",
+        "nenToa": "#23272D",
+        "the": "rgba(242, 238, 229, 0.05)",
+        "theDam": "#1E2227",
+        "vienThe": "#3A3F45",
+        "chu": "#F2EEE5",
+        "chuPhu": "#B4B8BD",
+        "chuMo": "#8A9096",
+        "nhan": "#C7A97B",
+        "nhanDam": "#A88A5E",
+        "nhanSang": "#E5CFA8",
+        "nhanChu": "#15181C",
+        "vach": "#C7A97B",
+        "vachMo": "#3A3F45",
+        "kimLoai": "linear-gradient(180deg, #EAD7B4 0%, #C7A97B 60%, #A88A5E 100%)",
+        "kimLoaiNgang": "linear-gradient(90deg, #A88A5E 0%, #E5CFA8 50%, #A88A5E 100%)",
+        "manAnh": "#15181C"
+      },
+      "phong": {
+        "tieuDe": "Lora",
+        "noiDung": "Be Vietnam Pro",
+        "kicker": "Be Vietnam Pro"
+      },
+      "hoaTiet": [
+        "vach-mau",
+        "vong-cung"
+      ]
+    },
+    "dem-xanh": {
+      "ten": "Đêm xanh giải thích (sơ đồ, cơ chế, số liệu)",
+      "khiNao": "giải thích cơ chế, quy trình, số liệu, framework",
+      "toi": true,
+      "mau": {
+        "nen": "#0E1230",
+        "nenSau": "#090C22",
+        "nenToa": "#1A2152",
+        "the": "rgba(255, 255, 255, 0.05)",
+        "theDam": "#171C45",
+        "vienThe": "rgba(168, 180, 230, 0.22)",
+        "chu": "#EEF2FF",
+        "chuPhu": "#A9B1D6",
+        "chuMo": "#7A82AA",
+        "nhan": "#5CC2F7",
+        "nhanDam": "#2E9CD6",
+        "nhanSang": "#A7E0FF",
+        "nhanChu": "#0E1230",
+        "nhan2": "#F2B544",
+        "vach": "#5CC2F7",
+        "vachMo": "rgba(92, 194, 247, 0.25)",
+        "kimLoai": "linear-gradient(180deg, #A7E0FF 0%, #5CC2F7 100%)",
+        "kimLoaiNgang": "linear-gradient(90deg, #5CC2F7 0%, #A7E0FF 100%)",
+        "manAnh": "#0E1230",
+        "phu1": "#5CC2F7",
+        "phu2": "#F2B544",
+        "phu3": "#7EE0B5"
+      },
+      "phong": {
+        "tieuDe": "Be Vietnam Pro",
+        "noiDung": "Be Vietnam Pro",
+        "kicker": "Be Vietnam Pro"
+      },
+      "hoaTiet": [
+        "quang-sang"
+      ]
+    },
+    "am-ap": {
+      "ten": "Kem và đất nung",
+      "khiNao": "kỹ năng sống, nuôi dạy con, kể chuyện, cộng đồng; gần gũi và tin cậy",
+      "toi": false,
+      "mau": {
+        "nen": "#FBF5EC",
+        "nenSau": "#F3E9DA",
+        "nenToa": "#FFFFFF",
+        "the": "#FFFFFF",
+        "theDam": "#F6ECDD",
+        "vienThe": "#E6D6BF",
+        "chu": "#2B2420",
+        "chuPhu": "#5E534B",
+        "chuMo": "#6F645B",
+        "nhan": "#B5552E",
+        "nhanDam": "#8F3F20",
+        "nhanSang": "#E09A73",
+        "nhanChu": "#FFFFFF",
+        "nhan2": "#5E7A4A",
+        "vach": "#B5552E",
+        "vachMo": "#E6D6BF",
+        "kimLoai": "linear-gradient(180deg, #C8653A 0%, #A64A26 100%)",
+        "kimLoaiNgang": "linear-gradient(90deg, #A64A26 0%, #C8653A 100%)",
+        "manAnh": "#2B2420",
+        "phu1": "#B5552E",
+        "phu2": "#5E7A4A",
+        "phu3": "#C8963E"
+      },
+      "phong": {
+        "tieuDe": "Lora",
+        "noiDung": "Be Vietnam Pro",
+        "kicker": "Be Vietnam Pro"
+      },
+      "hoaTiet": [
+        "vach-mau"
+      ]
+    },
+    "trang-xanh": {
+      "ten": "Trắng và xanh dương hiện đại",
+      "khiNao": "công nghệ, kinh doanh, đào tạo doanh nghiệp, thông báo; rõ, sáng, năng động",
+      "toi": false,
+      "mau": {
+        "nen": "#FFFFFF",
+        "nenSau": "#F2F6FC",
+        "nenToa": "#FFFFFF",
+        "the": "#F4F7FC",
+        "theDam": "#E7EEF8",
+        "vienThe": "#D3DEEE",
+        "chu": "#0F1B33",
+        "chuPhu": "#46536B",
+        "chuMo": "#5E6A80",
+        "nhan": "#1E5BD8",
+        "nhanDam": "#1546A8",
+        "nhanSang": "#6C93EA",
+        "nhanChu": "#FFFFFF",
+        "nhan2": "#12A57A",
+        "vach": "#1E5BD8",
+        "vachMo": "#D3DEEE",
+        "kimLoai": "linear-gradient(180deg, #1E5BD8 0%, #1E5BD8 100%)",
+        "kimLoaiNgang": "linear-gradient(90deg, #1E5BD8 0%, #3E78EA 100%)",
+        "manAnh": "#0F1B33"
+      },
+      "phong": {
+        "tieuDe": "Be Vietnam Pro",
+        "noiDung": "Be Vietnam Pro",
+        "kicker": "Be Vietnam Pro"
+      },
+      "hoaTiet": [
+        "vach-mau"
+      ]
+    }
+  },
+  "thuongHieu": {
+    "chinh": {
+      "ten": "[Tên thương hiệu của bạn]",
+      "chuDeMacDinh": "giay-muc",
+      "chuDeHop": [
+        "giay-muc",
+        "than-dong",
+        "dem-xanh"
+      ],
+      "logo": {},
+      "khauHieu": "",
+      "website": "",
+      "ghiChu": "Thả logo vào brand/logo/ rồi ghi tên tệp vào đây: nenSang (logo cho nền sáng), nenToi (cho nền tối), bieuTuongSang, bieuTuongToi (biểu tượng vuông), có thể thêm khoá riêng như 'trien'. Chưa có logo thì để trống: khuôn tự bỏ chỗ logo."
+    },
+    "mau": {
+      "ten": "Học viện Mẫu (giả định, chỉ để kiểm khuôn)",
+      "chuDeMacDinh": "dem-vang",
+      "chuDeHop": [
+        "dem-vang",
+        "giay-muc"
+      ],
+      "logo": {
+        "nenSang": "logo-mau-sang.png",
+        "nenToi": "logo-mau-toi.png"
+      }
+    }
+  },
+  "nhanVat": {
+    "chinh": {
+      "ten": "[Tên bạn]",
+      "hocVi": "",
+      "tenDayDu": "[Học vị Tên bạn]",
+      "chungChi": "",
+      "chucDanh": {
+        "macDinh": "[Chức danh nguyên văn]"
+      },
+      "ghiChu": "Viết nguyên văn như muốn hiện trên mọi ấn phẩm. Có nhiều bản chức danh (theo người xem, theo chủ đề) thì thêm khoá vào chucDanh và ghi quy tắc chọn ở PHONG-CACH.md mục 1."
+    }
+  }
+}

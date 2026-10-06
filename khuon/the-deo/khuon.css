@@ -1,0 +1,11 @@
+/* Khuôn thẻ đeo: tên người đọc được từ 2 m, đơn vị, dải màu vai trò (học viên, ban tổ chức, khách mời, diễn giả).
+ * In hàng loạt: file ấn phẩm có "danhSach" (xem README). Màu dải: noiDung.mauVai hoặc mauRieng. */
+.khuon-the-deo { --le: 7; }
+.khuon-the-deo .lo-deo { position: absolute; left: 50%; top: calc(var(--tra) + 4cqmin); width: 16cqmin; height: 3.2cqmin; transform: translateX(-50%); border-radius: 2cqmin; border: max(1px, 0.2cqmin) dashed var(--vachMo); }
+.khuon-the-deo .vung { align-items: center; text-align: center; bottom: calc(var(--tra) + 20cqmin); }
+.khuon-the-deo .logo { height: calc(var(--co) * 11cqmin); }
+.khuon-the-deo .ten-su-kien { margin-top: 2cqmin; font-family: var(--phong-tieu-de), serif; font-weight: 700; font-size: calc(var(--co) * 5.4cqmin); line-height: 1.15; color: var(--nhan); }
+.khuon-the-deo .ten-lon { font-weight: 800; font-size: calc(var(--co) * 12cqmin); line-height: 1.08; color: var(--chu); text-wrap: balance; }
+.khuon-the-deo .don-vi { margin-top: 2cqmin; font-size: calc(var(--co) * 5cqmin); color: var(--chuPhu); line-height: 1.3; }
+.khuon-the-deo .dai-vai { position: absolute; left: 0; right: 0; bottom: 0; height: calc(var(--tra) + 17cqmin); padding-bottom: var(--tra);
+  display: grid; place-items: center; background: var(--kimLoaiNgang); color: var(--nhanChu); font-weight: 800; text-transform: uppercase; letter-spacing: 0.2em; font-size: calc(var(--co) * 5.6cqmin); }

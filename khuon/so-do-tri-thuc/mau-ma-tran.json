@@ -1,0 +1,46 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "so-do-tri-thuc",
+  "thuongHieu": "mau",
+  "chuDe": "dem-xanh",
+  "theThuc": [
+    "vuong"
+  ],
+  "noiDung": {
+    "kicker": "Trạng thái dòng chảy",
+    "tieuDe1": "Thử thách và kỹ năng",
+    "tieuDe2": "gặp nhau ở đâu?",
+    "soDo": {
+      "loai": "ma-tran",
+      "mucNhan": 1,
+      "trucNgang": [
+        "kỹ năng thấp",
+        "kỹ năng cao"
+      ],
+      "trucDoc": [
+        "thử thách thấp",
+        "thử thách cao"
+      ],
+      "o": [
+        {
+          "nhan": "Lo âu",
+          "phu": "thử thách vượt sức"
+        },
+        {
+          "nhan": "Dòng chảy",
+          "phu": "vừa sức, quên thời gian"
+        },
+        {
+          "nhan": "Thờ ơ",
+          "phu": "không gì kéo mình vào"
+        },
+        {
+          "nhan": "Buồn chán",
+          "phu": "dễ quá với mình"
+        }
+      ]
+    },
+    "ketLuan": "Một chút khó hơn sức mình là chỗ **dòng chảy** bắt đầu.",
+    "nguon": "Mô hình dòng chảy - Mihaly Csikszentmihalyi"
+  }
+}

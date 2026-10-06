@@ -1,0 +1,54 @@
+/* Khuôn giới thiệu chuyên gia: ảnh thật đầy khung (một người) hoặc chia cột (hai người), vai trò viết lớn, tên,
+ * chức danh nguyên văn, lời hứa giá trị, các công cụ hay khung chuyên môn, thanh kêu gọi. Gốc: bố cục quảng bá khoá học phổ biến. */
+.khuon-gioi-thieu .cot-ds { position: absolute; inset: 0; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; }
+.khuon-gioi-thieu .cot-nguoi { position: relative; overflow: hidden; }
+.khuon-gioi-thieu .cot-nguoi + .cot-nguoi { border-left: max(1px, 0.14cqmin) solid var(--vach); }
+.khuon-gioi-thieu .anh-nen-nguoi { position: absolute; inset: 0; background-size: cover; background-repeat: no-repeat; }
+.khuon-gioi-thieu .man-nguoi { position: absolute; inset: 0; background: linear-gradient(0deg, var(--manAnh) 0%, color-mix(in srgb, var(--manAnh) 92%, transparent) 30%, color-mix(in srgb, var(--manAnh) 40%, transparent) 52%, transparent 70%); }
+.khuon-gioi-thieu .chu-nguoi { position: absolute; left: max(var(--an-l), 6cqmin); right: max(var(--an-r), 6cqmin);
+  bottom: calc(max(var(--an-b), 5cqmin) + 13cqmin); display: flex; flex-direction: column; gap: calc(var(--co) * 0.9cqmin); }
+.khuon-gioi-thieu .kicker { font-size: calc(var(--co) * 1.95cqmin); }
+.khuon-gioi-thieu .vai-lon { font-family: var(--phong-tieu-de), serif; font-weight: 700; font-size: calc(var(--co) * 10cqmin); line-height: 1.05;
+  background: var(--kimLoai); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; padding-bottom: 0.08em; }
+.khuon-gioi-thieu[data-toi="0"] .vai-lon { background: none; color: var(--nhan); -webkit-text-fill-color: currentColor; }
+.khuon-gioi-thieu .ten-nguoi { font-size: calc(var(--co) * 4.2cqmin); }
+.khuon-gioi-thieu .chuc-danh { font-size: calc(var(--co) * 2.4cqmin); color: var(--chu); }
+.khuon-gioi-thieu .loi-hua { margin-top: calc(var(--co) * 1.2cqmin); padding: 2cqmin 2.6cqmin; font-size: calc(var(--co) * 2.9cqmin); line-height: 1.42; font-weight: 500; }
+.khuon-gioi-thieu .loi-hua strong { color: var(--nhanSang); }
+.khuon-gioi-thieu .the-ds { display: flex; flex-wrap: wrap; gap: 1.2cqmin; margin-top: calc(var(--co) * 1cqmin); }
+.khuon-gioi-thieu .the-ds .muc-lap:first-child .vien { background: var(--kimLoaiNgang); color: var(--nhanChu); border-color: transparent; }
+.khuon-gioi-thieu .logo-goc { position: absolute; top: max(var(--an-t), 5.5cqmin); left: max(var(--an-l), 6cqmin); height: calc(var(--co) * 6.4cqmin); z-index: 3; }
+.khuon-gioi-thieu .thanh-cta { position: absolute; left: max(var(--an-l), 5cqmin); right: max(var(--an-r), 5cqmin); bottom: max(var(--an-b), 4.5cqmin);
+  display: flex; align-items: center; justify-content: space-between; gap: 2cqmin; padding: 1.3cqmin 1.3cqmin 1.3cqmin 3cqmin;
+  border-radius: 99cqmin; border: max(1px, 0.12cqmin) solid var(--vienThe); background: color-mix(in srgb, var(--theDam) 85%, transparent); z-index: 3; }
+.khuon-gioi-thieu .thanh-cta .kicker { font-size: calc(var(--co) * 1.7cqmin); color: var(--chu); letter-spacing: 0.2em; }
+.khuon-gioi-thieu .cta-ngay { font-weight: 700; font-size: calc(var(--co) * 3cqmin); line-height: 1.2; }
+.khuon-gioi-thieu .nut { font-size: calc(var(--co) * 2.4cqmin); padding-left: 3.2cqmin; }
+/* hai người: chữ nhỏ lại theo cột */
+.khuon-gioi-thieu .cot-ds[data-so-muc="2"] .chu-nguoi { left: 4.5cqmin; right: 4.5cqmin; }
+.khuon-gioi-thieu .cot-ds[data-so-muc="2"] .man-nguoi { background: linear-gradient(0deg, var(--manAnh) 0%, color-mix(in srgb, var(--manAnh) 94%, transparent) 42%, color-mix(in srgb, var(--manAnh) 55%, transparent) 62%, transparent 80%); }
+.khuon-gioi-thieu .cot-ds[data-so-muc="2"] .vai-lon { font-size: calc(var(--co) * 7.2cqmin); }
+.khuon-gioi-thieu .cot-ds[data-so-muc="2"] .ten-nguoi { font-size: calc(var(--co) * 3.3cqmin); }
+.khuon-gioi-thieu .cot-ds[data-so-muc="2"] .chuc-danh { font-size: calc(var(--co) * 2.1cqmin); }
+.khuon-gioi-thieu .cot-ds[data-so-muc="2"] .loi-hua { font-size: calc(var(--co) * 2.25cqmin); padding: 1.5cqmin 2cqmin; }
+.khuon-gioi-thieu .cot-ds[data-so-muc="2"] .vien { font-size: calc(var(--co) * 1.9cqmin); padding: 0.9cqmin 1.6cqmin; }
+.khuon-gioi-thieu .cot-ds[data-so-muc="2"] ~ .logo-goc { left: calc(50% - 6cqmin); }
+/* ngang: ảnh chiếm nửa phải, chữ trái trên nền */
+.khuon-gioi-thieu[data-nhom="ngang"] .cot-ds[data-so-muc="1"] .anh-nen-nguoi, .khuon-gioi-thieu[data-nhom="bang"] .cot-ds[data-so-muc="1"] .anh-nen-nguoi { left: 42%; }
+.khuon-gioi-thieu[data-nhom="ngang"] .cot-ds[data-so-muc="1"] .man-nguoi, .khuon-gioi-thieu[data-nhom="bang"] .cot-ds[data-so-muc="1"] .man-nguoi { background: linear-gradient(90deg, var(--manAnh) 0%, var(--manAnh) 42%, color-mix(in srgb, var(--manAnh) 60%, transparent) 52%, transparent 70%); }
+.khuon-gioi-thieu[data-nhom="ngang"] .cot-ds[data-so-muc="1"] .chu-nguoi, .khuon-gioi-thieu[data-nhom="bang"] .cot-ds[data-so-muc="1"] .chu-nguoi { right: 52%; top: 16cqmin; bottom: auto; }
+.khuon-gioi-thieu[data-nhom="ngang"] .thanh-cta, .khuon-gioi-thieu[data-nhom="bang"] .thanh-cta { right: auto; width: min(52%, 100cqmin); }
+
+.khuon-gioi-thieu .man-tren { position: absolute; inset: 0 0 auto 0; height: 22%; background: linear-gradient(180deg, color-mix(in srgb, var(--manAnh) 65%, transparent), transparent); z-index: 2; }
+/* dọc cao (9:16, 1:2): khối chữ lớn như poster */
+.khuon-gioi-thieu[data-nhom="doc"] .vai-lon { font-size: calc(var(--co) * 15cqmin); }
+.khuon-gioi-thieu[data-nhom="doc"] .kicker { font-size: calc(var(--co) * 2.5cqmin); }
+.khuon-gioi-thieu[data-nhom="doc"] .ten-nguoi { font-size: calc(var(--co) * 5.6cqmin); }
+.khuon-gioi-thieu[data-nhom="doc"] .chuc-danh { font-size: calc(var(--co) * 3.1cqmin); }
+.khuon-gioi-thieu[data-nhom="doc"] .loi-hua { font-size: calc(var(--co) * 3.8cqmin); padding: 2.6cqmin 3cqmin; }
+.khuon-gioi-thieu[data-nhom="doc"] .vien { font-size: calc(var(--co) * 3cqmin); padding: 1.4cqmin 2.8cqmin; }
+.khuon-gioi-thieu[data-nhom="doc"] .chu-nguoi { bottom: calc(max(var(--an-b), 5cqmin) + 17cqmin); gap: calc(var(--co) * 1.4cqmin); }
+.khuon-gioi-thieu[data-nhom="doc"] .thanh-cta .kicker { font-size: calc(var(--co) * 2.1cqmin); }
+.khuon-gioi-thieu[data-nhom="doc"] .cta-ngay { font-size: calc(var(--co) * 3.8cqmin); }
+.khuon-gioi-thieu[data-nhom="doc"] .nut { font-size: calc(var(--co) * 2.9cqmin); }
+.khuon-gioi-thieu[data-nhom="doc"] .logo-goc { height: calc(var(--co) * 8cqmin); }

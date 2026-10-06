@@ -1,0 +1,63 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "hoi-dap",
+  "thuongHieu": "mau",
+  "chuDe": "dem-vang",
+  "theThuc": [
+    "ig-4x5",
+    "ngang-16x9"
+  ],
+  "noiDung": {
+    "tieuDe1": "Zoom giải đáp",
+    "tieuDe2": "Hỏi nhanh - đáp kỹ",
+    "phuDe": "Cùng hai giảng viên khoá Giao tiếp tỉnh thức",
+    "ngay": "08.10.2026",
+    "thu": "Thứ Năm",
+    "gio": "**20:00 - 21:30** · Zoom · Miễn phí",
+    "nhanMuc": "Bạn hỏi",
+    "nhanMucPhu": "Hai giảng viên trả lời trực tiếp",
+    "muc": [
+      {
+        "dau": "?",
+        "nhan": "Câu hỏi 01",
+        "chu": "Khoá học gồm những gì, dựa trên nền tảng nào?"
+      },
+      {
+        "dau": "?",
+        "nhan": "Câu hỏi 02",
+        "chu": "Sau 8 tuần, tôi làm được điều gì khác đi?"
+      },
+      {
+        "dau": "?",
+        "nhan": "Câu hỏi 03",
+        "chu": "Lịch làm việc của tôi bận rộn, liệu có theo kịp không?"
+      }
+    ],
+    "nguoi": [
+      {
+        "anh": {
+          "src": "kho:khuon/_chung/anh-mau.jpg",
+          "tieuDiem": [
+            0.5,
+            0.15
+          ]
+        },
+        "vai": "Lắng nghe",
+        "ten": "TS~Nguyễn~Minh~An",
+        "chucDanh": "Chuyên gia tâm lý\nhọc thực hành"
+      },
+      {
+        "anh": {
+          "src": "kho:khuon/_chung/anh-mau.jpg",
+          "tieuDiem": [
+            0.5,
+            0.25
+          ]
+        },
+        "vai": "Kết nối",
+        "ten": "ThS~Trần~Thu~Hà",
+        "chucDanh": "Chuyên gia phát triển\ntổ chức"
+      }
+    ]
+  }
+}

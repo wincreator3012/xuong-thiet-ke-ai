@@ -1,0 +1,32 @@
+/* Khuôn thư ngỏ: chân dung người viết ở một bên, lá thư ngắn (lời chào, 2-3 đoạn, chữ ký) trong thẻ ở bên kia.
+ * Gốc: bố cục quảng bá khoá học phổ biến. Hợp lời mời cá nhân, thư cảm ơn, lời ngỏ đầu khoá. */
+.khuon-thu-ngo { --le: 6.5; }
+.khuon-thu-ngo .nen-anh.mo { filter: blur(0.6cqmin) brightness(0.55); transform: scale(1.04); }
+.khuon-thu-ngo .nen-man-toan { background: linear-gradient(90deg, color-mix(in srgb, var(--manAnh) 30%, transparent), color-mix(in srgb, var(--manAnh) 75%, transparent)); }
+.khuon-thu-ngo .tach { position: absolute; left: -3%; bottom: 0; height: 80%; width: auto; max-width: 58%; z-index: 1; }
+.khuon-thu-ngo .vung { gap: calc(var(--co) * 1.6cqmin); z-index: 2; }
+.khuon-thu-ngo .cot-thu { margin-left: auto; width: 56%; flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; gap: calc(var(--co) * 2.4cqmin); min-height: 0; }
+.khuon-thu-ngo .thu { padding: 3.2cqmin 3.4cqmin; display: flex; flex-direction: column; gap: calc(var(--co) * 1.3cqmin); border-left: max(2px, 0.3cqmin) solid var(--nhan); }
+.khuon-thu-ngo .thu .kicker { font-size: calc(var(--co) * 1.75cqmin); color: var(--nhanSang); opacity: 0.85; margin-bottom: 0.8cqmin; }
+.khuon-thu-ngo .loi-chao { font-family: var(--phong-tieu-de), serif; font-style: italic; font-size: calc(var(--co) * 3.5cqmin); color: var(--nhanSang); }
+.khuon-thu-ngo[data-toi="0"] .loi-chao { color: var(--nhan); }
+.khuon-thu-ngo .than-thu { display: flex; flex-direction: column; gap: calc(var(--co) * 1.3cqmin); }
+.khuon-thu-ngo .than-thu p { margin: 0; font-family: var(--phong-tieu-de), serif; font-size: calc(var(--co) * 3.1cqmin); line-height: 1.42; color: var(--chu); }
+.khuon-thu-ngo .than-thu em { color: var(--nhanSang); }
+.khuon-thu-ngo .chu-ky { margin-top: calc(var(--co) * 0.8cqmin); }
+.khuon-thu-ngo .ky-ten { font-size: calc(var(--co) * 2.1cqmin); }
+.khuon-thu-ngo .ten-ky { font-weight: 700; }
+.khuon-thu-ngo .hoc-ky { color: var(--chuPhu); }
+.khuon-thu-ngo .chuc-danh { font-size: calc(var(--co) * 2.1cqmin); }
+.khuon-thu-ngo .cta-hang { display: flex; justify-content: center; }
+/* dọc: chân dung dưới trái, thư ở giữa trên */
+.khuon-thu-ngo[data-nhom="doc"] .cot-thu, .khuon-thu-ngo[data-nhom="doc-nhe"] .cot-thu { width: 100%; justify-content: flex-start; padding-top: 3cqmin; }
+.khuon-thu-ngo[data-nhom="doc"] .tach { height: 44%; left: -8%; }
+.khuon-thu-ngo[data-nhom="doc-nhe"] .tach { height: 42%; left: -6%; }
+.khuon-thu-ngo[data-nhom="doc"] .than-thu p { font-size: calc(var(--co) * 3.7cqmin); }
+.khuon-thu-ngo[data-nhom="doc"] .loi-chao { font-size: calc(var(--co) * 4.2cqmin); }
+.khuon-thu-ngo[data-nhom="doc"] .thu .kicker, .khuon-thu-ngo[data-nhom="doc"] .ky-ten, .khuon-thu-ngo[data-nhom="doc"] .chuc-danh { font-size: calc(var(--co) * 2.4cqmin); }
+.khuon-thu-ngo[data-nhom="doc"] .chu-ky { font-size: calc(var(--co) * 6cqmin); }
+.khuon-thu-ngo[data-nhom="doc"] .cta-hang, .khuon-thu-ngo[data-nhom="doc-nhe"] .cta-hang { justify-content: flex-end; margin-top: auto; }
+.khuon-thu-ngo[data-nhom="ngang"] .cot-thu, .khuon-thu-ngo[data-nhom="bang"] .cot-thu { width: 58%; }
+.khuon-thu-ngo[data-nhom="ngang"] .tach, .khuon-thu-ngo[data-nhom="bang"] .tach { height: 92%; left: 2%; }

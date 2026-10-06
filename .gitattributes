@@ -1,2 +1,6 @@
-# Auto detect text files and perform LF normalization
+# Tự nhận diện tệp chữ và chuẩn hoá xuống dòng LF
 * text=auto
+# Tệp chạy trên Windows cần CRLF, tệp chạy trên Mac cần LF
+*.bat text eol=crlf
+*.command text eol=lf
+*.sh text eol=lf

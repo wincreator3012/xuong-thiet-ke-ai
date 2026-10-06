@@ -1,0 +1,26 @@
+{
+  "_huong-dan": "Từ điển ẩn dụ hình ảnh của BẠN cho ấn phẩm tĩnh (bắt đầu trống). Khoá = slug không dấu của khái niệm. Chỉ ghi mục ĐÃ ĐƯỢC BẠN DUYỆT (có ngày và dự án). Trước khi đề xuất ẩn dụ mới, Claude tra file này; có thì dùng lại để mọi ấn phẩm nói cùng một ngôn ngữ hình; chưa có thì đề xuất kèm 'ẨN DỤ MỚI - cần duyệt', bạn duyệt xong mới ghi vào đây. Phép thử: người Việt đọc ra không cần giải thích; vẽ được bằng vài nét; không trùng ẩn dụ của khái niệm khác. Bạn có từ điển ẩn dụ ở công cụ khác (ví dụ xưởng dựng video) thì giữ hai bên khớp nhau qua trường 'dong-bo-khac'.",
+  "schema": [
+    "chua-dung",
+    "duong-di",
+    "can-bang",
+    "tren-duoi",
+    "day-keo",
+    "sang-toi",
+    "trung-tam-ngoai-vi",
+    "vong-lap",
+    "tang-lop"
+  ],
+  "mau-muc": {
+    "khai-niem": "tên khái niệm như bạn dùng",
+    "tieng-anh": "thuật ngữ gốc nếu có",
+    "schema": "một trong danh sách schema",
+    "an-du": "mô tả hình bằng lời thường",
+    "hinh-thuc": "so-do:<loai> | svg:<đường dẫn trong dự án> | bieu-tuong:<tên>",
+    "du-lieu": {},
+    "duyet": "YYYY-MM-DD",
+    "du-an": "tên dự án",
+    "dong-bo-khac": "slug tương ứng trong từ điển ẩn dụ ở công cụ khác, nếu có"
+  },
+  "muc": {}
+}

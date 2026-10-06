@@ -1,0 +1,24 @@
+# rác hệ thống và bản chép của ứng dụng (repo không chứa nháp, tạm; tools/kiem-sach.py kiểm)
+Claude outputs/
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+# cấu hình riêng từng máy
+cau-hinh.json
+# hồ sơ màu tải về (giấy phép hạn chế phân phối)
+in-an/icc/*.icc
+in-an/icc/*.icm
+# PHẦN CỦA BẠN (tạo từ các tệp *.mau.* ở bước cài, không lên git chung để cập nhật xưởng không đụng tới):
+# muốn lưu phong cách vào repo riêng của bạn thì xoá các dòng dưới đây
+brand/brand.json
+brand/logo/*
+!brand/logo/README.md
+!brand/logo/logo-mau-sang.png
+!brand/logo/logo-mau-toi.png
+phong-cach/PHONG-CACH.md
+phong-cach/PHAN-TICH-MAU.md
+phong-cach/tu-ngu.json
+phong-cach/mau-tham-khao/*
+!phong-cach/mau-tham-khao/README.md
+minh-hoa/an-du.json

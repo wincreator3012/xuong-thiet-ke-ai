@@ -1,0 +1,24 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "chung-nhan",
+  "thuongHieu": "mau",
+  "chuDe": "giay-muc",
+  "theThuc": [
+    "a4-ngang"
+  ],
+  "noiDung": {
+    "kicker": "Học viện Mẫu",
+    "tieuDe": "Giấy chứng nhận",
+    "trao": "Trân trọng trao cho",
+    "nguoiNhan": "Lê Hoàng Mai",
+    "noiDung": "Đã hoàn thành chương trình **Giao tiếp tỉnh thức** (24 giờ thực hành) và thể hiện năng lực lắng nghe, đồng cảm, phản hồi rõ ràng.",
+    "ngayNoi": "TP. Hồ Chí Minh, ngày 15 tháng 10 năm 2026",
+    "nguoiKy": [
+      {
+        "ten": "TS~Nguyễn~Minh~An",
+        "chucDanh": "Chuyên gia tâm lý học thực hành"
+      }
+    ],
+    "soHieu": "Số: GTTT-2026-0142"
+  }
+}

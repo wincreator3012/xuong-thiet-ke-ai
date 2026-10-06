@@ -1,0 +1,26 @@
+/* Khuôn giấy chứng nhận (A4 ngang, có tràn lề 3 mm): viền kép, logo, tên chứng nhận, người nhận, nội dung,
+ * ngày nơi, 1-3 người ký (ảnh chữ ký tuỳ chọn), triện tuỳ chọn, số hiệu. Họ màu hợp: giay-muc, dem-vang. */
+.khuon-chung-nhan { --le: 9; }
+.khuon-chung-nhan .vien-hoa { position: absolute; inset: calc(var(--tra) + 4cqmin); border: max(1px, 0.5cqmin) double var(--nhan); }
+.khuon-chung-nhan .vien-hoa::before { content: ""; position: absolute; inset: 1.4cqmin; border: max(1px, 0.12cqmin) solid var(--vachMo); }
+.khuon-chung-nhan .vung { align-items: center; text-align: center; justify-content: center; gap: calc(var(--co) * 1.5cqmin); }
+.khuon-chung-nhan .hang-logo { display: flex; align-items: center; gap: 4cqmin; }
+.khuon-chung-nhan .logo { height: calc(var(--co) * 7cqmin); }
+.khuon-chung-nhan .logo-phu { display: flex; gap: 3cqmin; }
+.khuon-chung-nhan .kicker { font-size: calc(var(--co) * 2.1cqmin); color: var(--chuPhu); }
+.khuon-chung-nhan .tieu-de { font-size: calc(var(--co) * 7cqmin); letter-spacing: 0.06em; }
+.khuon-chung-nhan[data-toi="0"] .tieu-de.kim { background: none; color: var(--nhan); -webkit-text-fill-color: currentColor; filter: none; }
+.khuon-chung-nhan .trao { font-family: var(--phong-tieu-de), serif; font-style: italic; font-size: calc(var(--co) * 3cqmin); color: var(--chuPhu); }
+.khuon-chung-nhan .ten-nhan { font-family: var(--phong-tieu-de), serif; font-weight: 700; font-size: calc(var(--co) * 8.6cqmin); line-height: 1.15; color: var(--chu); white-space: nowrap; }
+.khuon-chung-nhan .vach-mo { width: 46%; }
+.khuon-chung-nhan .noi-dung { margin: 0; font-size: calc(var(--co) * 2.7cqmin); line-height: 1.5; max-width: 110cqmin; color: var(--chu); text-wrap: balance; }
+.khuon-chung-nhan .noi-dung strong { color: var(--nhan); }
+.khuon-chung-nhan .ngay-noi { font-style: italic; font-family: var(--phong-tieu-de), serif; font-size: calc(var(--co) * 2.4cqmin); color: var(--chuPhu); }
+.khuon-chung-nhan .ky { display: flex; gap: 14cqmin; justify-content: center; margin-top: 1cqmin; }
+.khuon-chung-nhan .o-ky { display: flex; flex-direction: column; align-items: center; min-width: 34cqmin; }
+.khuon-chung-nhan .anh-ky { height: 7cqmin; object-fit: contain; }
+.khuon-chung-nhan .vach-ky { width: 100%; height: max(1px, 0.12cqmin); background: var(--chuMo); margin: 0.6cqmin 0 1cqmin; }
+.khuon-chung-nhan .ten-nguoi { font-size: calc(var(--co) * 2.6cqmin); }
+.khuon-chung-nhan .chuc-danh { font-size: calc(var(--co) * 1.9cqmin); }
+.khuon-chung-nhan .trien { position: absolute; right: calc(var(--tra) + 10cqmin); bottom: calc(var(--tra) + 9cqmin); height: 13cqmin; opacity: 0.9; }
+.khuon-chung-nhan .so-cn { position: absolute; left: calc(var(--tra) + 9cqmin); bottom: calc(var(--tra) + 7cqmin); font-size: calc(var(--co) * 1.6cqmin); color: var(--chuMo); letter-spacing: 0.1em; }

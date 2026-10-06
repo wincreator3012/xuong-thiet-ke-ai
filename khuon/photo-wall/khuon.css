@@ -1,0 +1,11 @@
+/* Khuôn photo wall, step-and-repeat: logo lặp so le nửa ô mỗi hàng, một bảng giữa (tên sự kiện, hashtag) ở độ cao
+ * ngực-mặt người chụp. Logo dạng vector hoặc PNG đủ lớn; vật liệu mờ chống chói đèn flash. */
+.khuon-photo-wall .luoi-logo { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-evenly; opacity: 0.85; }
+.khuon-photo-wall .hang-lap { display: flex; justify-content: space-around; align-items: center; }
+.khuon-photo-wall .hang-lap.le { transform: translateX(calc(100% / var(--cot) / 2)); }
+.khuon-photo-wall .logo-lap { height: 7cqmin; width: auto; opacity: 0.9; }
+.khuon-photo-wall .vung { justify-content: center; align-items: center; }
+.khuon-photo-wall .bang-giua { padding: 4cqmin 6cqmin; display: flex; flex-direction: column; align-items: center; gap: 1.6cqmin; text-align: center; background: var(--nen); box-shadow: 0 0 0 3cqmin var(--nen); margin-top: -12cqmin; }
+.khuon-photo-wall .bang-giua .logo { height: 10cqmin; }
+.khuon-photo-wall .tieu-de { font-size: calc(var(--co) * 7cqmin); }
+.khuon-photo-wall .hashtag { font-weight: 700; font-size: calc(var(--co) * 3.2cqmin); color: var(--nhanSang); letter-spacing: 0.04em; }

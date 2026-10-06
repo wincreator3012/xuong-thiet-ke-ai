@@ -1,0 +1,873 @@
+{
+  "_huong-dan": "Kho thể thức [format registry]: nguồn sự thật duy nhất về kích thước, vùng an toàn và cách xuất của mọi thể thức. tools/ve.py và he-thong/khung.js đọc file này. Số đo số [digital] tính bằng px ở kích thước thiết kế (1x); số đo in tính bằng mm ở kích thước thành phẩm. 'an' = vùng phải để trống do giao diện nền tảng hay gia công che (tính từ mép thành phẩm, cùng đơn vị với khung); 'le' = lề thiết kế mặc định (phần trăm cạnh ngắn); khuôn dùng giá trị lớn hơn của hai thứ. 'nhom' quyết định bố cục khuôn chọn: vuong, doc-nhe (4:5, 3:4), doc (9:16, 1:2), ngang (16:9, 1.91:1), bang (dải rộng từ 2.5:1 trở lên). Nguồn và mức tin cậy từng con số: chuan/02-mang-xa-hoi-web.md, chuan/03-in-an.md, chuan/04-san-khau-su-kien.md. Thể thức tự do ngoài kho: 'tu-do:1536x768' (px) hoặc 'in:600x300mm' (mm, thêm '@150dpi', '+3mm' cho tràn lề). 'chuToiDa' = định mức chữ trên hình, đếm theo tiếng (âm tiết): tieuDe = số tiếng tối đa của tiêu đề, lyTuong = tổng chữ nên nhắm tới, tran = ngưỡng ve.py báo 'nhieu-chu'. Mức chứng cứ C (quy tắc kinh nghiệm dựng trên nguyên lý tải nhận thức, đọc lướt, đọc từ xa): xem nghien-cuu/E-chu-tren-thiet-ke.md và chuan/08-chu-tren-thiet-ke.md; khuôn tri thức (so-do-tri-thuc, hoi-dap, lich-thong-tin) được nhân 1,4.",
+  "cap-nhat": "2026-10-06",
+  "the-thuc": {
+    "vuong": {
+      "ten": "Vuông 1:1 (Facebook, Instagram, LinkedIn, Zalo)",
+      "loai": "so",
+      "nhom": "vuong",
+      "w": 1080,
+      "h": 1080,
+      "an": {
+        "tren": 0,
+        "duoi": 0,
+        "trai": 0,
+        "phai": 0
+      },
+      "le": 6.5,
+      "xuat": {
+        "tiLe": 2,
+        "dinhDang": [
+          "png",
+          "jpg"
+        ]
+      },
+      "ghiChu": "Lưới hồ sơ Instagram (3:4) chỉ hiện 810 px giữa: nếu bài cần đẹp trên lưới IG, giữ chữ trong x 150-930.",
+      "chuToiDa": {
+        "tieuDe": 12,
+        "lyTuong": 35,
+        "tran": 60
+      }
+    },
+    "ig-4x5": {
+      "ten": "Dọc 4:5 (feed Facebook, Instagram, LinkedIn, Threads)",
+      "loai": "so",
+      "nhom": "doc-nhe",
+      "w": 1080,
+      "h": 1350,
+      "an": {
+        "tren": 0,
+        "duoi": 0,
+        "trai": 34,
+        "phai": 34
+      },
+      "le": 6.5,
+      "xuat": {
+        "tiLe": 2,
+        "dinhDang": [
+          "png",
+          "jpg"
+        ]
+      },
+      "ghiChu": "Thể thức mặc định cho bài feed. Lưới IG cắt 34 px mỗi bên. Facebook giữ tới 2048 px cạnh dài: bản 2x (2160x2700) được thu về 1638x2048, vẫn nét hơn bản 1x.",
+      "chuToiDa": {
+        "tieuDe": 12,
+        "lyTuong": 35,
+        "tran": 60
+      }
+    },
+    "ig-3x4": {
+      "ten": "Dọc 3:4 (Instagram, lưới hồ sơ mới)",
+      "loai": "so",
+      "nhom": "doc-nhe",
+      "w": 1080,
+      "h": 1440,
+      "an": {
+        "tren": 0,
+        "duoi": 0,
+        "trai": 0,
+        "phai": 0
+      },
+      "le": 6.5,
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "png",
+          "jpg"
+        ]
+      },
+      "ghiChu": "Instagram nên tải đúng 1080 px ngang.",
+      "chuToiDa": {
+        "tieuDe": 12,
+        "lyTuong": 35,
+        "tran": 60
+      }
+    },
+    "doc-9x16": {
+      "ten": "Dọc 9:16 dạng ảnh (Story Facebook, Instagram, Zalo)",
+      "loai": "so",
+      "nhom": "doc",
+      "w": 1080,
+      "h": 1920,
+      "an": {
+        "tren": 269,
+        "duoi": 384,
+        "trai": 65,
+        "phai": 65
+      },
+      "le": 6.5,
+      "xuat": {
+        "tiLe": 2,
+        "dinhDang": [
+          "png",
+          "jpg"
+        ]
+      },
+      "ghiChu": "Lề Meta cho Stories: trên 14%, dưới 20%, hai bên 6%.",
+      "chuToiDa": {
+        "tieuDe": 10,
+        "lyTuong": 25,
+        "tran": 40
+      }
+    },
+    "reels-9x16": {
+      "ten": "Dọc 9:16 an toàn mọi nền tảng video (Reels, TikTok, Shorts, ảnh bìa video dọc)",
+      "loai": "so",
+      "nhom": "doc",
+      "w": 1080,
+      "h": 1920,
+      "an": {
+        "tren": 288,
+        "duoi": 672,
+        "trai": 120,
+        "phai": 192
+      },
+      "le": 6.5,
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "png",
+          "jpg"
+        ]
+      },
+      "ghiChu": "Hộp an toàn chung x 120-888, y 288-1248 (tổng hợp Meta Reels, TikTok, YouTube). Ảnh bìa Reels hiện trên lưới IG ở dải y 240-1680.",
+      "chuToiDa": {
+        "tieuDe": 10,
+        "lyTuong": 25,
+        "tran": 40
+      }
+    },
+    "doc-1x2": {
+      "ten": "Dọc 1:2 (ảnh dài xem toàn màn hình, album)",
+      "loai": "so",
+      "nhom": "doc",
+      "w": 1080,
+      "h": 2160,
+      "an": {
+        "tren": 0,
+        "duoi": 0,
+        "trai": 0,
+        "phai": 0
+      },
+      "le": 6.5,
+      "xuat": {
+        "tiLe": 2,
+        "dinhDang": [
+          "png",
+          "jpg"
+        ]
+      },
+      "ghiChu": "Trên feed Facebook ảnh cao hơn 4:5 bị cắt khung 4:5 ở giữa: phần quan trọng nhất đặt trong dải giữa cao 1350 px.",
+      "chuToiDa": {
+        "tieuDe": 10,
+        "lyTuong": 25,
+        "tran": 40
+      }
+    },
+    "ngang-16x9": {
+      "ten": "Ngang 16:9 (trình chiếu, YouTube, bài viết LinkedIn, nền Zoom)",
+      "loai": "so",
+      "nhom": "ngang",
+      "w": 1920,
+      "h": 1080,
+      "an": {
+        "tren": 0,
+        "duoi": 0,
+        "trai": 0,
+        "phai": 0
+      },
+      "le": 6,
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "png",
+          "jpg"
+        ]
+      },
+      "chuToiDa": {
+        "tieuDe": 12,
+        "lyTuong": 35,
+        "tran": 60
+      }
+    },
+    "og-191": {
+      "ten": "Ảnh chia sẻ liên kết 1.91:1 (Open Graph web, Zalo, Facebook link)",
+      "loai": "so",
+      "nhom": "ngang",
+      "w": 1200,
+      "h": 630,
+      "an": {
+        "tren": 60,
+        "duoi": 60,
+        "trai": 100,
+        "phai": 100
+      },
+      "le": 6,
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "jpg",
+          "png"
+        ]
+      },
+      "ghiChu": "Tối đa 8 MB; nhiều nơi cắt vuông ở giữa nên chữ chính đặt giữa.",
+      "chuToiDa": {
+        "tieuDe": 10,
+        "lyTuong": 15,
+        "tran": 25
+      }
+    },
+    "fb-bia": {
+      "ten": "Ảnh bìa trang Facebook (an toàn cả máy tính lẫn điện thoại)",
+      "loai": "so",
+      "nhom": "ngang",
+      "w": 1640,
+      "h": 924,
+      "an": {
+        "tren": 150,
+        "duoi": 150,
+        "trai": 180,
+        "phai": 180
+      },
+      "le": 4,
+      "vungTrong": [
+        {
+          "ten": "ảnh đại diện trang",
+          "x": 0,
+          "y": 600,
+          "w": 420,
+          "h": 324
+        }
+      ],
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "png",
+          "jpg"
+        ]
+      },
+      "ghiChu": "Máy tính hiện dải 1640x624 ở giữa (cắt 150 px trên dưới); điện thoại hiện đủ 16:9.",
+      "chuToiDa": {
+        "tieuDe": 8,
+        "lyTuong": 20,
+        "tran": 30
+      }
+    },
+    "fb-bia-rong": {
+      "ten": "Ảnh bìa Facebook dải rộng 2.63:1 (chỉ tối ưu máy tính)",
+      "loai": "so",
+      "nhom": "bang",
+      "w": 1640,
+      "h": 624,
+      "an": {
+        "tren": 0,
+        "duoi": 0,
+        "trai": 266,
+        "phai": 266
+      },
+      "le": 4,
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "png",
+          "jpg"
+        ]
+      },
+      "ghiChu": "Điện thoại cắt về 16:9 ở giữa (khoảng 1109 px ngang): chữ chính phải nằm trong x 266-1374.",
+      "chuToiDa": {
+        "tieuDe": 8,
+        "lyTuong": 20,
+        "tran": 30
+      }
+    },
+    "fb-su-kien": {
+      "ten": "Ảnh bìa sự kiện Facebook 1.91:1",
+      "loai": "so",
+      "nhom": "ngang",
+      "w": 1920,
+      "h": 1005,
+      "an": {
+        "tren": 80,
+        "duoi": 80,
+        "trai": 160,
+        "phai": 160
+      },
+      "le": 5,
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "png",
+          "jpg"
+        ]
+      },
+      "chuToiDa": {
+        "tieuDe": 10,
+        "lyTuong": 20,
+        "tran": 30
+      }
+    },
+    "yt-thumb": {
+      "ten": "Thumbnail YouTube 16:9",
+      "loai": "so",
+      "nhom": "ngang",
+      "w": 1280,
+      "h": 720,
+      "an": {
+        "tren": 48,
+        "duoi": 48,
+        "trai": 64,
+        "phai": 64
+      },
+      "le": 5,
+      "vungTrong": [
+        {
+          "ten": "nhãn thời lượng",
+          "x": 1000,
+          "y": 600,
+          "w": 280,
+          "h": 120
+        }
+      ],
+      "xuat": {
+        "tiLe": 2,
+        "dinhDang": [
+          "jpg"
+        ]
+      },
+      "ghiChu": "Chữ tối thiểu khoảng 100 px trên khung 1280; 2-5 từ. Bản 2x (2560x1440) dưới 2 MB để tải được cả trên điện thoại.",
+      "chuToiDa": {
+        "tieuDe": 6,
+        "lyTuong": 8,
+        "tran": 12
+      }
+    },
+    "yt-banner": {
+      "ten": "Ảnh bìa kênh YouTube",
+      "loai": "so",
+      "nhom": "ngang",
+      "w": 2560,
+      "h": 1440,
+      "an": {
+        "tren": 508,
+        "duoi": 509,
+        "trai": 507,
+        "phai": 507
+      },
+      "le": 2,
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "jpg",
+          "png"
+        ]
+      },
+      "ghiChu": "Vùng hiện mọi thiết bị 1546x423 ở giữa; tối đa 6 MB.",
+      "chuToiDa": {
+        "tieuDe": 8,
+        "lyTuong": 20,
+        "tran": 30
+      }
+    },
+    "li-banner": {
+      "ten": "Ảnh bìa hồ sơ LinkedIn 4:1",
+      "loai": "so",
+      "nhom": "bang",
+      "w": 1584,
+      "h": 396,
+      "an": {
+        "tren": 40,
+        "duoi": 96,
+        "trai": 480,
+        "phai": 194
+      },
+      "le": 3,
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "png",
+          "jpg"
+        ]
+      },
+      "ghiChu": "Ảnh đại diện đè góc trái dưới; LinkedIn không công bố toạ độ, nên xem thử trên điện thoại. Chữ canh phải hợp nhất.",
+      "chuToiDa": {
+        "tieuDe": 8,
+        "lyTuong": 20,
+        "tran": 30
+      }
+    },
+    "zalo-bai": {
+      "ten": "Ảnh bìa bài viết, tin truyền thông Zalo OA 16:9",
+      "loai": "so",
+      "nhom": "ngang",
+      "w": 1280,
+      "h": 720,
+      "an": {
+        "tren": 0,
+        "duoi": 0,
+        "trai": 80,
+        "phai": 80
+      },
+      "le": 5,
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "jpg"
+        ]
+      },
+      "ghiChu": "Zalo chính thức: 16:9, vùng hiển thị an toàn 14:9, tối đa 15 MB. Ảnh mẫu tin ZNS: dưới 500 KB, chữ không quá 50% diện tích.",
+      "chuToiDa": {
+        "tieuDe": 12,
+        "lyTuong": 35,
+        "tran": 60
+      }
+    },
+    "zalo-bia": {
+      "ten": "Ảnh bìa Zalo OA",
+      "loai": "so",
+      "nhom": "doc-nhe",
+      "w": 1280,
+      "h": 1400,
+      "an": {
+        "tren": 360,
+        "duoi": 360,
+        "trai": 0,
+        "phai": 0
+      },
+      "le": 5,
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "jpg",
+          "png"
+        ]
+      },
+      "ghiChu": "Nguồn thứ ba mâu thuẫn về cách hiển thị; dải giữa y 360-1040 sống được với mọi cách cắt. Đăng thử rồi xem trên cả điện thoại và máy tính.",
+      "chuToiDa": {
+        "tieuDe": 8,
+        "lyTuong": 20,
+        "tran": 30
+      }
+    },
+    "email-dau": {
+      "ten": "Ảnh đầu thư email (hiển thị 600 px)",
+      "loai": "so",
+      "nhom": "bang",
+      "w": 1200,
+      "h": 400,
+      "an": {
+        "tren": 0,
+        "duoi": 0,
+        "trai": 0,
+        "phai": 0
+      },
+      "le": 5,
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "png",
+          "jpg"
+        ]
+      },
+      "ghiChu": "Xuất 2x so với hiển thị; mỗi ảnh dưới 200 KB; thông tin chính phải có cả trong chữ HTML vì nhiều hộp thư chặn ảnh.",
+      "chuToiDa": {
+        "tieuDe": 8,
+        "lyTuong": 20,
+        "tran": 30
+      }
+    },
+    "zoom-nen": {
+      "ten": "Nền ảo Zoom, Teams, Google Meet",
+      "loai": "so",
+      "nhom": "ngang",
+      "w": 1920,
+      "h": 1080,
+      "an": {
+        "tren": 0,
+        "duoi": 0,
+        "trai": 0,
+        "phai": 0
+      },
+      "le": 4,
+      "vungTrong": [
+        {
+          "ten": "đầu và vai người nói",
+          "x": 560,
+          "y": 300,
+          "w": 800,
+          "h": 780
+        }
+      ],
+      "xuat": {
+        "tiLe": 1,
+        "dinhDang": [
+          "jpg"
+        ]
+      },
+      "ghiChu": "Logo, tên đặt góc trên. Người khác thấy chữ đúng chiều dù bản thân thấy ngược.",
+      "chuToiDa": {
+        "tieuDe": 6,
+        "lyTuong": 12,
+        "tran": 20
+      }
+    },
+    "a4-doc": {
+      "ten": "A4 dọc (handout, tờ rơi, worksheet)",
+      "loai": "in",
+      "nhom": "doc-nhe",
+      "wMm": 210,
+      "hMm": 297,
+      "traMm": 3,
+      "dpi": 300,
+      "an": {
+        "tren": 3,
+        "duoi": 3,
+        "trai": 3,
+        "phai": 3
+      },
+      "le": 6,
+      "xuat": {
+        "dinhDang": [
+          "pdf-in",
+          "png"
+        ]
+      },
+      "ghiChu": "Chữ thân 10-11 pt, giãn dòng 1.4-1.5; lề trong tối thiểu 12-15 mm nếu đóng gáy.",
+      "chuToiDa": {
+        "tieuDe": 12,
+        "lyTuong": 350,
+        "tran": 500
+      }
+    },
+    "a4-ngang": {
+      "ten": "A4 ngang (giấy chứng nhận, bảng thông tin)",
+      "loai": "in",
+      "nhom": "ngang",
+      "wMm": 297,
+      "hMm": 210,
+      "traMm": 3,
+      "dpi": 300,
+      "an": {
+        "tren": 3,
+        "duoi": 3,
+        "trai": 3,
+        "phai": 3
+      },
+      "le": 6,
+      "xuat": {
+        "dinhDang": [
+          "pdf-in",
+          "png"
+        ]
+      },
+      "chuToiDa": {
+        "tieuDe": 12,
+        "lyTuong": 350,
+        "tran": 500
+      }
+    },
+    "a5-doc": {
+      "ten": "A5 dọc (tờ rơi, thiệp, workbook)",
+      "loai": "in",
+      "nhom": "doc-nhe",
+      "wMm": 148,
+      "hMm": 210,
+      "traMm": 3,
+      "dpi": 300,
+      "an": {
+        "tren": 3,
+        "duoi": 3,
+        "trai": 3,
+        "phai": 3
+      },
+      "le": 7,
+      "xuat": {
+        "dinhDang": [
+          "pdf-in",
+          "png"
+        ]
+      },
+      "chuToiDa": {
+        "tieuDe": 10,
+        "lyTuong": 200,
+        "tran": 300
+      }
+    },
+    "a3-doc": {
+      "ten": "A3 dọc (poster nhỏ)",
+      "loai": "in",
+      "nhom": "doc-nhe",
+      "wMm": 297,
+      "hMm": 420,
+      "traMm": 3,
+      "dpi": 300,
+      "an": {
+        "tren": 3,
+        "duoi": 3,
+        "trai": 3,
+        "phai": 3
+      },
+      "le": 6,
+      "xuat": {
+        "dinhDang": [
+          "pdf-in",
+          "png"
+        ]
+      },
+      "chuToiDa": {
+        "tieuDe": 12,
+        "lyTuong": 70,
+        "tran": 100
+      }
+    },
+    "poster-60x90": {
+      "ten": "Poster 60x90 cm",
+      "loai": "in",
+      "nhom": "doc-nhe",
+      "wMm": 600,
+      "hMm": 900,
+      "traMm": 3,
+      "dpi": 150,
+      "an": {
+        "tren": 10,
+        "duoi": 10,
+        "trai": 10,
+        "phai": 10
+      },
+      "le": 6,
+      "xuat": {
+        "dinhDang": [
+          "pdf-in",
+          "png"
+        ]
+      },
+      "chuToiDa": {
+        "tieuDe": 12,
+        "lyTuong": 70,
+        "tran": 100
+      }
+    },
+    "danh-thiep": {
+      "ten": "Danh thiếp 90x54 mm",
+      "loai": "in",
+      "nhom": "bang",
+      "wMm": 90,
+      "hMm": 54,
+      "traMm": 3,
+      "dpi": 300,
+      "an": {
+        "tren": 4,
+        "duoi": 4,
+        "trai": 4,
+        "phai": 4
+      },
+      "le": 4,
+      "xuat": {
+        "dinhDang": [
+          "pdf-in",
+          "png"
+        ]
+      },
+      "ghiChu": "File có tràn lề là 96x60 mm. Giấy C300-C350 hoặc mỹ thuật.",
+      "chuToiDa": {
+        "tieuDe": 4,
+        "lyTuong": 30,
+        "tran": 45
+      }
+    },
+    "the-deo": {
+      "ten": "Thẻ đeo sự kiện 9x13 cm",
+      "loai": "in",
+      "nhom": "doc-nhe",
+      "wMm": 90,
+      "hMm": 130,
+      "traMm": 3,
+      "dpi": 300,
+      "an": {
+        "tren": 12,
+        "duoi": 5,
+        "trai": 5,
+        "phai": 5
+      },
+      "le": 6,
+      "xuat": {
+        "dinhDang": [
+          "pdf-in",
+          "png"
+        ]
+      },
+      "ghiChu": "Đo vỏ thẻ thật: ruột nên nhỏ hơn vỏ 2-5 mm. Phía trên chừa lỗ, khe dây đeo.",
+      "chuToiDa": {
+        "tieuDe": 6,
+        "lyTuong": 20,
+        "tran": 30
+      }
+    },
+    "standee-x-60x160": {
+      "ten": "Standee chữ X 60x160 cm",
+      "loai": "in",
+      "nhom": "doc",
+      "wMm": 600,
+      "hMm": 1600,
+      "traMm": 3,
+      "dpi": 150,
+      "an": {
+        "tren": 50,
+        "duoi": 50,
+        "trai": 30,
+        "phai": 30
+      },
+      "le": 6,
+      "vungTrong": [
+        {
+          "ten": "khoen góc trên trái",
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 60
+        },
+        {
+          "ten": "khoen góc trên phải",
+          "x": 540,
+          "y": 0,
+          "w": 60,
+          "h": 60
+        },
+        {
+          "ten": "khoen góc dưới trái",
+          "x": 0,
+          "y": 1540,
+          "w": 60,
+          "h": 60
+        },
+        {
+          "ten": "khoen góc dưới phải",
+          "x": 540,
+          "y": 1540,
+          "w": 60,
+          "h": 60
+        }
+      ],
+      "xuat": {
+        "dinhDang": [
+          "pdf-in"
+        ]
+      },
+      "ghiChu": "Bốn góc bấm khoen: để trống. Chữ tiêu đề cao chữ hoa tối thiểu 2-3 cm.",
+      "chuToiDa": {
+        "tieuDe": 10,
+        "lyTuong": 40,
+        "tran": 60
+      }
+    },
+    "rollup-80x200": {
+      "ten": "Standee cuốn (roll-up) 80x200 cm",
+      "loai": "in",
+      "nhom": "doc",
+      "wMm": 800,
+      "hMm": 2000,
+      "traMm": 3,
+      "dpi": 150,
+      "an": {
+        "tren": 30,
+        "duoi": 150,
+        "trai": 30,
+        "phai": 30
+      },
+      "le": 6,
+      "xuat": {
+        "dinhDang": [
+          "pdf-in"
+        ]
+      },
+      "ghiChu": "Đáy 7-10 cm cuốn vào hộp: không đặt nội dung quan trọng trong 15 cm cuối. Luôn xin file khuôn của nhà in vì có nơi tính phần giấu vào trong 200 cm.",
+      "chuToiDa": {
+        "tieuDe": 10,
+        "lyTuong": 40,
+        "tran": 60
+      }
+    },
+    "backdrop-6x3": {
+      "ten": "Phông sân khấu 6x3 m (thiết kế tỉ lệ 1:10)",
+      "loai": "in",
+      "nhom": "bang",
+      "wMm": 6000,
+      "hMm": 3000,
+      "traMm": 50,
+      "dpi": 300,
+      "tiLeThietKe": 10,
+      "an": {
+        "tren": 200,
+        "duoi": 1700,
+        "trai": 300,
+        "phai": 300
+      },
+      "le": 5,
+      "xuat": {
+        "dinhDang": [
+          "pdf-in"
+        ]
+      },
+      "ghiChu": "File là 600x300 mm ở 300 dpi (bằng 30 ppi khổ thật, đủ cho người xem từ 3 m trở ra). Dưới 1.7 m là vùng người đứng và bục phát biểu: chỉ để nền. Tiêu đề, logo, ngày đặt trong 40% phía trên. Bạt hiflex mờ, đế xám chống chói đèn flash.",
+      "chuToiDa": {
+        "tieuDe": 12,
+        "lyTuong": 30,
+        "tran": 45
+      }
+    },
+    "backdrop-4x25": {
+      "ten": "Phông hội thảo 4x2.5 m (thiết kế tỉ lệ 1:10)",
+      "loai": "in",
+      "nhom": "ngang",
+      "wMm": 4000,
+      "hMm": 2500,
+      "traMm": 50,
+      "dpi": 300,
+      "tiLeThietKe": 10,
+      "an": {
+        "tren": 150,
+        "duoi": 1400,
+        "trai": 200,
+        "phai": 200
+      },
+      "le": 5,
+      "xuat": {
+        "dinhDang": [
+          "pdf-in"
+        ]
+      },
+      "chuToiDa": {
+        "tieuDe": 12,
+        "lyTuong": 30,
+        "tran": 45
+      }
+    },
+    "photo-wall-25x23": {
+      "ten": "Photo wall, check-in 2.5x2.3 m (thiết kế tỉ lệ 1:5)",
+      "loai": "in",
+      "nhom": "vuong",
+      "wMm": 2500,
+      "hMm": 2300,
+      "traMm": 50,
+      "dpi": 300,
+      "tiLeThietKe": 5,
+      "an": {
+        "tren": 100,
+        "duoi": 100,
+        "trai": 100,
+        "phai": 100
+      },
+      "le": 4,
+      "xuat": {
+        "dinhDang": [
+          "pdf-in"
+        ]
+      },
+      "ghiChu": "Người được chụp từ 1.5-2 m nên cần nét hơn backdrop: 1:5 ở 300 dpi (60 ppi khổ thật), logo và chữ giữ dạng vector. Logo lặp rộng 20-30 cm, so le nửa ô mỗi hàng.",
+      "chuToiDa": {
+        "tieuDe": 6,
+        "lyTuong": 15,
+        "tran": 25
+      }
+    }
+  }
+}

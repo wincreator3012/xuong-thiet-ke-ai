@@ -1,0 +1,43 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "so-do-tri-thuc",
+  "thuongHieu": "mau",
+  "chuDe": "giay-muc",
+  "theThuc": [
+    "vuong",
+    "doc-9x16"
+  ],
+  "noiDung": {
+    "kicker": "Năm giai đoạn của nhóm",
+    "tieuDe1": "Một nhóm trưởng thành",
+    "tieuDe2": "qua năm chặng",
+    "dan": "Từ *hình thành* tới *khép lại*, mỗi chặng cần một kiểu hỗ trợ khác.",
+    "soDo": {
+      "loai": "chuoi",
+      "buoc": [
+        {
+          "nhan": "Hình thành",
+          "phu": "làm quen, dè dặt"
+        },
+        {
+          "nhan": "Xung đột",
+          "phu": "khác biệt lộ ra"
+        },
+        {
+          "nhan": "Chuẩn hoá",
+          "phu": "thống nhất cách làm"
+        },
+        {
+          "nhan": "Vận hành",
+          "phu": "làm việc trôi chảy"
+        },
+        {
+          "nhan": "Khép lại",
+          "phu": "tổng kết, chia tay"
+        }
+      ]
+    },
+    "ketLuan": "Nhóm của bạn đang ở **chặng nào**?",
+    "nguon": "Mô hình phát triển nhóm - Bruce Tuckman (1965, 1977)"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "_huong-dan": "Chép thành cau-hinh.json (không đưa lên git) cho từng máy. Đường dẫn tương đối tính từ thư mục repo. thuMucDuAn: nơi làm nháp, mỗi dự án một thư mục con (BRIEF.md, nguon/, anh/, thiet-ke/, nhap/). thuMucThanhPham: nơi ve.py ghi bản cuối, theo <tên dự án>/<tên ấn phẩm>/. Khi người dùng muốn đẩy thành phẩm sang chỗ khác, người dùng nói ở đầu cuộc trò chuyện; Claude dùng --ra cho phiên đó, không sửa file này.",
+  "thuMucDuAn": "../Nhap",
+  "thuMucThanhPham": "../Thanh pham"
+}

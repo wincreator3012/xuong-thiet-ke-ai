@@ -1,0 +1,18 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "trich-dan",
+  "thuongHieu": "mau",
+  "chuDe": "giay-muc",
+  "theThuc": [
+    "ig-4x5",
+    "vuong"
+  ],
+  "noiDung": {
+    "kicker": "Ghi chú từ lớp học",
+    "ngoac": "“",
+    "trich": "Người ta thường không cần lời khuyên. *Họ cần được nghe cho trọn* trước đã.",
+    "tacGia": "Nguyễn Minh An",
+    "nguon": "Chuyên gia tâm lý học thực hành",
+    "cauHoiMo": "Lần gần nhất bạn được nghe trọn vẹn là khi nào?"
+  }
+}

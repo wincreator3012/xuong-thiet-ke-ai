@@ -1,0 +1,46 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "so-do-tri-thuc",
+  "thuongHieu": "mau",
+  "chuDe": "than-dong",
+  "theThuc": [
+    "vuong",
+    "ngang-16x9"
+  ],
+  "noiDung": {
+    "kicker": "Trí tuệ cảm xúc",
+    "tieuDe1": "Năm năng lực",
+    "tieuDe2": "quanh một trục",
+    "soDo": {
+      "loai": "trung-tam",
+      "tam": {
+        "nhan": "Trí tuệ cảm xúc",
+        "phu": "hiểu và dùng cảm xúc"
+      },
+      "nhanh": [
+        {
+          "nhan": "Tự nhận thức",
+          "phu": "biết mình đang cảm gì"
+        },
+        {
+          "nhan": "Tự điều chỉnh",
+          "phu": "chọn cách đáp lại"
+        },
+        {
+          "nhan": "Động lực",
+          "phu": "đi tiếp vì điều có ý nghĩa"
+        },
+        {
+          "nhan": "Đồng cảm",
+          "phu": "cảm cùng người khác"
+        },
+        {
+          "nhan": "Kỹ năng xã hội",
+          "phu": "xây quan hệ bền"
+        }
+      ]
+    },
+    "ketLuan": "Năng lực nào bạn đang nuôi dưỡng nhiều nhất?",
+    "nguon": "Mô hình trí tuệ cảm xúc - Daniel Goleman (1995)"
+  }
+}

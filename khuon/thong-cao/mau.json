@@ -1,0 +1,65 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "thong-cao",
+  "phienBan": 1,
+  "thuongHieu": "mau",
+  "chuDe": "dem-vang",
+  "theThuc": [
+    "vuong",
+    "ig-4x5",
+    "doc-9x16",
+    "ngang-16x9",
+    "fb-bia-rong"
+  ],
+  "noiDung": {
+    "tieuDe1": "Giao tiếp tỉnh thức",
+    "tieuDe2": "Khoá~3",
+    "phuDe": "Lắng nghe để hiểu, nói để kết nối",
+    "moTa": "Tám tuần thực hành **lắng nghe và phản hồi** cho người làm việc với con người trong gia đình, lớp học và tổ chức.",
+    "nguoi": [
+      {
+        "anh": {
+          "src": "kho:khuon/_chung/nguoi-mau-tach.png",
+          "tieuDiem": [
+            0.5,
+            1
+          ]
+        },
+        "vai": "Lắng nghe",
+        "ten": "TS~Nguyễn~Minh~An",
+        "chucDanh": "Chuyên gia tâm lý\nhọc thực hành"
+      },
+      {
+        "anh": {
+          "src": "kho:khuon/_chung/nguoi-mau-tach-2.png",
+          "tieuDiem": [
+            0.5,
+            1
+          ]
+        },
+        "vai": "Kết nối",
+        "ten": "ThS~Trần~Thu~Hà",
+        "chucDanh": "Chuyên gia phát triển\ntổ chức"
+      }
+    ],
+    "ngay": "15.10.2026",
+    "nhanNgay": "Khai giảng",
+    "diemNhan": "8 tuần thực hành",
+    "diemNhanPhu": "16 buổi theo cặp",
+    "tinhNang": [
+      {
+        "nhan": "Bài tập theo cặp",
+        "moTa": "Giảng viên phản hồi từng tuần"
+      },
+      {
+        "nhan": "8 buổi trực tuyến",
+        "moTa": "Qua Zoom, có ghi hình"
+      },
+      {
+        "nhan": "Nhóm nhỏ 1:6",
+        "moTa": "Một trợ giảng cho sáu người"
+      }
+    ],
+    "cta": "Đăng ký"
+  }
+}

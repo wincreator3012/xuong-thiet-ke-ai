@@ -1,0 +1,36 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "so-do-tri-thuc",
+  "thuongHieu": "mau",
+  "chuDe": "giay-muc",
+  "theThuc": [
+    "vuong",
+    "doc-9x16"
+  ],
+  "noiDung": {
+    "kicker": "Văn hoá tổ chức",
+    "tieuDe1": "Ba tầng",
+    "tieuDe2": "của một nền văn hoá",
+    "soDo": {
+      "loai": "tang",
+      "kieu": "thap",
+      "mucNhan": 0,
+      "tang": [
+        {
+          "nhan": "Giả định nền",
+          "phu": "điều ai cũng ngầm tin"
+        },
+        {
+          "nhan": "Giá trị tuyên bố",
+          "phu": "điều tổ chức nói mình coi trọng"
+        },
+        {
+          "nhan": "Biểu hiện",
+          "phu": "điều thấy được: không gian, nghi thức"
+        }
+      ]
+    },
+    "ketLuan": "Tầng nào ở tổ chức bạn **khó đổi nhất**?",
+    "nguon": "Mô hình văn hoá tổ chức - Edgar Schein (1985)"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "_ghiChu": "Nội dung mẫu GIẢ ĐỊNH để kiểm khuôn (tools/kiem-khuon.py): người, chương trình, tổ chức đều không có thật. Ấn phẩm thật nằm trong thư mục dự án (Nhap/), không nằm trong repo.",
+  "khuon": "lich-thong-tin",
+  "thuongHieu": "mau",
+  "chuDe": "dem-vang",
+  "theThuc": [
+    "vuong",
+    "doc-9x16"
+  ],
+  "noiDung": {
+    "tieuDe1": "Thông tin khai giảng",
+    "tieuDe2": "Khoá 3",
+    "lich": {
+      "thang": 10,
+      "nam": 2026,
+      "ngayNhan": [
+        15
+      ]
+    },
+    "ngay": "15.10.2026",
+    "nhanNgay": "Khai giảng · Buổi 01",
+    "thongTin": [
+      {
+        "bieuTuong": "dong-ho",
+        "nhan": "19:30 - 21:30",
+        "phu": "Tối thứ Năm"
+      },
+      {
+        "bieuTuong": "may-quay",
+        "nhan": "Trực tuyến",
+        "phu": "qua Zoom, có ghi hình"
+      },
+      {
+        "bieuTuong": "muc-tieu",
+        "nhan": "Thực hành",
+        "phu": "nghe và phản hồi theo cặp"
+      }
+    ],
+    "cta": "Giữ chỗ khai giảng"
+  }
+}
