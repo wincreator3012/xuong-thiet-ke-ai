@@ -105,7 +105,7 @@ def cau_hinh_trong_repo():
     for khoa in ('thuMucDuAn', 'thuMucThanhPham'):
         d = ve.duong_cau_hinh(khoa)
         if d and ve.trong_repo(d):
-            loi.append(f'cau-hinh.json > {khoa} trỏ vào trong repo ({d}): đổi ra ngoài repo (ví dụ "../Nhap", "../Thanh pham")')
+            loi.append(f'cau-hinh.json > {khoa} trỏ vào trong repo ({d}): đổi ra ngoài repo (ví dụ "../Du an", "../Thanh pham")')
     return loi
 
 

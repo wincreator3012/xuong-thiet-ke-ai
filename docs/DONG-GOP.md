@@ -8,13 +8,15 @@ Tác giả (Lương Dũng Nhân, ldn.edu.vn) dùng một xưởng riêng hằng 
 
 Phần của bạn không bao giờ bị bản mới ghi đè:
 
-- ngoài repo: `Nhap/`, `Thanh pham/` (mọi dự án, nháp, thành phẩm);
+- ngoài repo: `Du an/`, `Thanh pham/` (mọi dự án, nháp, thành phẩm);
 - trong repo nhưng là của bạn: `brand/brand.json`, logo bạn thả vào `brand/logo/`, `phong-cach/PHONG-CACH.md`, `phong-cach/tu-ngu.json`, `phong-cach/PHAN-TICH-MAU.md`, `phong-cach/mau-tham-khao/`, `minh-hoa/an-du.json`, `cau-hinh.json`. Các tệp này được tạo trên máy bạn ở bước cài, từ bản khởi đầu cùng tên có thêm `.mau` (ví dụ `brand/brand.mau.json`); repo chung chỉ chứa bản khởi đầu, và `.gitignore` giữ bản của bạn ngoài git, nên bản cập nhật chỉ có thể thay bản khởi đầu, không đụng tới bản của bạn.
 
 Cách cập nhật, chọn một:
 
 1. **Nhờ trợ lý AI** (dễ nhất): tải bản mới (nút Code, Download ZIP trên GitHub), giải nén ra một thư mục tạm cạnh repo, rồi nói: "Cập nhật xưởng từ thư mục <tên thư mục tạm>, giữ nguyên brand, phong-cach, an-du.json, cau-hinh.json của tôi". Trợ lý chép phần năng lực mới vào repo, giữ phần của bạn, so `brand/brand.mau.json` bản mới với `brand/brand.json` của bạn để thêm họ màu, khoá mới (nếu có) mà không đổi giá trị bạn đã đặt, rồi chạy `python3 tools/kiem-tai-lieu.py`, `python3 tools/kiem-khuon.py`, `python3 tools/kiem-sach.py`.
 2. **Dùng git** (nếu bạn đã `git clone`): `git pull`. Phần của bạn nằm ngoài git nên không xung đột; sau đó nhờ trợ lý so bản khởi đầu mới với bản của bạn như cách 1.
+
+Đang dùng bản cũ có thư mục `Nhap/` cạnh repo: công cụ vẫn chạy (đọc `cau-hinh.json`). Muốn theo bố cục mới thì đổi tên `Nhap` thành `Du an` và sửa `thuMucDuAn` trong `cau-hinh.json` thành `"../Du an"`; thành phẩm cũ trong `Thanh pham/` giữ nguyên, ấn phẩm xuất mới được đánh số `NN <ấn phẩm>`.
 
 ## Đóng góp
 

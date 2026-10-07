@@ -29,7 +29,7 @@ Cài xong, mở ứng dụng và đăng nhập. Với Claude Desktop: chọn ch�
 
 1. Mở **Documents** (Tài liệu), tạo một thư mục mới tên **AI Designer**. Đây là nơi chứa xưởng và mọi việc bạn làm với nó.
 2. Trên trang GitHub của repo này, bấm nút xanh **Code**, chọn **Download ZIP**.
-3. Giải nén (Mac: bấm đúp tệp ZIP; Windows: bấm chuột phải, chọn "Extract All"). Bạn có một thư mục tên `Claude-Designer-for-Speaker-main`; đổi tên thành `Claude-Designer-for-Speaker` và kéo vào trong **AI Designer**.
+3. Giải nén (Mac: bấm đúp tệp ZIP; Windows: bấm chuột phải, chọn "Extract All"). Bạn có một thư mục tên `xuong-thiet-ke-ai-main`; đổi tên thành `xuong-thiet-ke-ai` và kéo vào trong **AI Designer**.
 
 Quen dùng Terminal: `cd ~/Documents/AI\ Designer && git clone <địa chỉ repo>` cho kết quả tương tự và sau này cập nhật dễ hơn.
 
@@ -38,10 +38,10 @@ Kết quả:
 ```
 Documents/
 └── AI Designer/
-    └── Claude-Designer-for-Speaker/
+    └── xuong-thiet-ke-ai/
 ```
 
-Hai thư mục `Nhap` (nháp) và `Thanh pham` (thành phẩm) sẽ được tạo tự động bên cạnh repo ở bước cài. Vì sao tách ra: repo chỉ chứa "năng lực" của xưởng, còn việc của bạn nằm riêng, nên lúc cập nhật xưởng không đụng tới dự án nào của bạn.
+Hai thư mục `Du an` (hồ sơ dự án, nháp) và `Thanh pham` (thành phẩm) sẽ được tạo tự động bên cạnh repo ở bước cài. Vì sao tách ra: repo chỉ chứa "năng lực" của xưởng, còn việc của bạn nằm riêng, nên lúc cập nhật xưởng không đụng tới dự án nào của bạn.
 
 ## Bước 3: mở thư mục trong ứng dụng AI
 
@@ -57,11 +57,11 @@ Từ lúc này trợ lý đọc và ghi được trong thư mục đó, và ch�
 
 Gõ vào khung chat:
 
-> Đọc file CLAUDE.md trong thư mục Claude-Designer-for-Speaker rồi thiết lập xưởng thiết kế cho tôi.
+> Đọc file CLAUDE.md trong thư mục xuong-thiet-ke-ai rồi thiết lập xưởng thiết kế cho tôi.
 
 Ứng dụng khác Claude:
 
-> Đọc file AGENTS.md trong thư mục Claude-Designer-for-Speaker rồi thiết lập xưởng thiết kế cho tôi.
+> Đọc file AGENTS.md trong thư mục xuong-thiet-ke-ai rồi thiết lập xưởng thiết kế cho tôi.
 
 Chuyện gì sẽ xảy ra, theo thứ tự:
 
@@ -89,7 +89,7 @@ Nói với trợ lý một câu có đủ ba ý: làm gì, cho ai, đăng ở đ
 
 > Làm bộ ảnh thông cáo khoá "Lắng nghe trọn vẹn" khai giảng tối thứ Năm 12/11, học trực tuyến 8 buổi, cho phụ huynh có con tuổi teen. Đăng Facebook, Instagram và story. Ảnh của tôi ở đây [kèm ảnh].
 
-Trợ lý tạo một thư mục dự án trong `Nhap/`, viết **brief** (thông điệp, chữ nguyên văn, khuôn, họ màu, các khổ) và hỏi những gì còn thiếu. Bạn duyệt. Trợ lý dựng bản nháp mọi khổ và gửi **tờ tổng thể** (tất cả khổ cạnh nhau). Bạn góp ý bằng lời, hoặc tự mở Bàn thiết kế sửa. Ưng rồi trợ lý xuất **bản cuối** vào `Thanh pham/<tên dự án>/`, kèm văn bản thay thế cho từng ảnh và lưu ý khi đăng. Đó là tệp bạn đăng.
+Trợ lý tạo một thư mục dự án trong `Du an/`, viết **brief** (thông điệp, chữ nguyên văn, khuôn, họ màu, các khổ) và hỏi những gì còn thiếu. Bạn duyệt. Trợ lý dựng bản nháp mọi khổ và gửi **tờ tổng thể** (tất cả khổ cạnh nhau). Bạn góp ý bằng lời, hoặc tự mở Bàn thiết kế sửa. Ưng rồi trợ lý xuất **bản cuối** vào `Thanh pham/<tên dự án>/`, kèm văn bản thay thế cho từng ảnh và lưu ý khi đăng. Đó là tệp bạn đăng.
 
 Cách đặt yêu cầu cho từng loại ấn phẩm, ví dụ câu nói, Bàn thiết kế, xử lý khi có gì lạ: đọc tiếp [HUONG-DAN.md](HUONG-DAN.md).
 
@@ -97,7 +97,7 @@ Cách đặt yêu cầu cho từng loại ấn phẩm, ví dụ câu nói, Bàn 
 
 - **Hai tệp bấm đúp ở gốc repo**: `Mo ban thiet ke` (mở Bàn thiết kế để tự chỉnh) và `Dung tren may` (khi trợ lý nhờ máy bạn dựng ảnh). Mac dùng bản `.command`, Windows dùng bản `.bat`. Lần đầu, Mac có thể chặn: bấm chuột phải vào tệp, chọn Open, rồi Open lần nữa; Windows có thể hiện "Windows protected your PC": bấm "More info" rồi "Run anyway".
 - **Giữ ứng dụng AI mở và máy không ngủ** khi trợ lý đang dựng cả bộ hay xuất file in.
-- **Ảnh của bạn ở trên máy bạn.** Thư mục `Nhap/` và `Thanh pham/` nằm trên máy. Ứng dụng AI chạy trên đám mây chỉ nhận những tệp cần cho bước đang làm, như khi bạn gửi ảnh vào khung chat.
+- **Ảnh của bạn ở trên máy bạn.** Thư mục `Du an/` và `Thanh pham/` nằm trên máy. Ứng dụng AI chạy trên đám mây chỉ nhận những tệp cần cho bước đang làm, như khi bạn gửi ảnh vào khung chat.
 - **Dùng trên hai máy**: đặt thư mục `AI Designer` vào iCloud Drive, Dropbox hay OneDrive là dùng chung được; chờ tệp tải hết về máy đang ngồi trước khi làm việc lớn. Trên mỗi máy mới, nói với trợ lý "kiểm tra xưởng" để nó cài phần còn thiếu.
 - **Muốn đổi phong cách** (màu, chức danh, logo, cách viết): nói "đổi phong cách" và nêu điều muốn đổi. Không cần làm lại từ đầu.
 - **Muốn chỉnh ảnh, tách nền, làm file in CMYK**: nói với trợ lý, nó cài thêm thư viện cần thiết (vài trăm MB) lần đầu dùng.

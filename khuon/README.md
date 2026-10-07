@@ -2,7 +2,7 @@
 
 Mỗi khuôn là một thư mục: `khuon.html` (cấu trúc), `khuon.css` (bố cục theo nhóm tỉ lệ: vuong, doc-nhe, doc, ngang, bang), `mau*.json` (nội dung mẫu để kiểm). Khuôn không chứa nội dung, màu, kích thước: những thứ đó đến từ file ấn phẩm, `brand/brand.json` và `chuan/kho-the-thuc.json`. Ảnh mẫu trung tính (hình bán thân cách điệu) ở `_chung/`.
 
-Thử một khuôn: `python3 tools/kiem-khuon.py <id>` (kết quả ở `Nhap/_tam/kiem-khuon/`, ngoài repo); thử riêng một mẫu: `python3 tools/ve.py khuon/<id>/mau.json --nhap --ra "<thư mục Nhap>/_tam/thu"` (ve.py từ chối `--ra` trong repo). Phần phụ của khuôn (mô tả dài, chú thích, nhãn phụ) gắn `data-rut-gon` để tự ẩn ở story 9:16 (nhóm `doc`); khuôn mới cũng phải đánh dấu như vậy. Kiểm cả kho sau khi sửa: `python3 tools/kiem-khuon.py`.
+Thử một khuôn: `python3 tools/kiem-khuon.py <id>` (kết quả ở `Du an/_tam/kiem-khuon/`, ngoài repo); thử riêng một mẫu: `python3 tools/ve.py khuon/<id>/mau.json --nhap --ra "<thư mục Nhap>/_tam/thu"` (ve.py từ chối `--ra` trong repo). Phần phụ của khuôn (mô tả dài, chú thích, nhãn phụ) gắn `data-rut-gon` để tự ẩn ở story 9:16 (nhóm `doc`); khuôn mới cũng phải đánh dấu như vậy. Kiểm cả kho sau khi sửa: `python3 tools/kiem-khuon.py`.
 
 ## Danh mục
 

@@ -5,10 +5,11 @@ Tài liệu cho người dùng, đọc sau khi đã cài xong ([BAT-DAU.md](BAT-
 ## 1. Một ấn phẩm đi qua những bước nào
 
 1. **Bạn nói nhu cầu**, kèm tư liệu nếu có (ảnh gốc, logo đối tác, nội dung chương trình). Một câu tốt có ba ý: làm gì, cho ai, đăng ở đâu.
-2. **Trợ lý lập brief** trong thư mục dự án (`Nhap/<năm-tháng tên dự án>/BRIEF.md`): mục đích, người xem, chữ nguyên văn, chức danh, khổ, họ màu, khuôn. Nó hỏi bạn MỘT lượt những gì còn thiếu. **Chốt 1: bạn duyệt brief.** Sửa ở đây rẻ nhất.
+2. **Trợ lý lập brief** trong thư mục dự án (`Du an/<năm-tháng tên dự án>/BRIEF.md`): mục đích, người xem, chữ nguyên văn, chức danh, khổ, họ màu, khuôn. Nó hỏi bạn MỘT lượt những gì còn thiếu. **Chốt 1: bạn duyệt brief.** Sửa ở đây rẻ nhất.
 3. **Trợ lý dựng bản nháp** mọi khổ và gửi **tờ tổng thể** (tất cả khổ đặt cạnh nhau) kèm vài dòng giải thích lựa chọn và cảnh báo còn lại. Bạn góp ý bằng lời, hoặc tự mở Bàn thiết kế sửa. **Chốt 2: bạn duyệt tờ tổng thể.**
-4. **Trợ lý xuất bản cuối** vào `Thanh pham/<tên dự án>/<tên ấn phẩm>/`: ảnh nét gấp đôi đúng chuẩn từng nền tảng (PNG và JPG), PDF in CMYK khi cần in; kèm văn bản thay thế [alt text] cho từng ảnh và lưu ý khi đăng.
-5. **Góp ý đáng nhớ được ghi lại**: góp ý của từng dự án vào `SO-GOP-Y.md` của dự án; góp ý lặp lại lần thứ hai thì trợ lý sửa luôn mặc định của xưởng và ghi vào sổ tay góp ý trong `phong-cach/PHONG-CACH.md`, để lần sau không phải nói lại.
+4. **Trợ lý xuất bản cuối** vào `Thanh pham/<tên dự án>/NN <tên ấn phẩm>/` (mỗi ấn phẩm một thư mục đánh số): ảnh nét gấp đôi đúng chuẩn từng nền tảng (PNG và JPG), PDF in CMYK khi cần in; kèm văn bản thay thế [alt text] cho từng ảnh và lưu ý khi đăng.
+5. **Bạn nói "duyệt"**: trợ lý đóng gói (mỗi thư mục ấn phẩm có thêm báo cáo nghiệm thu và `DANG.md`: văn bản thay thế, lời đăng gợi ý, lưu ý đăng hoặc gửi in), xin phép bạn một lần rồi dọn nháp của dự án. Hồ sơ dự án chỉ còn brief, sổ góp ý, tư liệu, ảnh đã xử lý và file ấn phẩm, đủ để dựng lại khi cần.
+6. **Góp ý đáng nhớ được ghi lại**: góp ý của từng dự án vào `SO-GOP-Y.md` của dự án; góp ý lặp lại lần thứ hai thì trợ lý sửa luôn mặc định của xưởng và ghi vào sổ tay góp ý trong `phong-cach/PHONG-CACH.md`, để lần sau không phải nói lại.
 
 Trước khi báo "xong", trợ lý phải qua cổng nghiệm thu: máy không báo lỗi (chữ tràn, lấn vùng bị che), trợ lý đã nhìn ảnh thật và đọc soát từng chữ.
 
@@ -65,7 +66,7 @@ Muốn xem đủ 30 khổ: "liệt kê các khổ xưởng làm được". Khổ
 
 Mở: vào thư mục repo, **bấm đúp `Mo ban thiet ke.command`** (Mac) hoặc **`Mo ban thiet ke.bat`** (Windows). Trình duyệt mở trang Bàn thiết kế; giữ cửa sổ dòng lệnh mở trong lúc làm.
 
-- **Chọn ấn phẩm** ở ô trên cùng (danh sách lấy từ các dự án trong `Nhap/`), hoặc trợ lý gửi bạn đường dẫn mở thẳng.
+- **Chọn ấn phẩm** ở ô trên cùng (danh sách lấy từ các dự án trong `Du an/`), hoặc trợ lý gửi bạn đường dẫn mở thẳng.
 - **Khổ** ở cột trái: bấm để chuyển khổ; "+ thêm thể thức" để ra thêm khổ mới từ cùng nội dung; bấm chuột phải vào một khổ để bỏ.
 - **Bấm một phần tử** để chọn: kéo để dời, kéo góc để đổi cỡ, kéo chấm tròn để xoay, phím mũi tên để dời 1 px (giữ Shift: 10 px).
 - **Bấm đúp vào chữ** để sửa ngay trên ấn phẩm; Esc hoặc bấm ra ngoài để xong.
@@ -124,8 +125,8 @@ Trợ lý xuất PDF in CMYK đúng chuẩn (tràn lề, vùng an toàn, chữ �
 
 Trong thư mục `AI Designer`, cạnh repo:
 
-- `Nhap/<năm-tháng tên dự án>/` (trợ lý tạo): `BRIEF.md`, `SO-GOP-Y.md`, `nguon/` (tư liệu bạn đưa), `anh/` (ảnh đã xử lý), `thiet-ke/` (file ấn phẩm, Bàn thiết kế ghi vào đây), `nhap/` (bản dựng nháp, tờ tổng thể).
-- `Thanh pham/<năm-tháng tên dự án>/<tên ấn phẩm>/`: ảnh, PDF bản cuối để đăng, gửi in.
+- `Du an/<năm-tháng tên dự án>/` (trợ lý tạo): `BRIEF.md`, `SO-GOP-Y.md`, `nguon/` (tư liệu bạn đưa), `anh/` (ảnh đã xử lý), `thiet-ke/` (file ấn phẩm, Bàn thiết kế ghi vào đây), `nhap/` (bản dựng nháp, tờ tổng thể).
+- `Thanh pham/<năm-tháng tên dự án>/NN <tên ấn phẩm>/`: ảnh, PDF bản cuối để đăng, gửi in; sau khi duyệt có thêm báo cáo nghiệm thu và `DANG.md`. Sao lưu cả dự án bằng cách dời một thư mục.
 
 Repo không bao giờ chứa nháp hay thành phẩm: trợ lý ghi mọi thứ ra ngoài repo và cuối mỗi phiên kiểm repo còn sạch. Thấy thư mục lạ như `Claude outputs/` trong repo: đó là bản chép ứng dụng tạo khi gửi ảnh vào khung chat; trợ lý sẽ dọn.
 

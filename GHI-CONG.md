@@ -18,7 +18,7 @@ Bản ngắn (dưới bài viết, mô tả video, đầu tài liệu):
 
 Bản đầy đủ (trong README của bản rẽ nhánh, tài liệu khoá học):
 
-> Xưởng thiết kế Claude (Claude-Designer-for-Speaker), tác giả Lương Dũng Nhân, ldn.edu.vn. Tài liệu theo CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), mã nguồn theo MIT. [Ghi rõ nếu bạn đã sửa đổi: "Đã chỉnh sửa: ..."]
+> Xưởng thiết kế Claude (xuong-thiet-ke-ai), tác giả Lương Dũng Nhân, ldn.edu.vn. Tài liệu theo CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), mã nguồn theo MIT. [Ghi rõ nếu bạn đã sửa đổi: "Đã chỉnh sửa: ..."]
 
 Trong bản rẽ nhánh hay bản sao của repo: giữ nguyên `LICENSE`, `LICENSE-TAI-LIEU.md`, tệp này, và mục "Tác giả" trong `README.md`.
 

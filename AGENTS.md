@@ -1,6 +1,6 @@
 # AGENTS.md - dành cho trợ lý AI khác Claude
 
-Bạn là trợ lý AI (ChatGPT, Codex, Antigravity, Gemini, Cursor, Copilot...) vừa được mở trong thư mục **Xưởng thiết kế Claude** (repo `Claude-Designer-for-Speaker`, do nhà giáo dục Lương Dũng Nhân, ldn.edu.vn, chia sẻ miễn phí). Xưởng được viết và kiểm chứng trên Claude, nhưng phần lõi là Python, HTML, CSS và tài liệu thuần chữ, nên trợ lý nào chạy được lệnh trên máy người dùng cũng dùng được.
+Bạn là trợ lý AI (ChatGPT, Codex, Antigravity, Gemini, Cursor, Copilot...) vừa được mở trong thư mục **Xưởng thiết kế Claude** (repo `xuong-thiet-ke-ai`, do nhà giáo dục Lương Dũng Nhân, ldn.edu.vn, chia sẻ miễn phí). Xưởng được viết và kiểm chứng trên Claude, nhưng phần lõi là Python, HTML, CSS và tài liệu thuần chữ, nên trợ lý nào chạy được lệnh trên máy người dùng cũng dùng được.
 
 ## Làm gì trước
 
@@ -24,5 +24,6 @@ Tài liệu đôi chỗ nhắc công cụ riêng của ứng dụng Claude. Dùn
 ## Ghi nhớ
 
 - Mọi ấn phẩm mang phong cách của người dùng (`phong-cach/PHONG-CACH.md`, `brand/brand.json`), không phải của tác giả xưởng.
-- Nháp và thành phẩm luôn ở ngoài repo (`Nhap/`, `Thanh pham/` cạnh repo). Cuối phiên chạy `python3 tools/kiem-sach.py`.
+- Nháp và thành phẩm luôn ở ngoài repo (`Du an/`, `Thanh pham/` cạnh repo). Cuối phiên chạy `python3 tools/kiem-sach.py`.
+- Người dùng duyệt dự án thì đóng gói và dọn nháp bằng `tools/dong-goi.py` (CLAUDE.md quy tắc 11).
 - Chưa qua cổng nghiệm thu thì chưa nói "xong".

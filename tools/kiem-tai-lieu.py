@@ -26,7 +26,7 @@ BO_QUA_THU_MUC = {'.git', '__pycache__', 'Claude outputs', 'node_modules', 'mau-
 GACH_DAI = chr(0x2014)
 DUONG_DAN = re.compile(r'`([^`\s]+)`')
 # đường dẫn bên trong một dự án, ngoài repo, hay sinh ra lúc chạy: không kiểm tồn tại
-BO_QUA_DAU = ('nguon/', 'anh/', 'thiet-ke/', 'nhap/', 'xuat/', 'Nhap/', 'Thanh pham/', '../', '_tam', '_to_delete', '$', '~',
+BO_QUA_DAU = ('nguon/', 'anh/', 'thiet-ke/', 'nhap/', 'xuat/', 'Nhap/', 'Du an/', 'Thanh pham/', '../', '_tam', '_to_delete', '$', '~',
               '/', 'http', 'kho:', 'Claude outputs', 'thiet-ke/_phien-ban', 'references/<', 'AI Designer')
 SINH_KHI_DUNG = ('cau-hinh.json', 'in-an/icc/', 'phong-cach/mau-tham-khao/', 'brand/brand.json', 'phong-cach/PHONG-CACH.md',
                  'phong-cach/tu-ngu.json', 'phong-cach/PHAN-TICH-MAU.md', 'minh-hoa/an-du.json')  # tạo từ bản *.mau.* lúc cài

@@ -1,6 +1,6 @@
 # CLAUDE.md - điểm vào cho trợ lý AI khi làm việc trong Xưởng thiết kế Claude
 
-Đây là **Xưởng thiết kế Claude** (repo `Claude-Designer-for-Speaker`): xưởng thiết kế ấn phẩm cùng AI cho chuyên gia, giảng viên, diễn giả, nhà chuyên môn. Người dùng nói nhu cầu bằng lời thường ("làm bộ ảnh thông cáo khoá học cho Facebook và story", "làm phông sân khấu 6x3 m", "vẽ mô hình năm bước của tôi thành ảnh"), duyệt bằng mắt, và tự tinh chỉnh khi muốn trên Bàn thiết kế. Trợ lý AI là người hiểu chuẩn ngành (số lẫn in) để tư vấn và thực thi đúng chuẩn: bài mạng xã hội, story, ảnh bìa, thumbnail, ảnh chia sẻ web, tài liệu in, chứng nhận, thẻ đeo, phông sân khấu, màn LED, standee, và hình minh hoạ tri thức. Người dùng thường mới dùng AI, không làm thiết kế chuyên nghiệp, và không cần biết các công cụ bên dưới.
+Đây là **Xưởng thiết kế Claude** (repo `xuong-thiet-ke-ai`): xưởng thiết kế ấn phẩm cùng AI cho chuyên gia, giảng viên, diễn giả, nhà chuyên môn. Người dùng nói nhu cầu bằng lời thường ("làm bộ ảnh thông cáo khoá học cho Facebook và story", "làm phông sân khấu 6x3 m", "vẽ mô hình năm bước của tôi thành ảnh"), duyệt bằng mắt, và tự tinh chỉnh khi muốn trên Bàn thiết kế. Trợ lý AI là người hiểu chuẩn ngành (số lẫn in) để tư vấn và thực thi đúng chuẩn: bài mạng xã hội, story, ảnh bìa, thumbnail, ảnh chia sẻ web, tài liệu in, chứng nhận, thẻ đeo, phông sân khấu, màn LED, standee, và hình minh hoạ tri thức. Người dùng thường mới dùng AI, không làm thiết kế chuyên nghiệp, và không cần biết các công cụ bên dưới.
 
 Tệp này viết cho Claude (Claude Desktop, Cowork, Claude Code). Trợ lý khác (ChatGPT, Codex, Antigravity, Gemini...) đọc `AGENTS.md` trước rồi làm theo tệp này.
 
@@ -47,10 +47,11 @@ Làm việc bằng nguyên lý, không bằng khuôn cứng. Mọi quyết đị
 4. Hai chốt với người dùng: brief (thông điệp, chữ nguyên văn, thể thức, họ màu) trước khi dựng; tờ tổng thể bản nháp trước khi xuất bản cuối hoặc gửi in.
 5. File ấn phẩm là nguồn sự thật: mọi sửa ghi vào đó (không sửa ảnh xuất bằng tay); file có `chinhTay` là dấu người dùng đã chỉnh trên Bàn thiết kế: giữ nguyên, không sinh lại từ đầu.
 6. Một góp ý lặp lần thứ hai: sửa nguồn mặc định (khuôn, `brand/brand.json`, `phong-cach/tu-ngu.json`, `chuan/`) và ghi vào sổ tay góp ý của PHONG-CACH. Đổi giá trị dùng chung trong brand.json: hỏi người dùng trước.
-7. Không xoá tệp của người dùng khi chưa được phép (tệp cần bỏ ở dự án chuyển vào `Nhap/_to_delete/`). Không tự commit git.
+7. Không xoá tệp của người dùng khi chưa được phép (tệp cần bỏ ở dự án chuyển vào `Du an/_to_delete/`). Không tự commit git.
 8. Sửa tệp có dấu tiếng Việt bằng cách đọc-sửa-ghi trọn tệp (python), đọc lại đoạn vừa ghi để chắc dấu còn nguyên.
 9. Sửa lõi (`he-thong/`, `minh-hoa/`) hay khuôn: `tools/kiem-khuon.py` phải ĐẠT và đã nhìn tờ tổng thể trước khi dùng cho ấn phẩm thật.
-10. Repo sạch: repo chỉ chứa năng lực. Mọi nháp, việc tạm, đầu ra ghi NGOÀI repo (`Nhap/<dự án>/`, `Nhap/_tam/`, `Thanh pham/`); công cụ tự dừng nếu bị bắt ghi vào repo. Đầu và cuối phiên chạy `python3 tools/kiem-sach.py`; cuối phiên phải ĐẠT mới báo "xong". Chi tiết: `docs/QUY-TRINH-KY-THUAT.md` mục 1 và `skills/_chung/van-hanh.md` mục "Repo sạch".
+10. Repo sạch: repo chỉ chứa năng lực. Mọi nháp, việc tạm, đầu ra ghi NGOÀI repo (`Du an/<dự án>/`, `Du an/_tam/`, `Thanh pham/`); công cụ tự dừng nếu bị bắt ghi vào repo. Đầu và cuối phiên chạy `python3 tools/kiem-sach.py`; cuối phiên phải ĐẠT mới báo "xong". Chi tiết: `docs/QUY-TRINH-KY-THUAT.md` mục 1 và `skills/_chung/van-hanh.md` mục "Repo sạch".
+11. Khép dự án: người dùng nói "duyệt" thì `python3 tools/dong-goi.py "<dự án>" --lam` (đánh số thư mục ấn phẩm, chép báo cáo nghiệm thu, tạo `DANG.md`), trợ lý điền `DANG.md` (văn bản thay thế, lời đăng gợi ý, lưu ý đăng hoặc gửi in), rồi xin phép xoá một lần và `--don --xoa` (dọn `nhap/`, `thiet-ke/_phien-ban/`, `_to_delete/`; giữ BRIEF, SO-GOP-Y, `nguon/`, `anh/`, `thiet-ke/*.json` để dựng lại khi cần). Chưa duyệt thì không dọn.
 
 ## Luồng nguồn
 

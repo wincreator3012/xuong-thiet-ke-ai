@@ -1,11 +1,11 @@
 ---
 name: thiet-ke
-description: "Thiết kế ấn phẩm trong Xưởng thiết kế Claude (repo Claude-Designer-for-Speaker) theo phong cách của người dùng: bài quảng bá mạng xã hội (Facebook, Instagram, LinkedIn, Zalo, Threads), story, ảnh bìa trang, kênh, thumbnail, ảnh chia sẻ web, banner email, nền Zoom, poster số; một nội dung dựng ra mọi thể thức (1:1, 4:5, 9:16, 16:9, bìa) nhanh và chính xác; mở Bàn thiết kế để người dùng tự sửa; nghiệm thu đúng chuẩn ngành. Kích hoạt khi người dùng nói 'thiết kế', 'làm ảnh quảng bá', 'làm bài đăng', 'poster', 'banner', 'ảnh bìa', 'thumbnail', 'resize ra các khổ', 'làm bộ ấn phẩm cho chương trình', 'thông cáo khai giảng', 'giới thiệu giảng viên', 'mở bàn thiết kế', 'sửa ấn phẩm này', hoặc gửi mẫu muốn làm tương tự. Là lõi cho mọi ấn phẩm: in ấn, sân khấu dùng thêm thiet-ke-in-su-kien; ảnh, sơ đồ dùng thêm thiet-ke-hinh; chọn và viết chữ trên hình dùng thêm thiet-ke-chu; lần đầu dùng chạy thiet-ke-thiet-lap. KHÔNG dùng cho slide thuyết trình, landing page, đồ họa video."
+description: "Thiết kế ấn phẩm trong Xưởng thiết kế Claude (repo xuong-thiet-ke-ai) theo phong cách của người dùng: bài quảng bá mạng xã hội (Facebook, Instagram, LinkedIn, Zalo, Threads), story, ảnh bìa trang, kênh, thumbnail, ảnh chia sẻ web, banner email, nền Zoom, poster số; một nội dung dựng ra mọi thể thức (1:1, 4:5, 9:16, 16:9, bìa) nhanh và chính xác; mở Bàn thiết kế để người dùng tự sửa; nghiệm thu đúng chuẩn ngành. Kích hoạt khi người dùng nói 'thiết kế', 'làm ảnh quảng bá', 'làm bài đăng', 'poster', 'banner', 'ảnh bìa', 'thumbnail', 'resize ra các khổ', 'làm bộ ấn phẩm cho chương trình', 'thông cáo khai giảng', 'giới thiệu giảng viên', 'mở bàn thiết kế', 'sửa ấn phẩm này', hoặc gửi mẫu muốn làm tương tự. Là lõi cho mọi ấn phẩm: in ấn, sân khấu dùng thêm thiet-ke-in-su-kien; ảnh, sơ đồ dùng thêm thiet-ke-hinh; chọn và viết chữ trên hình dùng thêm thiet-ke-chu; lần đầu dùng chạy thiet-ke-thiet-lap. KHÔNG dùng cho slide thuyết trình, landing page, đồ họa video."
 ---
 
 # Thiết kế ấn phẩm: brief, khuôn, đa thể thức, nghiệm thu
 
-Đọc trước: `CLAUDE.md`, `docs/QUY-TRINH-KY-THUAT.md`, `phong-cach/PHONG-CACH.md`, `skills/_chung/van-hanh.md` (nơi chạy lệnh, chuyển tệp). Chuẩn: `chuan/01-nguyen-ly-thiet-ke.md`, `chuan/02-mang-xa-hoi-web.md`, `chuan/07-nghiem-thu.md`. Danh mục khuôn và ô nội dung: `khuon/README.md`. Nháp và thành phẩm luôn nằm ngoài repo, trong thư mục cha của repo: dự án và bản nháp trong `Nhap/<YYYY-MM tên dự án>/`, bản cuối trong `Thanh pham/<tên dự án>/<tên ấn phẩm>/` (`cau-hinh.json` > `thuMucDuAn`, `thuMucThanhPham`). Người dùng muốn đẩy sang chỗ khác thì nói ở đầu cuộc trò chuyện: dùng chỗ đó cho phiên ấy (`--goc`, `--ra`), không sửa `cau-hinh.json`.
+Đọc trước: `CLAUDE.md`, `docs/QUY-TRINH-KY-THUAT.md`, `phong-cach/PHONG-CACH.md`, `skills/_chung/van-hanh.md` (nơi chạy lệnh, chuyển tệp). Chuẩn: `chuan/01-nguyen-ly-thiet-ke.md`, `chuan/02-mang-xa-hoi-web.md`, `chuan/07-nghiem-thu.md`. Danh mục khuôn và ô nội dung: `khuon/README.md`. Nháp và thành phẩm luôn nằm ngoài repo, trong thư mục cha của repo: dự án và bản nháp trong `Du an/<YYYY-MM tên dự án>/`, bản cuối trong `Thanh pham/<tên dự án>/NN <tên ấn phẩm>/` (`cau-hinh.json` > `thuMucDuAn`, `thuMucThanhPham`). Người dùng muốn đẩy sang chỗ khác thì nói ở đầu cuộc trò chuyện: dùng chỗ đó cho phiên ấy (`--goc`, `--ra`), không sửa `cau-hinh.json`.
 
 Ba nguyên tắc xuyên suốt:
 
@@ -37,10 +37,16 @@ Ba nguyên tắc xuyên suốt:
 
 ## Bước 4 - Xuất, giao
 
-- `python3 tools/ve.py <file>` (không `--nhap`) → `Thanh pham/<tên dự án>/<tên>/`: khổ feed xuất 2x (Facebook giữ tới 2048 px cạnh dài), Instagram 3:4 đúng 1080, sRGB nhúng, PNG + JPG 4:4:4 chất lượng 92 theo kho thể thức.
-- Đưa về đúng `Thanh pham/<tên dự án>/<tên>/` trên máy người dùng (hoặc chỗ người dùng chỉ định ở đầu cuộc trò chuyện). Kèm gợi ý văn bản thay thế [alt text] cho từng ảnh (ảnh nhiều chữ: đủ chữ trên ảnh) và lưu ý đăng (ảnh bìa: kiểm cả điện thoại lẫn máy tính; Zalo OA: đăng thử vì quy cách chưa rõ).
+- `python3 tools/ve.py <file>` (không `--nhap`) → `Thanh pham/<tên dự án>/NN <tên>/`: khổ feed xuất 2x (Facebook giữ tới 2048 px cạnh dài), Instagram 3:4 đúng 1080, sRGB nhúng, PNG + JPG 4:4:4 chất lượng 92 theo kho thể thức.
+- Đưa về đúng `Thanh pham/<tên dự án>/NN <tên>/` trên máy người dùng (hoặc chỗ người dùng chỉ định ở đầu cuộc trò chuyện). Kèm gợi ý văn bản thay thế [alt text] cho từng ảnh (ảnh nhiều chữ: đủ chữ trên ảnh) và lưu ý đăng (ảnh bìa: kiểm cả điện thoại lẫn máy tính; Zalo OA: đăng thử vì quy cách chưa rõ).
 - Thể thức mới cho cùng chiến dịch sau này: chỉ thêm id vào `theThuc` rồi dựng lại.
 - Dọn cuối phiên theo `skills/_chung/van-hanh.md` mục "Repo sạch"; `python3 tools/kiem-sach.py` ĐẠT rồi mới báo xong.
+
+## Bước 5 - Khép dự án khi người dùng duyệt
+
+- Người dùng nói "duyệt" (cả dự án hay từng ấn phẩm): `python3 tools/dong-goi.py "<dự án>"` xem trước, rồi `--lam`: đánh số thư mục ấn phẩm còn thiếu số, chép `<tên>-bao-cao.json` (nghiệm thu máy) vào thư mục ấn phẩm, tạo `DANG.md` khuôn.
+- Điền `DANG.md` cho từng ấn phẩm sau khi NHÌN ảnh: văn bản thay thế (ai, làm gì, chữ chính nguyên văn), lời đăng gợi ý theo skill viết của người dùng (dòng đầu tự đứng được, kết bằng câu hỏi mở thật nếu là bài chia sẻ), lưu ý đăng (khổ nào cho kênh nào, nguồn ảnh cần ghi) hoặc gửi in (nhà in, giấy, hồ sơ màu, số lượng). Điều còn treo trong BRIEF (quyền ảnh, dữ kiện chưa kiểm) đưa vào lưu ý.
+- `--don` xem nháp sẽ dọn, xin quyền xoá một lần (`device_request_delete_permission`), rồi `--don --xoa`. Ghi mốc duyệt vào BRIEF.
 
 ## Thêm khuôn, sửa lõi
 
@@ -54,5 +60,5 @@ Khuôn mới khi một dạng ấn phẩm lặp lại mà chưa khuôn nào hợ
 - Không báo "xong" khi ve.py còn LỖI hoặc chưa nhìn ảnh thật; đọc soát dấu tiếng Việt từng âm tiết.
 - File ấn phẩm là nguồn sự thật; giữ nguyên `chinhTay` người dùng đã chỉnh; không sửa ảnh xuất bằng tay.
 - Không ảnh AI thay người, lớp, sự kiện thật; không bịa số liệu, lời chứng thực, khan hiếm; ghi tác giả mô hình, công cụ của người khác; học mẫu tham khảo ở mức nguyên lý, không sao chép.
-- Repo sạch: nháp, thành phẩm, thử nghiệm không bao giờ ghi vào repo (việc tạm ở `Nhap/_tam/`); cuối phiên `python3 tools/kiem-sach.py` ĐẠT.
+- Repo sạch: nháp, thành phẩm, thử nghiệm không bao giờ ghi vào repo (việc tạm ở `Du an/_tam/`); cuối phiên `python3 tools/kiem-sach.py` ĐẠT.
 - Không tự commit git; không xoá tệp của người dùng khi chưa được phép.

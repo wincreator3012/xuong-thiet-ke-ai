@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """DỰ ÁN MỚI: tạo thư mục một dự án thiết kế (nháp và thành phẩm nằm NGOÀI repo).
 
-Trên máy người dùng: dự án (nơi làm nháp) nằm trong "AI Designer/Nhap", bản cuối xuất sang "AI Designer/Thanh pham/<tên dự án>/"
+Trên máy người dùng: dự án (nơi làm nháp) nằm trong "AI Designer/Du an", bản cuối xuất sang "AI Designer/Thanh pham/<tên dự án>/"
 (cau-hinh.json > thuMucDuAn, thuMucThanhPham). Người dùng nói đẩy sang chỗ khác ở đầu cuộc trò chuyện thì dùng --goc cho phiên đó.
 
     python3 tools/du-an-moi.py "Khoá học mùa thu" [--goc <thư mục dự án>] [--khuon thong-cao] [--thuong-hieu chinh]
@@ -15,7 +15,7 @@ Cấu trúc tạo ra:
       anh/              ảnh đã chuẩn hoá, sửa, tách nền (đưa vào khuôn)
       thiet-ke/         file ấn phẩm .json (nguồn sự thật; Bàn thiết kế ghi vào đây)
       nhap/             bản dựng nháp theo từng ấn phẩm (ve.py --nhap)
-    Bản cuối: <thuMucThanhPham>/<YYYY-MM tên>/<ấn phẩm>/ (ve.py không --nhap)
+    Bản cuối: <thuMucThanhPham>/<YYYY-MM tên>/NN <ấn phẩm>/ (ve.py không --nhap); người dùng duyệt thì tools/dong-goi.py đóng gói và dọn nháp
 """
 import argparse
 import datetime

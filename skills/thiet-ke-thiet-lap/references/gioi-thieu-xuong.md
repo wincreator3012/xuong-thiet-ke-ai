@@ -55,7 +55,7 @@ Kết chặng: "Bạn muốn xem một ấn phẩm đi từ đầu tới cuối 
 Kể năm bước, nhấn rõ ai làm gì (chi tiết ở `HUONG-DAN.md`):
 
 1. **Bạn** nói nhu cầu (ai xem, đăng ở đâu, chữ nguyên văn nếu có) và đưa tư liệu (ảnh gốc, logo đối tác).
-2. **Mình** lập brief trong thư mục dự án (`Nhap/<tên dự án>/BRIEF.md`) và hỏi những gì còn thiếu. Đây là **chốt 1**; sửa ở đây rẻ nhất.
+2. **Mình** lập brief trong thư mục dự án (`Du an/<tên dự án>/BRIEF.md`) và hỏi những gì còn thiếu. Đây là **chốt 1**; sửa ở đây rẻ nhất.
 3. **Mình** dựng bản nháp mọi khổ và gửi **tờ tổng thể** (tất cả khổ cạnh nhau) kèm vài dòng giải thích. Bạn góp ý bằng lời, hoặc tự mở Bàn thiết kế sửa. Đây là **chốt 2**.
 4. **Mình** xuất bản cuối (ảnh nét gấp đôi đúng chuẩn nền tảng; PDF in khi cần) vào `Thanh pham/<tên dự án>/`, kèm văn bản thay thế cho người khiếm thị và lưu ý khi đăng.
 5. Góp ý đáng nhớ được ghi vào sổ tay để lần sau không lặp lại.

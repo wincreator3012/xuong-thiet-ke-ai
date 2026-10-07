@@ -33,8 +33,8 @@ Ngoài ra bạn nhận được:
 ## Bắt đầu trong ba bước
 
 1. **Cài một ứng dụng AI làm việc được với thư mục trên máy**: Claude Desktop (khuyên dùng, cần gói trả phí có Cowork), hoặc ChatGPT desktop, Codex, Google Antigravity. So sánh và cách cài: [BAT-DAU.md](BAT-DAU.md) bước 1.
-2. **Tải xưởng về máy**: tạo một thư mục tên `AI Designer` trong Documents, tải repo này (nút **Code**, chọn **Download ZIP**, giải nén), đổi tên thư mục vừa giải nén từ `Claude-Designer-for-Speaker-main` thành `Claude-Designer-for-Speaker` và đặt vào trong `AI Designer`.
-3. **Mở thư mục `AI Designer` trong ứng dụng AI và nói**: *"Đọc file CLAUDE.md trong thư mục Claude-Designer-for-Speaker rồi thiết lập xưởng thiết kế cho tôi."* (ứng dụng khác Claude: *"Đọc file AGENTS.md..."*).
+2. **Tải xưởng về máy**: tạo một thư mục tên `AI Designer` trong Documents, tải repo này (nút **Code**, chọn **Download ZIP**, giải nén), đổi tên thư mục vừa giải nén từ `xuong-thiet-ke-ai-main` thành `xuong-thiet-ke-ai` và đặt vào trong `AI Designer`.
+3. **Mở thư mục `AI Designer` trong ứng dụng AI và nói**: *"Đọc file CLAUDE.md trong thư mục xuong-thiet-ke-ai rồi thiết lập xưởng thiết kế cho tôi."* (ứng dụng khác Claude: *"Đọc file AGENTS.md..."*).
 
 Trợ lý tự cài và kiểm môi trường, hỏi bạn vài lượt về phong cách, dựng thử ấn phẩm mang tên bạn, rồi giới thiệu xưởng và cùng bạn chọn ấn phẩm đầu tiên. Chi tiết từng bước: [BAT-DAU.md](BAT-DAU.md).
 
@@ -53,7 +53,7 @@ Trợ lý tự cài và kiểm môi trường, hỏi bạn vài lượt về pho
 
 ```
 AI Designer/                      ← thư mục cha bạn tạo, thêm thư mục này vào ứng dụng AI
-├── Claude-Designer-for-Speaker/  ← repo này (chỉ chứa năng lực, luôn sạch)
+├── xuong-thiet-ke-ai/           ← repo này (chỉ chứa năng lực, luôn sạch)
 │   ├── README.md                 ← bạn đang đọc
 │   ├── BAT-DAU.md                ← cài lần đầu, từng bước
 │   ├── HUONG-DAN.md              ← từng tính năng, cách đặt yêu cầu, xử lý sự cố
@@ -69,8 +69,8 @@ AI Designer/                      ← thư mục cha bạn tạo, thêm thư m�
 │   ├── skills/                   ← 5 quy trình chuẩn cho trợ lý AI
 │   ├── tools/                    ← công cụ dựng, kiểm, cài đặt (trợ lý tự chạy)
 │   └── docs/                     ← tài liệu kỹ thuật cho trợ lý, bài học, cập nhật và đóng góp
-├── Nhap/                         ← mỗi dự án một thư mục: brief, tư liệu, ảnh, bản nháp
-└── Thanh pham/                   ← bản cuối để đăng, gửi in
+├── Du an/                        ← mỗi dự án một thư mục: brief, tư liệu, ảnh, bản nháp (việc tạm ở Du an/_tam/)
+└── Thanh pham/                   ← <năm-tháng dự án>/NN <ấn phẩm>/: bản cuối để đăng, gửi in, kèm DANG.md
 ```
 
 ## Cách nó chạy (cho người tò mò)

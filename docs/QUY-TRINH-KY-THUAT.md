@@ -28,9 +28,9 @@ Môi trường, lệnh, bản đồ tài nguyên, cổng nghiệm thu và cách 
 | Kiểm repo sạch | `tools/kiem-sach.py` | đầu và cuối phiên |
 | Skill | `skills/` | bản ở đây là gốc |
 | Bản khởi đầu phần của người dùng | `brand/brand.mau.json`, `phong-cach/PHONG-CACH.mau.md`, `phong-cach/tu-ngu.mau.json`, `phong-cach/PHAN-TICH-MAU.mau.md`, `minh-hoa/an-du.mau.json` | `tools/cai-dat.py` chép thành tệp không có `.mau` nếu chưa có; bản của người dùng không lên git (`.gitignore`), không bị cập nhật ghi đè |
-| Đường dẫn riêng từng máy | `cau-hinh.json` (tạo bởi `tools/cai-dat.py` từ `cau-hinh.mau.json`, không lên git; đường dẫn tương đối tính từ repo) | `thuMucDuAn` = `../Nhap`, `thuMucThanhPham` = `../Thanh pham` |
+| Đường dẫn riêng từng máy | `cau-hinh.json` (tạo bởi `tools/cai-dat.py` từ `cau-hinh.mau.json`, không lên git; đường dẫn tương đối tính từ repo) | `thuMucDuAn` = `../Du an`, `thuMucThanhPham` = `../Thanh pham` |
 
-**Nháp và thành phẩm không bao giờ nằm trong repo.** Người dùng có một thư mục cha (gợi ý tên "AI Designer") chứa repo và hai thư mục làm việc cạnh nó: `Nhap/<YYYY-MM tên dự án>/` chứa BRIEF.md, SO-GOP-Y.md, `nguon/`, `anh/`, `thiet-ke/` và bản dựng nháp `nhap/<tên ấn phẩm>/`; `Thanh pham/<tên dự án>/<tên ấn phẩm>/` chứa bản cuối (ảnh 2x, JPG, PDF in) do `ve.py` (không `--nhap`) hoặc nút Xuất của Bàn thiết kế ghi ra. `tools/cai-dat.py` tạo sẵn hai thư mục này. Người dùng muốn đẩy sang chỗ khác ở đầu cuộc trò chuyện thì dùng `--goc`, `--ra` cho phiên đó, không sửa `cau-hinh.json`. Cấu trúc dự án ở `tools/du-an-moi.py`.
+**Nháp và thành phẩm không bao giờ nằm trong repo.** Người dùng có một thư mục cha (gợi ý tên "AI Designer") chứa repo và hai thư mục làm việc cạnh nó: `Du an/<YYYY-MM tên dự án>/` chứa BRIEF.md, SO-GOP-Y.md, `nguon/`, `anh/`, `thiet-ke/` và bản dựng nháp `nhap/<tên ấn phẩm>/`; `Thanh pham/<tên dự án>/NN <tên ấn phẩm>/` chứa bản cuối (ảnh 2x, JPG, PDF in) do `ve.py` (không `--nhap`) hoặc nút Xuất của Bàn thiết kế ghi ra. `tools/cai-dat.py` tạo sẵn hai thư mục này. Người dùng muốn đẩy sang chỗ khác ở đầu cuộc trò chuyện thì dùng `--goc`, `--ra` cho phiên đó, không sửa `cau-hinh.json`. Cấu trúc dự án ở `tools/du-an-moi.py`.
 
 ### Repo sạch (bất biến)
 
@@ -38,12 +38,12 @@ Repo chỉ chứa năng lực: chuẩn, thương hiệu và phong cách của ng
 
 | Loại tệp | Nơi ghi |
 |---|---|
-| Brief, tư liệu người dùng đưa, ảnh đã xử lý, file ấn phẩm, bản nháp, tờ tổng thể, báo cáo kiểm | `Nhap/<YYYY-MM tên dự án>/` |
-| Bản cuối (ảnh 2x, PDF in) | `Thanh pham/<tên dự án>/<tên ấn phẩm>/` |
-| Việc tạm của công cụ và trợ lý: kiểm khuôn, thử khuôn, hàng đợi dựng, ảnh so sánh, script dùng một lần | `Nhap/_tam/`; ghi đè được, không cần lưu |
-| Bản chép tệp gửi vào chat (ứng dụng Claude có thể tự tạo `Claude outputs/` trong thư mục đầu tiên được gắn) | không phải nơi làm việc: xoá cuối phiên, bản thật đã nằm ở `Nhap/` hoặc `Thanh pham/` |
+| Brief, tư liệu người dùng đưa, ảnh đã xử lý, file ấn phẩm, bản nháp, tờ tổng thể, báo cáo kiểm | `Du an/<YYYY-MM tên dự án>/` |
+| Bản cuối (ảnh 2x, PDF in), khi đóng gói thêm báo cáo nghiệm thu và `DANG.md` | `Thanh pham/<YYYY-MM tên dự án>/NN <tên ấn phẩm>/` (NN do `ve.py` đánh theo thứ tự xuất bản cuối lần đầu, xuất lại giữ số cũ) |
+| Việc tạm của công cụ và trợ lý: kiểm khuôn, thử khuôn, hàng đợi dựng, ảnh so sánh, script dùng một lần | `Du an/_tam/`; ghi đè được, không cần lưu |
+| Bản chép tệp gửi vào chat (ứng dụng Claude có thể tự tạo `Claude outputs/` trong thư mục đầu tiên được gắn) | không phải nơi làm việc: xoá cuối phiên, bản thật đã nằm ở `Du an/` hoặc `Thanh pham/` |
 
-Máy giữ giúp: `ve.py`, `anh.py`, `du-an-moi.py`, `hang-doi-dung.py` từ chối ghi vào repo (báo DỪNG); `kiem-khuon.py` ghi vào `Nhap/_tam/kiem-khuon/`; công cụ không để `__pycache__`. Cổng kiểm: `python3 tools/kiem-sach.py` liệt kê nháp lạc và tệp lạ trong repo, ĐẠT khi không còn gì. Dọn: nháp lạc thì xin phép người dùng xoá rồi `python3 tools/kiem-sach.py --xoa`; tệp lạ chưa rõ là gì thì hỏi, không tự xoá.
+Máy giữ giúp: `ve.py`, `anh.py`, `du-an-moi.py`, `hang-doi-dung.py` từ chối ghi vào repo (báo DỪNG); `kiem-khuon.py` ghi vào `Du an/_tam/kiem-khuon/`; công cụ không để `__pycache__`. Cổng kiểm: `python3 tools/kiem-sach.py` liệt kê nháp lạc và tệp lạ trong repo, ĐẠT khi không còn gì. Dọn: nháp lạc thì xin phép người dùng xoá rồi `python3 tools/kiem-sach.py --xoa`; tệp lạ chưa rõ là gì thì hỏi, không tự xoá.
 
 ## 2. Nơi chạy lệnh
 
@@ -53,7 +53,7 @@ Việc dựng ảnh, PDF cần một trình duyệt Chromium (Playwright) hoặc
 
 **B. Claude Cowork trong ứng dụng Claude Desktop.** Claude chạm thư mục của người dùng qua một máy ảo Linux (`device_bash`) có gắn thư mục; máy ảo này thường **không có trình duyệt** và không tải được Chromium. Đọc, sửa, tạo dự án làm ở đó. Dựng ảnh theo thứ tự ưu tiên:
 1. Phiên có sandbox đám mây (`Bash`, có Playwright và Chromium sẵn): đưa repo và dự án lên sandbox, dựng, đưa kết quả về đúng thư mục trên máy người dùng (cách làm ở `skills/_chung/van-hanh.md`).
-2. Không có sandbox: xếp việc vào hàng đợi (`python3 tools/hang-doi-dung.py them <ấn phẩm.json> --nhap`), nhờ người dùng bấm đúp `Dung tren may.command` (Mac) hoặc `Dung tren may.bat` (Windows) ở gốc repo một lần; cửa sổ đó dựng bằng Chrome hoặc Playwright trên máy thật rồi chờ việc mới trong 30 phút. Đọc kết quả ở `Nhap/_tam/hang-doi/<mã>.xong.json` và ảnh trong thư mục ra của ấn phẩm.
+2. Không có sandbox: xếp việc vào hàng đợi (`python3 tools/hang-doi-dung.py them <ấn phẩm.json> --nhap`), nhờ người dùng bấm đúp `Dung tren may.command` (Mac) hoặc `Dung tren may.bat` (Windows) ở gốc repo một lần; cửa sổ đó dựng bằng Chrome hoặc Playwright trên máy thật rồi chờ việc mới trong 30 phút. Đọc kết quả ở `Du an/_tam/hang-doi/<mã>.xong.json` và ảnh trong thư mục ra của ấn phẩm.
 3. Người dùng tự xuất trên Bàn thiết kế (nút Xuất).
 
 **C. Trợ lý chỉ chat trên web, không chạy được lệnh trên máy**: không vận hành được xưởng. Hướng dẫn người dùng cài một ứng dụng có quyền làm việc với thư mục (`BAT-DAU.md` bước 1).
@@ -64,8 +64,8 @@ Máy người dùng là bản gốc; sandbox đám mây mất khi hết phiên.
 
 ```bash
 # 1. lấy repo: đóng gói trên máy RA NGOÀI repo rồi stage tệp đó (hoặc git clone nếu đã có mạng tới GitHub)
-#    trên máy: cd <repo> && mkdir -p ../Nhap/_tam && tar czf ../Nhap/_tam/repo.tgz --exclude=.git --exclude="Claude outputs" .
-#    ở sandbox: giải nén thành <làm việc>/<tên repo>, cạnh <làm việc>/Nhap và <làm việc>/Thanh pham
+#    trên máy: cd <repo> && mkdir -p "../Du an/_tam" && tar czf "../Du an/_tam/repo.tgz" --exclude=.git --exclude="Claude outputs" .
+#    ở sandbox: giải nén thành <làm việc>/<tên repo>, cạnh <làm việc>/Du an và <làm việc>/Thanh pham
 # 2. thư viện (Playwright, Chromium thường đã có trong sandbox; không chạy "playwright install" nếu đã có)
 pip install --break-system-packages pikepdf pillow-heif opencv-python-headless "rembg[cpu]"
 # 3. khi cần PDF/X-4 cho trang có trong suốt (in ấn): khoảng 5 phút
@@ -80,14 +80,14 @@ Hồ sơ màu CMYK miễn phí trên Ubuntu nằm ở `/usr/share/color/icc` (g�
 
 - Python 3.8+ (Mac: có sẵn hoặc `xcode-select --install`; Windows: python.org, đánh dấu "Add python.exe to PATH").
 - Google Chrome (Mac, Linux) hoặc Playwright (Windows, hoặc khi không có Chrome).
-- `cau-hinh.json` từ `cau-hinh.mau.json`; thư mục `../Nhap`, `../Thanh pham`.
+- `cau-hinh.json` từ `cau-hinh.mau.json`; thư mục `../Du an`, `../Thanh pham`.
 - Tuỳ chọn: `pip install pillow numpy` (JPG 4:4:4, nhúng sRGB, kiểm tương phản), `opencv-python-headless pillow-heif` (chỉnh ảnh, ảnh iPhone), `pikepdf` và Ghostscript (PDF in CMYK: Mac `brew install ghostscript`).
 
 ## 3. Lệnh thường dùng
 
 ```bash
 python3 tools/cai-dat.py [--trang-thai]                            # thiết lập, kiểm môi trường, dựng thử
-python3 tools/du-an-moi.py "Tên dự án" --khuon thong-cao           # tạo dự án trong Nhap/
+python3 tools/du-an-moi.py "Tên dự án" --khuon thong-cao           # tạo dự án trong Du an/
 python3 tools/ve.py <dự án>/thiet-ke/<tên>.json --nhap            # nháp nhanh mọi thể thức + tờ tổng thể + báo cáo
 python3 tools/ve.py <...>.json                                      # bản xuất (2x cho feed, sRGB, PNG + JPG 4:4:4)
 python3 tools/ve.py <...>.json --tt vuong,doc-9x16                  # chỉ vài thể thức
@@ -96,9 +96,10 @@ python3 tools/ve.py <...>.json --tt "tu-do:1536x768"                # màn LED t
 python3 tools/ve.py <...>.json --trong-suot --tt ig-4x5             # PNG nền trong suốt (lớp chữ để ghép)
 python3 tools/hang-doi-dung.py them <...>.json --nhap | chay | xem  # nhờ máy thật dựng (mục 2, B.2)
 python3 tools/anh.py kham <ảnh...> | sua <ảnh> | tach-nen <ảnh> | dong-bo <mẫu> <ảnh...> | chuan-hoa <ảnh...> | tieu-diem <ảnh>
-python3 tools/kiem-khuon.py [khuôn...]                              # cổng kiểm kho khuôn (kết quả ở Nhap/_tam/kiem-khuon/)
+python3 tools/kiem-khuon.py [khuôn...]                              # cổng kiểm kho khuôn (kết quả ở Du an/_tam/kiem-khuon/)
 python3 tools/kiem-tai-lieu.py                                      # cổng kiểm tài liệu, skill
 python3 tools/kiem-sach.py [--xoa]                                  # cổng repo sạch
+python3 tools/dong-goi.py "<dự án>" [--lam | --don [--xoa]]          # người dùng duyệt: đóng gói vào Thành phẩm (số, báo cáo, DANG.md), rồi dọn nháp
 ```
 
 ## 4. File ấn phẩm (thiet-ke/<tên>.json)
@@ -148,11 +149,11 @@ python3 tools/kiem-sach.py [--xoa]                                  # cổng rep
 | Chữ đen in ra 4 màu | bỏ qua bước xám trung tính sang K | luôn qua `in_an.py`, không gọi Ghostscript tay |
 | Bàn thiết kế báo "file đã đổi" | trợ lý vừa sửa tệp hoặc dịch vụ đồng bộ đám mây vừa ghi | chọn nạp bản mới, hoặc ghi đè nếu chắc chắn; bản cũ luôn có trong `thiet-ke/_phien-ban/` |
 | Sơ đồ chữ tràn, chồng | dữ liệu quá dài cho khung | rút nhãn; đổi `huong`; đổi kiểu sơ đồ; hoặc tăng vùng sơ đồ ở thể thức đó |
-| Công cụ báo DỪNG vì đầu ra nằm trong repo | ấn phẩm hay `--ra` đang trỏ vào repo (ví dụ chạy thẳng `khuon/<id>/mau.json`) | tạo dự án ở `Nhap/` (`du-an-moi.py`) hoặc thêm `--ra "../Nhap/_tam/thu"` |
+| Công cụ báo DỪNG vì đầu ra nằm trong repo | ấn phẩm hay `--ra` đang trỏ vào repo (ví dụ chạy thẳng `khuon/<id>/mau.json`) | tạo dự án ở `Du an/` (`du-an-moi.py`) hoặc thêm `--ra "../Du an/_tam/thu"` |
 | `kiem-sach.py` thấy `Claude outputs/` trong repo | ứng dụng chép tệp gửi vào chat | xin phép xoá rồi `python3 tools/kiem-sach.py --xoa` |
 | macOS chặn tệp `.command` | tệp tải từ mạng chưa được tin cậy | bấm chuột phải, chọn Open, rồi Open lần nữa (một lần) |
 | Windows: `python` không chạy | chưa cài Python hoặc chưa thêm vào PATH | cài từ python.org, đánh dấu "Add python.exe to PATH"; tệp `.bat` tự thử `py` và `python` |
 
 ## 7. Cập nhật bản mới của xưởng
 
-Xưởng được tác giả cập nhật từ kinh nghiệm dùng thật. Lấy bản mới mà không mất phần của mình: `docs/DONG-GOP.md` mục "Cập nhật bản mới". Phần của người dùng không bao giờ bị ghi đè: `brand/brand.json`, logo trong `brand/logo/`, các tệp trong `phong-cach/` (trừ bản `*.mau.*`), `minh-hoa/an-du.json`, `cau-hinh.json`, và toàn bộ `Nhap/`, `Thanh pham/` (nằm ngoài repo).
+Xưởng được tác giả cập nhật từ kinh nghiệm dùng thật. Lấy bản mới mà không mất phần của mình: `docs/DONG-GOP.md` mục "Cập nhật bản mới". Phần của người dùng không bao giờ bị ghi đè: `brand/brand.json`, logo trong `brand/logo/`, các tệp trong `phong-cach/` (trừ bản `*.mau.*`), `minh-hoa/an-du.json`, `cau-hinh.json`, và toàn bộ `Du an/`, `Thanh pham/` (nằm ngoài repo).

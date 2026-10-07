@@ -9,10 +9,10 @@
     python3 tools/ve.py <an-pham.json> --tt "tu-do:1536x768,in:600x300mm+5mm@150dpi"
 
 Ra đâu (dự án = thư mục cha của thư mục thiet-ke/ chứa file JSON; --ra để đổi):
-  - bản nháp (--nhap): <dự án>/nhap/<tên ấn phẩm>/ (dự án nằm trong thư mục Nháp: cau-hinh.json > thuMucDuAn);
-  - bản cuối: <thuMucThanhPham>/<tên dự án>/<tên ấn phẩm>/ (cau-hinh.json > thuMucThanhPham, hoặc biến XUONG_THANH_PHAM);
+  - bản nháp (--nhap): <dự án>/nhap/<tên ấn phẩm>/ (dự án nằm trong thư mục Du an: cau-hinh.json > thuMucDuAn);
+  - bản cuối: <thuMucThanhPham>/<tên dự án>/NN <tên ấn phẩm>/ (NN đánh số theo thứ tự xuất bản cuối lần đầu) (cau-hinh.json > thuMucThanhPham, hoặc biến XUONG_THANH_PHAM);
     chưa đặt thì <dự án>/xuat/<tên ấn phẩm>/.
-Đường dẫn trong cau-hinh.json có thể tương đối so với repo (vd "../Nhap"). Mỗi lần chạy ghi <tên>-bao-cao.json (cảnh báo bố cục, vùng an toàn, cỡ chữ, tương phản) và in tóm tắt.
+Đường dẫn trong cau-hinh.json có thể tương đối so với repo (vd "../Du an"). Mỗi lần chạy ghi <tên>-bao-cao.json (cảnh báo bố cục, vùng an toàn, cỡ chữ, tương phản) và in tóm tắt.
 
 Hai máy vẽ (cùng một khuôn HTML nên cùng kết quả):
   - playwright (sandbox đám mây, mặc định khi có): Chromium kèm Playwright.
@@ -129,12 +129,28 @@ def duong_cau_hinh(khoa, bien=None):
     return os.path.normpath(v if os.path.isabs(v) else os.path.join(GOC, v))
 
 
+def thu_muc_an_pham(cha, ten):
+    """Thư mục bản cuối của một ấn phẩm trong Thành phẩm: `NN <tên>` đánh số theo thứ tự xuất bản cuối lần đầu
+    (giữ số cũ khi xuất lại; thư mục kiểu cũ không số thì dùng tiếp)."""
+    if os.path.isdir(os.path.join(cha, ten)):
+        return os.path.join(cha, ten)
+    so = []
+    if os.path.isdir(cha):
+        for d in os.listdir(cha):
+            m = re.match(r'^(\d{2}) (.+)$', d)
+            if m and os.path.isdir(os.path.join(cha, d)):
+                if m.group(2) == ten:
+                    return os.path.join(cha, d)
+                so.append(int(m.group(1)))
+    return os.path.join(cha, f'{(max(so) + 1) if so else 1:02d} {ten}')
+
+
 def thu_muc_ra(du_an, ten, nhap=False):
     if nhap:
         return os.path.join(du_an, 'nhap', ten)
     tp = duong_cau_hinh('thuMucThanhPham', 'XUONG_THANH_PHAM')
     if tp:
-        return os.path.join(tp, os.path.basename(os.path.normpath(du_an)), ten)
+        return thu_muc_an_pham(os.path.join(tp, os.path.basename(os.path.normpath(du_an))), ten)
     return os.path.join(du_an, 'xuat', ten)
 
 

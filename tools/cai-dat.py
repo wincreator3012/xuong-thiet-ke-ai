@@ -12,13 +12,14 @@
 
 Các bước (mỗi bước tự bỏ qua nếu đã xong):
   1. Python 3.8+.
-  2. cau-hinh.json (chép từ cau-hinh.mau.json): nháp ở ../Nhap, thành phẩm ở ../Thanh pham, cạnh repo.
-  3. Tạo hai thư mục làm việc đó (và Nhap/_tam cho việc tạm) NGOÀI repo; chép các tệp phong cách của bạn từ bản
+  2. cau-hinh.json (chép từ cau-hinh.mau.json): hồ sơ dự án và nháp ở ../Du an, thành phẩm ở ../Thanh pham, cạnh repo
+     (người dùng bản cũ đã có ../Nhap mà chưa có ../Du an thì giữ ../Nhap).
+  3. Tạo hai thư mục làm việc đó (và Du an/_tam cho việc tạm) NGOÀI repo; chép các tệp phong cách của bạn từ bản
      khởi đầu (brand/brand.json, phong-cach/PHONG-CACH.md, tu-ngu.json, PHAN-TICH-MAU.md, minh-hoa/an-du.json) nếu chưa có.
   4. Máy vẽ: Playwright + Chromium (mọi hệ điều hành), hoặc Google Chrome có sẵn (Mac, Linux).
      Chưa có cái nào thì cài Playwright (cần mạng; mỗi lần chạy tối đa khoảng 150 giây, thoát mã 2 = chạy lại y nguyên).
   5. Thư viện ảnh nhẹ: Pillow, NumPy (JPG 4:4:4, nhúng sRGB, kiểm tương phản).
-  6. Dựng thử khuôn trich-dan ra Nhap/_tam/dung-thu/.
+  6. Dựng thử khuôn trich-dan ra Du an/_tam/dung-thu/.
 Trạng thái ghi vào cau-hinh.json > caiDat (không lên git).
 
 Nơi không có trình duyệt và không cài được (ví dụ máy ảo của Claude Cowork): vẫn dùng được mọi phần khác; dựng ảnh
@@ -172,7 +173,7 @@ def trang_thai(in_ra=True):
         print(f'  Repo:            {GOC}')
         print(f'  Python:          {tt["python"]} ({tt["heDieuHanh"]})')
         print(f'  cau-hinh.json:   {v(tt["cauHinh"])}')
-        print(f'  Thư mục nháp:    {tt["thuMucNhap"] or "chưa có"}')
+        print(f'  Thư mục dự án:   {tt["thuMucNhap"] or "chưa có"}')
         print(f'  Thư mục thành phẩm: {tt["thuMucThanhPham"] or "chưa có"}')
         print(f'  Máy vẽ:          {ten_may or "KHÔNG CÓ"} ({ghi_chu})')
         print(f'  Thư viện:        Pillow {v(tt["pillow"])}, NumPy {v(tt["numpy"])}, OpenCV {v(tt["opencv"])}, '
@@ -217,18 +218,21 @@ def buoc_cau_hinh():
     if os.path.exists(MAU):
         with open(MAU, encoding='utf-8') as f:
             mau = {k: v for k, v in json.load(f).items() if not k.startswith('_')}
-    ch = dict({'thuMucDuAn': '../Nhap', 'thuMucThanhPham': '../Thanh pham'}, **mau, **ch)
+    ch = dict({'thuMucDuAn': '../Du an', 'thuMucThanhPham': '../Thanh pham'}, **mau, **ch)
+    cu, moi = os.path.join(GOC, '..', 'Nhap'), os.path.join(GOC, '..', 'Du an')
+    if os.path.isdir(cu) and not os.path.isdir(moi):
+        ch['thuMucDuAn'] = '../Nhap'  # người dùng bản cũ: giữ thư mục đang có (đổi tên sang Du an được, xem docs/DONG-GOP.md)
     ghi_cau_hinh(ch)
-    print('✓ tạo cau-hinh.json (nháp ở ../Nhap, thành phẩm ở ../Thanh pham, cạnh repo)')
+    print(f'✓ tạo cau-hinh.json (dự án và nháp ở {ch["thuMucDuAn"]}, thành phẩm ở ../Thanh pham, cạnh repo)')
     return ch
 
 
 def buoc_thu_muc(ch):
-    for khoa, ten in (('thuMucDuAn', 'nháp'), ('thuMucThanhPham', 'thành phẩm')):
+    for khoa, ten in (('thuMucDuAn', 'dự án và nháp'), ('thuMucThanhPham', 'thành phẩm')):
         d = duong(ch, khoa)
         r, g = os.path.realpath(d), os.path.realpath(GOC)
         if r == g or r.startswith(g + os.sep):
-            print(f'✗ cau-hinh.json > {khoa} trỏ vào trong repo ({d}): đổi ra ngoài repo, ví dụ "../Nhap".')
+            print(f'✗ cau-hinh.json > {khoa} trỏ vào trong repo ({d}): đổi ra ngoài repo, ví dụ "../Du an".')
             sys.exit(1)
         os.makedirs(d, exist_ok=True)
         print(f'✓ thư mục {ten}: {d}')

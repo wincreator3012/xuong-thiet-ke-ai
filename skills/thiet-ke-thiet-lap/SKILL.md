@@ -1,6 +1,6 @@
 ---
 name: thiet-ke-thiet-lap
-description: "Thiết lập Xưởng thiết kế Claude (repo Claude-Designer-for-Speaker) lần đầu cho một người dùng mới: cài và kiểm môi trường bằng tools/cai-dat.py, phỏng vấn ngắn để điền phong-cach/PHONG-CACH.md, brand/brand.json, phong-cach/tu-ngu.json theo phong cách của chính họ (tên, chức danh nguyên văn, họ màu, logo, giọng chữ), phân tích mẫu tham khảo họ thích, dựng thử ấn phẩm mẫu mang tên họ để duyệt bằng mắt, rồi giới thiệu xưởng có hệ thống. Kích hoạt khi người dùng nói 'thiết lập xưởng', 'bắt đầu', 'cài đặt', 'cá nhân hoá', 'đổi phong cách', 'đổi màu, logo, chức danh mặc định', 'phân tích mẫu tham khảo của tôi', hoặc khi phong-cach/PHONG-CACH.md còn chỗ trống hay chưa có cau-hinh.json. Cũng kích hoạt để GIỚI THIỆU XƯỞNG khi người dùng nói 'xưởng làm được gì', 'giới thiệu xưởng', 'hướng dẫn tôi cách dùng', 'mới vào chưa biết làm gì', hoặc khi thiết lập vừa xong mà chưa giới thiệu."
+description: "Thiết lập Xưởng thiết kế Claude (repo xuong-thiet-ke-ai) lần đầu cho một người dùng mới: cài và kiểm môi trường bằng tools/cai-dat.py, phỏng vấn ngắn để điền phong-cach/PHONG-CACH.md, brand/brand.json, phong-cach/tu-ngu.json theo phong cách của chính họ (tên, chức danh nguyên văn, họ màu, logo, giọng chữ), phân tích mẫu tham khảo họ thích, dựng thử ấn phẩm mẫu mang tên họ để duyệt bằng mắt, rồi giới thiệu xưởng có hệ thống. Kích hoạt khi người dùng nói 'thiết lập xưởng', 'bắt đầu', 'cài đặt', 'cá nhân hoá', 'đổi phong cách', 'đổi màu, logo, chức danh mặc định', 'phân tích mẫu tham khảo của tôi', hoặc khi phong-cach/PHONG-CACH.md còn chỗ trống hay chưa có cau-hinh.json. Cũng kích hoạt để GIỚI THIỆU XƯỞNG khi người dùng nói 'xưởng làm được gì', 'giới thiệu xưởng', 'hướng dẫn tôi cách dùng', 'mới vào chưa biết làm gì', hoặc khi thiết lập vừa xong mà chưa giới thiệu."
 ---
 
 # Thiết lập xưởng thiết kế lần đầu
@@ -67,7 +67,7 @@ Cuối phiên: dọn dự án thử nếu người dùng không cần (hỏi tr�
 
 ## Khi người dùng hỏi xưởng làm được gì (bất cứ lúc nào)
 
-Không chạy lại thiết lập. Làm 5b (sáu chặng, hoặc chỉ chặng được hỏi), cập nhật theo PHONG-CACH và các dự án đã có trong `Nhap/`. Người dùng cũ hỏi "nên làm gì tiếp" thì gợi ý theo dự án họ đã làm (đã có bài đăng mà chưa có story, chưa có ảnh bìa trang...).
+Không chạy lại thiết lập. Làm 5b (sáu chặng, hoặc chỉ chặng được hỏi), cập nhật theo PHONG-CACH và các dự án đã có trong `Du an/`. Người dùng cũ hỏi "nên làm gì tiếp" thì gợi ý theo dự án họ đã làm (đã có bài đăng mà chưa có story, chưa có ảnh bìa trang...).
 
 ## Khi người dùng muốn đổi phong cách về sau
 
