@@ -5,7 +5,7 @@
     python3 tools/kiem-tai-lieu.py          # kiểm; thoát mã 0 = ĐẠT
 
 Cổng kiểm khuôn (kiem-khuon.py) không đọc chữ; cổng này làm việc đó cho tài liệu:
-  1. SKILL.md: phần đầu YAML có name trùng tên thư mục, description dưới 1024 ký tự, không ngoặc nhọn.
+  1. SKILL.md: phần đầu YAML có name trùng tên thư mục (xưởng riêng: <tiền tố>-<tên thư mục>, tiền tố trong XUONG.json), description dưới 1024 ký tự, không ngoặc nhọn.
   2. Mỗi skill có mặt trong bảng "Việc nào, skill nào" của CLAUDE.md; tên skill nhắc trong tài liệu đều có thật.
   3. Không có gạch dài (em dash) trong tài liệu (quy ước chữ mặc định của xưởng: gạch thường hoặc dấu hai chấm).
   4. Đường dẫn viết trong dấu `...` bắt đầu bằng một thư mục của repo (chuan/, tools/, skills/...) trỏ tới tệp hay
@@ -67,14 +67,20 @@ def main():
     loi, canh = [], []
     skills = sorted(os.path.basename(os.path.dirname(p)) for p in glob.glob(os.path.join(GOC, 'skills', '*', 'SKILL.md')))
     claude = doc(os.path.join(GOC, 'CLAUDE.md'))
+    tien_to = ''
+    if os.path.exists(os.path.join(GOC, 'XUONG.json')):
+        try:
+            tien_to = json.load(open(os.path.join(GOC, 'XUONG.json'), encoding='utf-8')).get('tienTo') or ''
+        except ValueError:
+            loi.append('XUONG.json: JSON lỗi')
     for s in skills:
         rel = f'skills/{s}/SKILL.md'
         d, e = dau_yaml(doc(os.path.join(GOC, rel)))
         if e:
             loi.append(f'{rel}: {e}')
             continue
-        if d.get('name') != s:
-            loi.append(f'{rel}: name "{d.get("name")}" khác tên thư mục "{s}"')
+        if d.get('name') not in ({s, f'{tien_to}-{s}'} if tien_to else {s}):
+            loi.append(f'{rel}: name "{d.get("name")}" khác tên thư mục "{s}"' + (f' (hoặc "{tien_to}-{s}")' if tien_to else ''))
         mo = d.get('description', '')
         if not mo:
             loi.append(f'{rel}: thiếu description')

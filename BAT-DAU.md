@@ -1,6 +1,6 @@
 # BẮT ĐẦU: cài xưởng lần đầu, từng bước
 
-Tài liệu này dành cho người chưa từng dùng AI làm việc với tệp trên máy. Đọc hết một lần mất khoảng 10 phút; làm theo mất khoảng 30-60 phút, phần lớn là ngồi chờ máy tải và trả lời vài câu hỏi. Bạn gần như không phải gõ lệnh nào: trợ lý AI làm thay.
+Tài liệu này dành cho người chưa từng dùng AI làm việc với tệp trên máy. Điều cần biết trước: repo này là **bản mẫu**. Bạn không tải nó về rồi làm việc trong đó; bạn đưa đường link cho trợ lý AI, trợ lý học từ bản mẫu rồi dựng cho bạn một **xưởng riêng** trên máy, mang tên, phong cách và bộ skill của bạn. Đọc hết một lần mất khoảng 10 phút; làm theo mất khoảng 60-90 phút, phần lớn là ngồi chờ máy tải và trả lời vài câu hỏi. Bạn gần như không phải gõ lệnh nào: trợ lý AI làm thay.
 
 ## Trước khi bắt đầu, bạn cần
 
@@ -25,27 +25,13 @@ Giá, gói và tên gọi của các ứng dụng AI thay đổi nhanh; xem tran
 
 Cài xong, mở ứng dụng và đăng nhập. Với Claude Desktop: chọn chế độ **Cowork** ở thanh bên.
 
-## Bước 2: tải xưởng về máy
+## Bước 2: tạo thư mục làm việc
 
-1. Mở **Documents** (Tài liệu), tạo một thư mục mới tên **AI Designer**. Đây là nơi chứa xưởng và mọi việc bạn làm với nó.
-2. Trên trang GitHub của repo này, bấm nút xanh **Code**, chọn **Download ZIP**.
-3. Giải nén (Mac: bấm đúp tệp ZIP; Windows: bấm chuột phải, chọn "Extract All"). Bạn có một thư mục tên `xuong-thiet-ke-ai-main`; đổi tên thành `xuong-thiet-ke-ai` và kéo vào trong **AI Designer**.
-
-Quen dùng Terminal: `cd ~/Documents/AI\ Designer && git clone <địa chỉ repo>` cho kết quả tương tự và sau này cập nhật dễ hơn.
-
-Kết quả:
-
-```
-Documents/
-└── AI Designer/
-    └── xuong-thiet-ke-ai/
-```
-
-Hai thư mục `Du an` (hồ sơ dự án, nháp) và `Thanh pham` (thành phẩm) sẽ được tạo tự động bên cạnh repo ở bước cài. Vì sao tách ra: repo chỉ chứa "năng lực" của xưởng, còn việc của bạn nằm riêng, nên lúc cập nhật xưởng không đụng tới dự án nào của bạn.
+Mở **Documents** (Tài liệu), tạo một thư mục mới tên **AI Designer**. Đây là nơi chứa xưởng của bạn và mọi việc bạn làm với nó. Để trống cũng được: trợ lý sẽ tự lấy bản mẫu về.
 
 ## Bước 3: mở thư mục trong ứng dụng AI
 
-Thêm **thư mục AI Designer** (thư mục cha, không phải riêng repo) vào ứng dụng:
+Thêm **thư mục AI Designer** vào ứng dụng:
 
 - **Claude Desktop, Cowork**: bắt đầu một phiên mới, bấm nút thêm thư mục (biểu tượng thư mục hoặc chữ "Add folder"), chọn `AI Designer`. Lần đầu, máy có thể hỏi quyền truy cập thư mục: bấm cho phép.
 - **ChatGPT desktop, Codex**: chọn mở thư mục (Open folder) hoặc tạo dự án từ thư mục `AI Designer`.
@@ -55,19 +41,19 @@ Từ lúc này trợ lý đọc và ghi được trong thư mục đó, và ch�
 
 ## Bước 4: nói câu đầu tiên
 
-Gõ vào khung chat:
+Gõ vào khung chat (dán nguyên câu, kể cả đường link):
 
-> Đọc file CLAUDE.md trong thư mục xuong-thiet-ke-ai rồi thiết lập xưởng thiết kế cho tôi.
-
-Ứng dụng khác Claude:
-
-> Đọc file AGENTS.md trong thư mục xuong-thiet-ke-ai rồi thiết lập xưởng thiết kế cho tôi.
+> Đọc https://github.com/wincreator3012/xuong-thiet-ke-ai, bắt đầu từ tệp BAN-MAU.md, rồi dựng cho tôi một xưởng thiết kế riêng trong thư mục này.
 
 Chuyện gì sẽ xảy ra, theo thứ tự:
 
+**Lấy bản mẫu về (1-3 phút, bạn chỉ chờ).** Trợ lý tải bản mẫu vào `AI Designer/_ban-mau/xuong-thiet-ke-ai/`. Thư mục này chỉ để trợ lý đọc và để so sánh khi cập nhật về sau; bạn không cần mở nó. Nếu ứng dụng AI của bạn không tải được từ mạng, trợ lý sẽ nhờ bạn: trên trang GitHub của repo bấm nút xanh **Code**, chọn **Download ZIP**, giải nén (Mac: bấm đúp tệp ZIP; Windows: bấm chuột phải, chọn "Extract All"), đổi tên thư mục `xuong-thiet-ke-ai-main` thành `xuong-thiet-ke-ai`, rồi đặt vào `AI Designer/_ban-mau/`.
+
+**Dựng xưởng riêng (khoảng 5 phút).** Trợ lý hỏi ba điều: tên hiển thị của bạn, tên thư mục xưởng (ví dụ `xuong-thiet-ke-ha`), và một tên ngắn không dấu làm tiền tố cho skill (ví dụ `ha`, để skill của bạn tên `ha-thiet-ke`, `ha-thiet-ke-slide`...). Rồi trợ lý dựng xưởng của bạn cạnh bản mẫu. Từ đây mọi việc làm trong xưởng của bạn.
+
 **Cài và kiểm môi trường (5-15 phút, bạn chỉ chờ).** Trợ lý chạy lệnh cài tự động: kiểm Python, tạo hai thư mục làm việc, tìm hoặc cài bộ dựng ảnh (Google Chrome có sẵn, hoặc Playwright), cài thư viện ảnh nhẹ, rồi dựng thử một ấn phẩm mẫu. Bạn sẽ thấy dòng "dựng thử ĐẠT". Máy thiếu Python thì trợ lý hướng dẫn cài (Mac: một lệnh; Windows: tải từ python.org, nhớ đánh dấu "Add python.exe to PATH").
 
-Với Claude Cowork, máy làm việc của Claude có thể không có trình duyệt. Đó không phải lỗi: Claude sẽ dùng môi trường đám mây của phiên, hoặc khi cần sẽ nhờ bạn bấm đúp tệp `Dung tren may.command` (Mac) hay `Dung tren may.bat` (Windows) để máy bạn dựng ảnh.
+Với Claude Cowork, máy làm việc của Claude có thể không có trình duyệt. Đó không phải lỗi: Claude sẽ dùng môi trường đám mây của phiên, hoặc khi cần sẽ nhờ bạn bấm đúp tệp `Dung tren may.command` (Mac) hay `Dung tren may.bat` (Windows) trong xưởng của bạn để máy bạn dựng ảnh.
 
 **Vài câu hỏi về bạn (10-15 phút).** Trợ lý hỏi ba lượt ngắn, mỗi lượt vài câu có sẵn lựa chọn:
 
@@ -75,13 +61,29 @@ Với Claude Cowork, máy làm việc của Claude có thể không có trình d
 - Bạn hay làm ấn phẩm gì, đăng ở đâu, muốn người xem cảm thấy thế nào. Có sáu họ màu để chọn: *giấy-mực* (điềm tĩnh, sâu), *than-đồng* (trầm ấm), *đêm-vàng* (sang trọng cho sự kiện), *đêm-xanh* (rõ ràng cho giải thích), *ấm áp* (gần gũi), *trắng-xanh* (hiện đại). Không ưng cái nào thì pha từ màu logo của bạn hoặc tả ba từ về cảm giác.
 - Chữ viết thế nào (xưng hô với người xem, từ phải viết đúng, từ không bao giờ dùng), có logo không, có mẫu nào bạn thích không.
 
-Trả lời tới đâu trợ lý ghi tới đó vào `phong-cach/PHONG-CACH.md`. Sau này bạn mở tệp đó đọc lại, sửa tay được, hoặc chỉ cần nói "từ nay đổi X thành Y".
+Trả lời tới đâu trợ lý ghi tới đó vào `phong-cach/PHONG-CACH.md` trong xưởng của bạn. Sau này bạn mở tệp đó đọc lại, sửa tay được, hoặc chỉ cần nói "từ nay đổi X thành Y".
 
-**Logo và mẫu bạn thích (nếu có).** Thả logo vào `brand/logo/`, ấn phẩm bạn thích vào `phong-cach/mau-tham-khao/`, rồi báo trợ lý. Không có logo cũng được: ấn phẩm hiện tên bạn bằng chữ.
+**Logo và mẫu bạn thích (nếu có).** Thả logo vào `brand/logo/`, ấn phẩm bạn thích vào `phong-cach/mau-tham-khao/` (trong xưởng của bạn), rồi báo trợ lý. Không có logo cũng được: ấn phẩm hiện tên bạn bằng chữ.
 
 **Dựng thử ấn phẩm mang tên bạn (5-10 phút).** Trợ lý dựng một ảnh trích dẫn và một ảnh giới thiệu với tên, chức danh, màu, logo của bạn, gửi bạn xem. Bạn góp ý về màu, chữ, logo; trợ lý sửa tới khi bạn ưng.
 
+**Tạo bộ skill của bạn và lưu vào tài khoản AI (10-15 phút).** Skill là những "tờ quy trình nghề" giúp trợ lý làm đúng từng việc mà bạn không phải dặn lại. Trợ lý giải thích ngắn skill là gì, viết phần mô tả skill theo đúng những câu bạn hay nói, đóng gói, rồi hướng dẫn bạn lưu vào tài khoản theo ứng dụng bạn dùng: với Claude, bạn bấm lưu trên thẻ đề xuất hoặc tải tệp ZIP lên; với ChatGPT (gói có skill), tải tệp ZIP lên; với Codex, Antigravity, mở thư mục là dùng được ngay. Đầy đủ: `skills/README.md` trong xưởng.
+
 **Buổi giới thiệu xưởng (khoảng 10 phút).** Trợ lý giải thích xưởng làm được gì cho bạn, một ấn phẩm chạy qua những bước nào, các thói quen dùng hiệu quả, những gì xưởng chưa làm, rồi cùng bạn chọn ấn phẩm đầu tiên. Muốn nghe lại lúc nào cũng được: "giới thiệu lại xưởng".
+
+Kết quả:
+
+```
+Documents/
+└── AI Designer/
+    ├── _ban-mau/xuong-thiet-ke-ai/   bản mẫu, chỉ đọc
+    ├── xuong-thiet-ke-<tên bạn>/     xưởng của bạn
+    ├── Du an/                        dự án, nháp
+    ├── Thanh pham/                   bản cuối
+    └── Goi skill/                    skill đóng gói để tải lên tài khoản
+```
+
+Vì sao tách ra như vậy: xưởng của bạn chỉ chứa "năng lực" (công cụ, khuôn, phong cách, skill), việc của bạn nằm riêng ở `Du an`, `Thanh pham`, còn bản mẫu nằm riêng ở `_ban-mau`. Nhờ vậy bạn sửa xưởng thoải mái, và lúc lấy kinh nghiệm mới từ bản mẫu không có gì của bạn bị ghi đè.
 
 ## Bước 5: làm ấn phẩm đầu tiên
 
@@ -95,10 +97,11 @@ Cách đặt yêu cầu cho từng loại ấn phẩm, ví dụ câu nói, Bàn 
 
 ## Những điều nên biết
 
-- **Hai tệp bấm đúp ở gốc repo**: `Mo ban thiet ke` (mở Bàn thiết kế để tự chỉnh) và `Dung tren may` (khi trợ lý nhờ máy bạn dựng ảnh). Mac dùng bản `.command`, Windows dùng bản `.bat`. Lần đầu, Mac có thể chặn: bấm chuột phải vào tệp, chọn Open, rồi Open lần nữa; Windows có thể hiện "Windows protected your PC": bấm "More info" rồi "Run anyway".
+- **Hai tệp bấm đúp ở gốc xưởng của bạn**: `Mo ban thiet ke` (mở Bàn thiết kế để tự chỉnh) và `Dung tren may` (khi trợ lý nhờ máy bạn dựng ảnh). Mac dùng bản `.command`, Windows dùng bản `.bat`. Lần đầu, Mac có thể chặn: bấm chuột phải vào tệp, chọn Open, rồi Open lần nữa; Windows có thể hiện "Windows protected your PC": bấm "More info" rồi "Run anyway".
 - **Giữ ứng dụng AI mở và máy không ngủ** khi trợ lý đang dựng cả bộ hay xuất file in.
 - **Ảnh của bạn ở trên máy bạn.** Thư mục `Du an/` và `Thanh pham/` nằm trên máy. Ứng dụng AI chạy trên đám mây chỉ nhận những tệp cần cho bước đang làm, như khi bạn gửi ảnh vào khung chat.
-- **Dùng trên hai máy**: đặt thư mục `AI Designer` vào iCloud Drive, Dropbox hay OneDrive là dùng chung được; chờ tệp tải hết về máy đang ngồi trước khi làm việc lớn. Trên mỗi máy mới, nói với trợ lý "kiểm tra xưởng" để nó cài phần còn thiếu.
+- **Dùng trên hai máy**: đặt thư mục `AI Designer` vào iCloud Drive, Dropbox hay OneDrive là dùng chung được; chờ tệp tải hết về máy đang ngồi trước khi làm việc lớn. Trên mỗi máy mới, nói với trợ lý "kiểm tra xưởng" để nó cài phần còn thiếu. Muốn sao lưu kỹ hơn: nhờ trợ lý tạo một repo git RIÊNG TƯ cho xưởng của bạn (không phải repo bản mẫu này).
+- **Đã cài theo hướng dẫn cũ** (làm việc thẳng trong thư mục `xuong-thiet-ke-ai`): nói với trợ lý "chuyển sang xưởng riêng theo BAN-MAU.md"; phong cách, logo và dự án của bạn được mang sang nguyên vẹn.
 - **Muốn đổi phong cách** (màu, chức danh, logo, cách viết): nói "đổi phong cách" và nêu điều muốn đổi. Không cần làm lại từ đầu.
 - **Muốn chỉnh ảnh, tách nền, làm file in CMYK**: nói với trợ lý, nó cài thêm thư viện cần thiết (vài trăm MB) lần đầu dùng.
 

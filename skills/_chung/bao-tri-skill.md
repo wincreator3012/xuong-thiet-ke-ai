@@ -1,7 +1,7 @@
 # Bảo trì skill thiet-ke-*
 
 1. Sửa ở `skills/<skill>/` trong repo. Đây là nguồn duy nhất.
-2. Nếu có cài skill vào tài khoản Claude (`skills/README.md`): cập nhật bản trên tài khoản ngay sau khi sửa (bản cập nhật thay toàn bộ SKILL.md). Skill tài khoản chỉ mang SKILL.md, nên mọi tham chiếu ghi đủ đường dẫn trong repo (`chuan/...`, `skills/_chung/...`).
+2. Sửa xong thì đóng gói lại (`python3 tools/dung-xuong.py --goi-skill`) và nhắc người dùng lưu bản mới vào tài khoản AI (`skills/README.md`); bản trên tài khoản thay trọn bản cũ. Trong xưởng riêng, `name` mang tiền tố của người dùng (`XUONG.json` > `tienTo`), tên thư mục thì không. Skill tài khoản chỉ mang thư mục skill, nên mọi tham chiếu ghi đủ đường dẫn trong xưởng (`chuan/...`, `skills/_chung/...`).
 3. Thêm skill mới: thêm một dòng vào bảng "Việc nào, skill nào" của `CLAUDE.md`.
 4. Skill chứa CÁCH LÀM; số liệu chuẩn ở `chuan/`, chữ và chức danh ở PHONG-CACH, môi trường và lệnh ở `docs/QUY-TRINH-KY-THUAT.md`: chỉ trỏ tới, không chép lại.
 5. Trường description là mô tả KÍCH HOẠT (khi nào dùng, câu người dùng hay nói, khi nào không dùng), tối đa 1024 ký tự, không ngoặc nhọn, không ghi lịch sử thay đổi.

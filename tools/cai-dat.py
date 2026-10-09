@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 """CÀI ĐẶT XƯỞNG THIẾT KẾ - một lệnh, chạy lại bao nhiêu lần cũng an toàn.
 
+Chạy trong XƯỞNG RIÊNG của người dùng (thư mục có XUONG.json, dựng từ bản mẫu bằng tools/dung-xuong.py), không chạy
+trong bản mẫu (thư mục có BAN-MAU.md): bản mẫu chỉ để trợ lý đọc và dựng xưởng, xem BAN-MAU.md.
+
     python3 tools/cai-dat.py                     # làm mọi bước còn thiếu, rồi dựng thử một ấn phẩm mẫu
     python3 tools/cai-dat.py --trang-thai        # chỉ xem: bước nào xong, máy vẽ nào dùng được, việc tiếp theo
     python3 tools/cai-dat.py --anh               # cài thêm thư viện chỉnh ảnh (opencv, pillow-heif) và PDF in (pikepdf)
@@ -9,6 +12,7 @@
     python3 tools/cai-dat.py --khong-cai         # không cài gì qua mạng, chỉ kiểm và dựng thử
     python3 tools/cai-dat.py --khong-thu         # bỏ bước dựng thử
     python3 tools/cai-dat.py --danh-dau thiet-lap|gioi-thieu   # trợ lý ghi dấu sau bước thiết lập phong cách, buổi giới thiệu
+    (đóng gói, lưu skill vào tài khoản AI: tools/dung-xuong.py --goi-skill, --da-luu)
 
 Các bước (mỗi bước tự bỏ qua nếu đã xong):
   1. Python 3.8+.
@@ -42,6 +46,7 @@ TOOLS = os.path.dirname(os.path.abspath(__file__))
 GOC = os.path.dirname(TOOLS)
 CAU_HINH = os.path.join(GOC, 'cau-hinh.json')
 MAU = os.path.join(GOC, 'cau-hinh.mau.json')
+LA_BAN_MAU = os.path.exists(os.path.join(GOC, 'BAN-MAU.md')) and not os.path.exists(os.path.join(GOC, 'XUONG.json'))
 HAN_GIAY = 150
 BAT_DAU = time.time()
 
@@ -166,6 +171,7 @@ def trang_thai(in_ra=True):
         'dungThu': bool(cd.get('dungThu')),
         'daThietLap': bool(cd.get('daThietLap')) and da_dien_phong_cach(),
         'daGioiThieu': bool(cd.get('daGioiThieu')),
+        'skill': trang_thai_skill(),
     }
     if in_ra:
         v = lambda b: 'có' if b else 'chưa'
@@ -183,9 +189,26 @@ def trang_thai(in_ra=True):
         print(f'  Dựng thử:        {"ĐẠT" if tt["dungThu"] else "chưa"}')
         con = cho_trong_phong_cach()
         print(f'  Phong cách:      {"đã thiết lập" if tt["daThietLap"] else f"CHƯA ({len(con)} chỗ trống trong phong-cach/PHONG-CACH.md)"}')
+        sk = tt['skill']
+        if sk is not None:
+            print(f'  Skill tài khoản: {"đã đóng gói" if sk["goi"] else "CHƯA đóng gói"}, '
+                  f'{"đã lưu vào " + ", ".join(sk["daLuu"]) if sk["daLuu"] else "CHƯA lưu vào tài khoản AI nào"}')
         print(f'  Giới thiệu xưởng: {"đã" if tt["daGioiThieu"] else "chưa"}')
         print('\nViệc tiếp theo: ' + viec_tiep(tt))
     return tt
+
+
+def trang_thai_skill():
+    """Skill của xưởng riêng (XUONG.json); None nếu không phải xưởng dựng từ bản mẫu."""
+    p = os.path.join(GOC, 'XUONG.json')
+    if not os.path.exists(p):
+        return None
+    try:
+        with open(p, encoding='utf-8') as f:
+            sk = json.load(f).get('skill', {})
+    except (OSError, ValueError):
+        return None
+    return {'goi': bool(sk.get('goiLuc')), 'daLuu': [m.get('noi') for m in sk.get('daLuu') or []]}
 
 
 def viec_tiep(tt):
@@ -198,6 +221,10 @@ def viec_tiep(tt):
         return 'chạy python3 tools/cai-dat.py để dựng thử'
     if not tt['daThietLap']:
         return 'thiết lập phong cách: skill skills/thiet-ke-thiet-lap/SKILL.md'
+    sk = tt.get('skill')
+    if sk is not None and not (sk['goi'] and sk['daLuu']):
+        return ('đóng gói skill và hướng dẫn người dùng lưu vào tài khoản AI: skill skills/thiet-ke-thiet-lap/SKILL.md bước 6, '
+                'skills/README.md')
     if not tt['daGioiThieu']:
         return 'giới thiệu xưởng cho người dùng: skills/thiet-ke-thiet-lap/references/gioi-thieu-xuong.md'
     return 'xưởng sẵn sàng: làm ấn phẩm đầu tiên (skill skills/thiet-ke/SKILL.md)'
@@ -339,6 +366,13 @@ def main():
     ap.add_argument('--khong-thu', action='store_true')
     ap.add_argument('--danh-dau', choices=['thiet-lap', 'gioi-thieu'])
     a = ap.parse_args()
+    if LA_BAN_MAU:
+        print('ĐÂY LÀ BẢN MẪU, không cài và không làm việc ở đây (không git pull, push, commit).')
+        print('Bản mẫu là tài liệu để trợ lý AI học rồi dựng một xưởng RIÊNG cho người dùng, cạnh bản mẫu:')
+        print('  python3 tools/dung-xuong.py --dich "../../<tên xưởng>" --chu "<tên người dùng>" --tien-to <tt>')
+        print('  (bản mẫu nằm ở AI Designer/_ban-mau/xuong-thiet-ke-ai, nên "../../<tên xưởng>" là AI Designer/<tên xưởng>)')
+        print('rồi chạy tools/cai-dat.py TRONG xưởng mới. Đọc BAN-MAU.md và skill skills/thiet-ke-thiet-lap/SKILL.md.')
+        sys.exit(3)
     if a.trang_thai:
         trang_thai()
         return

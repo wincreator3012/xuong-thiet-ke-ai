@@ -64,7 +64,7 @@ Máy người dùng là bản gốc; sandbox đám mây mất khi hết phiên.
 ### Khởi động phiên ở sandbox đám mây (trường hợp B.1)
 
 ```bash
-# 1. lấy repo: đóng gói trên máy RA NGOÀI repo rồi stage tệp đó (hoặc git clone nếu đã có mạng tới GitHub)
+# 1. lấy repo: đóng gói trên máy RA NGOÀI repo rồi stage tệp đó (không git clone: bản trên GitHub là bản mẫu, không phải xưởng của người dùng)
 #    trên máy: cd <repo> && mkdir -p "../Du an/_tam" && tar czf "../Du an/_tam/repo.tgz" --exclude=.git --exclude="Claude outputs" .
 #    ở sandbox: giải nén thành <làm việc>/<tên repo>, cạnh <làm việc>/Du an và <làm việc>/Thanh pham
 # 2. thư viện (Playwright, Chromium thường đã có trong sandbox; không chạy "playwright install" nếu đã có)
@@ -167,4 +167,4 @@ python3 tools/dong-goi.py "<dự án>" [--lam | --don [--xoa]]          # ngư�
 
 ## 7. Cập nhật bản mới của xưởng
 
-Xưởng được tác giả cập nhật từ kinh nghiệm dùng thật. Lấy bản mới mà không mất phần của mình: `docs/DONG-GOP.md` mục "Cập nhật bản mới". Phần của người dùng không bao giờ bị ghi đè: `brand/brand.json`, logo trong `brand/logo/`, các tệp trong `phong-cach/` (trừ bản `*.mau.*`), `minh-hoa/an-du.json`, `cau-hinh.json`, và toàn bộ `Du an/`, `Thanh pham/` (nằm ngoài repo).
+Bản mẫu được tác giả cập nhật từ kinh nghiệm dùng thật; xưởng riêng chỉ nhận thay đổi khi người dùng yêu cầu, qua `tools/dung-xuong.py --cap-nhat` (không `git pull`): `docs/DONG-GOP.md` mục "Cập nhật xưởng từ bản mẫu mới". Phần của người dùng không bao giờ bị ghi đè: `brand/brand.json`, logo trong `brand/logo/`, các tệp trong `phong-cach/` (trừ bản `*.mau.*`), `minh-hoa/an-du.json`, `cau-hinh.json`, và toàn bộ `Du an/`, `Thanh pham/` (nằm ngoài repo).

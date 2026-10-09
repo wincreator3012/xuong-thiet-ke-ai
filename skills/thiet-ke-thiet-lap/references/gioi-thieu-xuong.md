@@ -75,6 +75,7 @@ Kết chặng: "Mình nói thêm vài thói quen giúp xưởng ra kết quả t
 - dành sức cho brief vì sửa ở đó rẻ nhất;
 - góp ý cụ thể theo khổ ("story: tên to hơn"), và "chê một lần rồi dặn từ nay" để xưởng học;
 - nghĩ cả bộ khổ ngay từ đầu, và dùng Bàn thiết kế cho chỉnh nhỏ.
+- dùng skill của mình (đã lưu ở bước 6 của thiết lập): nói tự nhiên là đủ, muốn chắc thì gọi đích danh tên skill; luôn mở thư mục "AI Designer" vì đồ nghề nằm trong xưởng; muốn đổi quy trình thì nhờ trợ lý sửa skill trong xưởng rồi lưu lại bản mới.
 
 Kết chặng: "Còn vài điều xưởng chưa làm, mình nói thẳng để bạn khỏi mất công thử."
 

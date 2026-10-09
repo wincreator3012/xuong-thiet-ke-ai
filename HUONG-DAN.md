@@ -1,6 +1,6 @@
 # HƯỚNG DẪN SỬ DỤNG XƯỞNG THIẾT KẾ
 
-Tài liệu cho người dùng, đọc sau khi đã cài xong ([BAT-DAU.md](BAT-DAU.md)). Bạn không cần đọc hết một lần: mục 1-3 đủ để làm ấn phẩm đầu tiên, các mục sau tra khi cần. Mọi việc dưới đây bạn chỉ cần nói bằng lời thường với trợ lý AI; tên tệp và lệnh trong ngoặc là để bạn biết nó nằm ở đâu, không phải để bạn gõ.
+Tài liệu cho người dùng, đọc sau khi trợ lý đã dựng xong xưởng riêng của bạn (cách bắt đầu: `BAT-DAU.md` của bản mẫu). Bạn không cần đọc hết một lần: mục 1-3 đủ để làm ấn phẩm đầu tiên, các mục sau tra khi cần. Mọi việc dưới đây bạn chỉ cần nói bằng lời thường với trợ lý AI; tên tệp và lệnh trong ngoặc là để bạn biết nó nằm ở đâu, không phải để bạn gõ.
 
 ## 1. Một ấn phẩm đi qua những bước nào
 
@@ -81,11 +81,11 @@ Thay đổi vị trí, cỡ chữ, ẩn hiện chỉ áp cho khổ đang xem; th
 
 ## 5. Khi trợ lý nhờ "bấm đúp Dung tren may"
 
-Một số ứng dụng AI (ví dụ Claude Cowork) làm việc trong một máy ảo không có trình duyệt nên không tự dựng ảnh được. Khi đó trợ lý xếp việc vào hàng đợi và nhờ bạn bấm đúp **`Dung tren may.command`** (Mac) hoặc **`Dung tren may.bat`** (Windows) ở gốc repo. Một cửa sổ mở ra, máy bạn dựng ảnh rồi chờ việc mới trong 30 phút; trợ lý tự biết khi xong. Bạn chỉ cần để cửa sổ mở, xong thì đóng.
+Một số ứng dụng AI (ví dụ Claude Cowork) làm việc trong một máy ảo không có trình duyệt nên không tự dựng ảnh được. Khi đó trợ lý xếp việc vào hàng đợi và nhờ bạn bấm đúp **`Dung tren may.command`** (Mac) hoặc **`Dung tren may.bat`** (Windows) ở gốc xưởng của bạn. Một cửa sổ mở ra, máy bạn dựng ảnh rồi chờ việc mới trong 30 phút; trợ lý tự biết khi xong. Bạn chỉ cần để cửa sổ mở, xong thì đóng.
 
 ## 6. Phong cách của bạn
 
-Ba tệp giữ phong cách của bạn (tạo ở bước cài từ bản khởi đầu cùng tên có thêm `.mau`; chúng không lên git chung và không bị bản cập nhật của xưởng ghi đè). Bạn đọc, sửa tay được, nhưng cách dễ nhất là nói với trợ lý:
+Ba tệp giữ phong cách của bạn (tạo ở bước cài từ bản khởi đầu cùng tên có thêm `.mau`; chúng là của bạn, nằm trong xưởng của bạn và không bị bản cập nhật từ bản mẫu ghi đè). Bạn đọc, sửa tay được, nhưng cách dễ nhất là nói với trợ lý:
 
 - `phong-cach/PHONG-CACH.md`: tên, chức danh nguyên văn, ấn phẩm hay làm, cảm giác, họ màu, quy ước chữ, logo, sổ tay góp ý. Đây là "bản đồ" trợ lý đọc trước mỗi ấn phẩm.
 - `brand/brand.json`: phần máy đọc: họ màu (mã màu theo vai: nền, chữ, nhấn...), thương hiệu và logo, tên và các bản chức danh.
@@ -138,7 +138,7 @@ Trong thư mục `AI Designer`, cạnh repo:
 - `Du an/<năm-tháng tên dự án>/` (trợ lý tạo): `BRIEF.md`, `SO-GOP-Y.md`, `nguon/` (tư liệu bạn đưa), `anh/` (ảnh đã xử lý), `thiet-ke/` (file ấn phẩm, Bàn thiết kế ghi vào đây), `nhap/` (bản dựng nháp, tờ tổng thể).
 - `Thanh pham/<năm-tháng tên dự án>/NN <tên ấn phẩm>/`: ảnh, PDF bản cuối để đăng, gửi in; sau khi duyệt có thêm báo cáo nghiệm thu và `DANG.md`. Sao lưu cả dự án bằng cách dời một thư mục.
 
-Repo không bao giờ chứa nháp hay thành phẩm: trợ lý ghi mọi thứ ra ngoài repo và cuối mỗi phiên kiểm repo còn sạch. Thấy thư mục lạ như `Claude outputs/` trong repo: đó là bản chép ứng dụng tạo khi gửi ảnh vào khung chat; trợ lý sẽ dọn.
+Xưởng không bao giờ chứa nháp hay thành phẩm: trợ lý ghi mọi thứ ra ngoài xưởng và cuối mỗi phiên kiểm xưởng còn sạch. Thấy thư mục lạ như `Claude outputs/` trong xưởng: đó là bản chép ứng dụng tạo khi gửi ảnh vào khung chat; trợ lý sẽ dọn.
 
 ## 10. Dùng xưởng hiệu quả nhất
 
@@ -179,7 +179,9 @@ Nhờ thứ xưởng chưa có, trợ lý sẽ nói thẳng "xưởng chưa có"
 | "Làm file in gửi nhà in Z" | PDF CMYK đúng hồ sơ màu kèm ghi chú |
 | "Từ nay..." | sửa mặc định, ghi sổ tay góp ý |
 | "Đổi phong cách" | làm lại phần thiết lập bạn muốn đổi |
-| "Cập nhật xưởng từ bản mới" | cập nhật theo `docs/DONG-GOP.md`, giữ phần của bạn |
+| "Tạo skill cho tôi" / "Lưu lại skill vào tài khoản" | cá nhân hoá, đóng gói skill, hướng dẫn lưu vào tài khoản AI (`skills/README.md`) |
+| "Dùng skill <tên skill> ..." | gọi đích danh một skill khi muốn chắc trợ lý đi đúng quy trình |
+| "Cập nhật xưởng từ bản mẫu mới" | cập nhật theo `docs/DONG-GOP.md`, giữ phần của bạn |
 
 ## 13. Sự cố thường gặp
 
@@ -192,13 +194,20 @@ Nhờ thứ xưởng chưa có, trợ lý sẽ nói thẳng "xưởng chưa có"
 | Chữ trên ảnh mất dấu, sai phông | phông chưa nạp | nói với trợ lý, nó dựng lại; báo lỗi nếu lặp lại |
 | Bàn thiết kế báo "file đã đổi" | trợ lý vừa sửa, hoặc dịch vụ đồng bộ đám mây vừa ghi | chọn nạp bản mới; bản cũ luôn còn trong `thiet-ke/_phien-ban/` |
 | Logo không hiện | chưa khai tên tệp logo | nói "logo của tôi là tệp X trong brand/logo" |
-| Không thấy ảnh xuất | ảnh nằm ở `Thanh pham/`, không ở trong repo | mở `AI Designer/Thanh pham/<tên dự án>/` |
+| Không thấy ảnh xuất | ảnh nằm ở `Thanh pham/`, không ở trong xưởng | mở `AI Designer/Thanh pham/<tên dự án>/` |
+| Trợ lý không dùng skill của bạn | skill chưa lưu, đã tắt, hoặc mô tả chưa khớp câu bạn nói | gọi đích danh tên skill; nói "thêm câu tôi vừa nói vào mô tả skill"; kiểm skill còn bật trên tài khoản |
+| Tải skill lên tài khoản báo lỗi | mô tả quá 1024 ký tự, tên thư mục trong ZIP khác tên skill | nói với trợ lý, nó kiểm và đóng gói lại |
+| Trợ lý làm việc trong thư mục `_ban-mau` | nhầm bản mẫu với xưởng | nhắc: "bản mẫu chỉ để đọc, làm trong xưởng của tôi" |
 
 Còn lại: nói với trợ lý điều bạn thấy bằng lời thường, nó có tài liệu chẩn đoán bên trong thư mục.
 
-## 14. Cập nhật xưởng
+## 14. Skill của bạn
 
-Xưởng được tác giả cập nhật từ kinh nghiệm dùng thật (khuôn mới, chuẩn nền tảng mới, sửa lỗi). Lấy bản mới mà không mất phong cách, logo, dự án của bạn: [docs/DONG-GOP.md](docs/DONG-GOP.md). Cách dễ nhất: tải bản mới về thư mục tạm rồi nói "cập nhật xưởng từ thư mục <tên>, giữ nguyên phong cách của tôi".
+Skill là những tờ quy trình nghề của trợ lý: mỗi việc (thiết kế, chữ, hình, in và sự kiện, trình chiếu, thiết lập) có một skill mang tiền tố tên bạn. Trợ lý đọc mô tả skill, thấy lời bạn khớp thì làm theo từng bước, nên kết quả nhất quán và bạn không phải dặn lại. Nguồn skill nằm trong `skills/` của xưởng; bản lưu trên tài khoản AI giúp trợ lý nhận ra việc thiết kế ở mọi cuộc trò chuyện. Skill là quy trình, đồ nghề nằm trong xưởng, nên luôn mở thư mục "AI Designer" khi làm việc. Lưu skill vào từng ứng dụng, cách gọi skill, giữ skill khớp với xưởng: `skills/README.md`.
+
+## 15. Cập nhật xưởng
+
+Bản mẫu được tác giả cập nhật từ kinh nghiệm dùng thật (khuôn mới, chuẩn nền tảng mới, sửa lỗi). Xưởng của bạn không tự đổi theo. Muốn lấy bản mới, nói "cập nhật xưởng từ bản mẫu mới": trợ lý tải bản mẫu mới, so với mốc cũ, chỉ mang sang phần bạn chưa sửa và hỏi bạn ở phần bạn đã sửa; phong cách, logo, skill, dự án của bạn không bị ghi đè ([docs/DONG-GOP.md](docs/DONG-GOP.md)).
 
 ---
 

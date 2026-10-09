@@ -22,4 +22,6 @@ Bản đầy đủ (trong README của bản rẽ nhánh, tài liệu khoá họ
 
 Trong bản rẽ nhánh hay bản sao của repo: giữ nguyên `LICENSE`, `LICENSE-TAI-LIEU.md`, tệp này, và mục "Tác giả" trong `README.md`.
 
+Xưởng riêng dựng từ bản mẫu (bằng `tools/dung-xuong.py`) tự mang theo `LICENSE`, `LICENSE-TAI-LIEU.md` và tệp này, và README của xưởng có sẵn dòng ghi nguồn; giữ chúng khi bạn sửa xưởng. Skill trong xưởng giữ câu ghi nguồn ở khối "Xưởng:" đầu mỗi skill.
+
 Cảm ơn bạn đã giữ dòng ghi công: đó là cách để tri thức được chia sẻ tiếp tục được chia sẻ.

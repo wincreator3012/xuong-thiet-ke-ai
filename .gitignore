@@ -9,8 +9,9 @@ cau-hinh.json
 # hồ sơ màu tải về (giấy phép hạn chế phân phối)
 in-an/icc/*.icc
 in-an/icc/*.icm
-# PHẦN CỦA BẠN (tạo từ các tệp *.mau.* ở bước cài, không lên git chung để cập nhật xưởng không đụng tới):
-# muốn lưu phong cách vào repo riêng của bạn thì xoá các dòng dưới đây
+# PHẦN CỦA NGƯỜI DÙNG: không bao giờ nằm trong bản mẫu. Người dùng làm việc trong xưởng riêng dựng bằng
+# tools/dung-xuong.py (xưởng đó có .gitignore riêng, giữ phong cách trong git của xưởng); các dòng dưới chỉ để
+# phòng khi ai đó lỡ cài thẳng trong bản mẫu (xưởng kiểu cũ).
 brand/brand.json
 brand/logo/*
 !brand/logo/README.md

@@ -1,12 +1,14 @@
 # Xưởng thiết kế Claude
 
+> **Đây là BẢN MẪU, không phải repo để tải về rồi kéo, đẩy qua lại.** Bạn đưa đường link repo này cho trợ lý AI trên máy của bạn; trợ lý đọc, học, rồi dựng cho bạn một **xưởng thiết kế riêng** ngay trên máy, mang tên, phong cách và bộ skill của chính bạn. Trợ lý AI: đọc [BAN-MAU.md](BAN-MAU.md) trước khi làm bất cứ điều gì.
+
 **Một xưởng thiết kế ấn phẩm cùng AI ngay trên máy tính của bạn, dành cho chuyên gia, giảng viên, diễn giả và nhà chuyên môn.** Bạn nói bằng lời thường mình cần gì ("làm bộ ảnh thông cáo khoá học cho Facebook và story", "làm phông sân khấu 6x3 m", "vẽ mô hình bốn bước của tôi thành ảnh"), trợ lý AI lo phần thiết kế đúng chuẩn ngành, dựng ra mọi khổ cần thiết, tự kiểm chất lượng, và bạn duyệt bằng mắt. Muốn tự tay sửa một chữ, dời một tấm ảnh, bạn mở Bàn thiết kế ngay trong trình duyệt.
 
 Repo này do nhà giáo dục **Lương Dũng Nhân** ([ldn.edu.vn](https://ldn.edu.vn)) đóng gói từ xưởng thiết kế cá nhân đã chạy qua nhiều ấn phẩm thật, tinh gọn lại và chia sẻ miễn phí cho cộng đồng. Mọi người có quyền sử dụng và lan toả miễn phí, nhớ giữ dòng ghi nhận tác giả ([GHI-CONG.md](GHI-CONG.md)).
 
 Điều quan trọng nhất: **xưởng thiết kế theo phong cách của BẠN.** Ở bước thiết lập, trợ lý hỏi bạn là ai, làm cho ai, thích cảm giác nào, rồi điền tên, chức danh nguyên văn, màu, logo, cách viết chữ của bạn vào chỗ đã chừa sẵn. Mọi ấn phẩm sau đó mang dấu ấn của bạn và đổi được bằng một câu nói.
 
-Bạn không cần biết thiết kế, không cần biết lập trình, không cần phần mềm đồ hoạ. Bạn cần một ứng dụng AI làm việc được với thư mục trên máy (Claude Desktop là lựa chọn đã kiểm chứng; ChatGPT, Codex, Antigravity cũng dùng được), và khoảng 30-60 phút cho lần cài đầu.
+Bạn không cần biết thiết kế, không cần biết lập trình, không cần phần mềm đồ hoạ. Bạn cần một ứng dụng AI làm việc được với thư mục trên máy (Claude Desktop là lựa chọn đã kiểm chứng; ChatGPT, Codex, Antigravity cũng dùng được), và khoảng 60-90 phút cho lần dựng xưởng đầu tiên.
 
 ## Xưởng làm được gì cho bạn
 
@@ -28,15 +30,18 @@ Ngoài ra bạn nhận được:
 - **Mười hai khuôn đa khổ** và **kho khoảng 30 thể thức** (mạng xã hội, in, sân khấu) có số đo, vùng an toàn và định mức số chữ từng khổ.
 - **Tám chuẩn nghề đã chưng cất** (nguyên lý thiết kế, mạng xã hội, in ấn, sân khấu, ảnh chân dung, minh hoạ tri thức, nghiệm thu, chữ trên thiết kế) cùng năm báo cáo nghiên cứu gốc có nguồn.
 - **Cổng nghiệm thu tự động**: chữ không lấn vùng bị che, không quá nhỏ để đọc trên điện thoại, tương phản đủ, không sáo ngữ văn AI, không dùng từ bạn đã cấm. Trợ lý không được nói "xong" khi máy chưa báo đạt.
+- **Bộ skill mang tên bạn**: sáu quy trình chuẩn cho trợ lý AI (thiết kế, chữ, hình, in và sự kiện, trình chiếu, thiết lập) được đặt tên theo bạn, viết mô tả theo đúng lời bạn hay nói, đóng gói sẵn để lưu vào tài khoản Claude, ChatGPT hay dùng thẳng trong Codex, Antigravity. Trợ lý giải thích skill là gì và cách dùng ngay trong buổi thiết lập ([skills/README.md](skills/README.md)).
 - **Hướng dẫn cho người mới**: [BAT-DAU.md](BAT-DAU.md) (cài lần đầu, từng bước, kể cả cài ứng dụng AI), [HUONG-DAN.md](HUONG-DAN.md) (từng tính năng, cách đặt yêu cầu, thói quen dùng hiệu quả, xử lý sự cố).
 
 ## Bắt đầu trong ba bước
 
 1. **Cài một ứng dụng AI làm việc được với thư mục trên máy**: Claude Desktop (khuyên dùng, cần gói trả phí có Cowork), hoặc ChatGPT desktop, Codex, Google Antigravity. So sánh và cách cài: [BAT-DAU.md](BAT-DAU.md) bước 1.
-2. **Tải xưởng về máy**: tạo một thư mục tên `AI Designer` trong Documents, tải repo này (nút **Code**, chọn **Download ZIP**, giải nén), đổi tên thư mục vừa giải nén từ `xuong-thiet-ke-ai-main` thành `xuong-thiet-ke-ai` và đặt vào trong `AI Designer`.
-3. **Mở thư mục `AI Designer` trong ứng dụng AI và nói**: *"Đọc file CLAUDE.md trong thư mục xuong-thiet-ke-ai rồi thiết lập xưởng thiết kế cho tôi."* (ứng dụng khác Claude: *"Đọc file AGENTS.md..."*).
+2. **Tạo một thư mục tên `AI Designer`** (ví dụ trong Documents) và mở thư mục đó trong ứng dụng AI. Thư mục còn trống cũng được.
+3. **Đưa link repo này cho trợ lý và nói**: *"Đọc https://github.com/wincreator3012/xuong-thiet-ke-ai, bắt đầu từ tệp BAN-MAU.md, rồi dựng cho tôi một xưởng thiết kế riêng trong thư mục này."*
 
-Trợ lý tự cài và kiểm môi trường, hỏi bạn vài lượt về phong cách, dựng thử ấn phẩm mang tên bạn, rồi giới thiệu xưởng và cùng bạn chọn ấn phẩm đầu tiên. Chi tiết từng bước: [BAT-DAU.md](BAT-DAU.md).
+Trợ lý tải bản mẫu về `AI Designer/_ban-mau/` chỉ để đọc, hỏi bạn tên xưởng và tên ngắn cho skill, dựng xưởng riêng bên cạnh, cài và kiểm môi trường, hỏi bạn vài lượt về phong cách, dựng thử ấn phẩm mang tên bạn, tạo bộ skill của bạn và hướng dẫn lưu vào tài khoản AI, rồi giới thiệu xưởng và cùng bạn chọn ấn phẩm đầu tiên. Chi tiết từng bước: [BAT-DAU.md](BAT-DAU.md).
+
+Vì sao không tải thẳng repo về làm việc: xưởng của bạn sẽ chứa phong cách, logo, quy tắc riêng và lớn dần theo cách bạn làm việc. Tách nó khỏi bản mẫu giúp bạn sửa thoải mái mà không sợ bản cập nhật ghi đè, và bản mẫu vẫn còn nguyên làm mốc để sau này trợ lý mang kinh nghiệm mới sang có chọn lọc.
 
 ## Dùng sao cho hiệu quả nhất
 
@@ -51,28 +56,35 @@ Trợ lý tự cài và kiểm môi trường, hỏi bạn vài lượt về pho
 
 ## Cấu trúc thư mục
 
+Sau khi trợ lý dựng xong, thư mục của bạn trông như sau:
+
 ```
-AI Designer/                      ← thư mục cha bạn tạo, thêm thư mục này vào ứng dụng AI
-├── xuong-thiet-ke-ai/           ← repo này (chỉ chứa năng lực, luôn sạch)
-│   ├── README.md                 ← bạn đang đọc
-│   ├── BAT-DAU.md                ← cài lần đầu, từng bước
+AI Designer/                      ← thư mục bạn tạo và mở trong ứng dụng AI
+├── _ban-mau/xuong-thiet-ke-ai/   ← bản mẫu (repo này): chỉ đọc, làm mốc khi cập nhật
+├── <xưởng của bạn>/              ← XƯỞNG RIÊNG, tên do bạn chọn; mọi việc làm ở đây
+│   ├── README.md                 ← giới thiệu xưởng của bạn (tạo lúc dựng)
+│   ├── XUONG.json                ← hồ sơ xưởng: chủ xưởng, tiền tố skill, mốc bản mẫu
 │   ├── HUONG-DAN.md              ← từng tính năng, cách đặt yêu cầu, xử lý sự cố
 │   ├── CLAUDE.md, AGENTS.md      ← điểm vào cho trợ lý AI
 │   ├── Mo ban thiet ke.command   ← bấm đúp để mở Bàn thiết kế (Mac; Windows: .bat)
 │   ├── Dung tren may.command     ← bấm đúp khi trợ lý nhờ máy bạn dựng ảnh (Mac; Windows: .bat)
-│   ├── phong-cach/               ← PHONG-CACH.md: bản đồ phong cách của BẠN (tạo lúc cài từ bản .mau); mẫu bạn thích
-│   ├── brand/                    ← brand.json (họ màu, thương hiệu, tên, chức danh; tạo lúc cài) + logo/
+│   ├── phong-cach/               ← PHONG-CACH.md: bản đồ phong cách của BẠN; mẫu bạn thích
+│   ├── brand/                    ← brand.json (họ màu, thương hiệu, tên, chức danh) + logo/
+│   ├── skills/                   ← nguồn sáu skill mang tên bạn
 │   ├── khuon/                    ← 12 khuôn đa khổ, nội dung mẫu giả định
 │   ├── chuan/, nghien-cuu/       ← chuẩn nghề và nghiên cứu gốc
 │   ├── he-thong/, minh-hoa/      ← lõi dựng, sơ đồ tri thức
 │   ├── trinh-chieu/              ← lõi bài trình chiếu: PPTX sửa được, 15 loại sơ đồ bằng hình khối gốc
 │   ├── fonts/                    ← 4 họ phông đủ dấu tiếng Việt
-│   ├── skills/                   ← 6 quy trình chuẩn cho trợ lý AI
-│   ├── tools/                    ← công cụ dựng, kiểm, cài đặt (trợ lý tự chạy)
-│   └── docs/                     ← tài liệu kỹ thuật cho trợ lý, bài học, cập nhật và đóng góp
+│   ├── tools/                    ← công cụ dựng, kiểm, cài đặt, dựng xưởng (trợ lý tự chạy)
+│   └── docs/                     ← tài liệu kỹ thuật cho trợ lý, bài học, cập nhật
 ├── Du an/                        ← mỗi dự án một thư mục: brief, tư liệu, ảnh, bản nháp (việc tạm ở Du an/_tam/)
-└── Thanh pham/                   ← <năm-tháng dự án>/NN <ấn phẩm>/: bản cuối để đăng, gửi in, kèm DANG.md
+├── Thanh pham/                   ← <năm-tháng dự án>/NN <ấn phẩm>/: bản cuối để đăng, gửi in, kèm DANG.md
+├── Goi skill/                    ← skill đóng gói ZIP để tải lên tài khoản Claude, ChatGPT
+└── .agents/skills/, .claude/skills/  ← skill cho Codex, Antigravity, Claude Code tự đọc (thư mục ẩn)
 ```
+
+Repo này (bản mẫu) có thêm [BAN-MAU.md](BAN-MAU.md) (cho trợ lý: bản mẫu là gì, dựng xưởng thế nào) và [BAT-DAU.md](BAT-DAU.md) (cho bạn: bắt đầu từng bước); hai tệp này không chép sang xưởng.
 
 ## Cách nó chạy (cho người tò mò)
 
@@ -97,4 +109,4 @@ Nếu bạn dùng, chia sẻ lại hoặc giới thiệu repo này (bài viết,
 
 ## Cập nhật và đóng góp
 
-Xưởng được tác giả cập nhật từ kinh nghiệm dùng thật; lấy bản mới mà không mất phong cách, logo, dự án của bạn: [docs/DONG-GOP.md](docs/DONG-GOP.md). Bạn có quy tắc hay, khuôn mới, hay bắt được lỗi? Mở issue hoặc pull request.
+Bản mẫu được tác giả cập nhật từ kinh nghiệm dùng thật. Xưởng của bạn không tự đổi theo: khi muốn, bạn nói "cập nhật xưởng từ bản mẫu mới", trợ lý tải bản mẫu mới, so với mốc cũ, chỉ mang sang phần bạn chưa sửa và hỏi bạn ở phần bạn đã sửa; phong cách, logo, skill, dự án của bạn không bị ghi đè ([docs/DONG-GOP.md](docs/DONG-GOP.md)). Bạn có quy tắc hay, khuôn mới, hay bắt được lỗi? Mở issue hoặc pull request trên repo này, nhưng đừng đẩy xưởng riêng của bạn lên đây.
