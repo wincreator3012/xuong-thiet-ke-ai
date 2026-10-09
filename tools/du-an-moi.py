@@ -6,6 +6,7 @@ Trên máy người dùng: dự án (nơi làm nháp) nằm trong "AI Designer/D
 (cau-hinh.json > thuMucDuAn, thuMucThanhPham). Người dùng nói đẩy sang chỗ khác ở đầu cuộc trò chuyện thì dùng --goc cho phiên đó.
 
     python3 tools/du-an-moi.py "Khoá học mùa thu" [--goc <thư mục dự án>] [--khuon thong-cao] [--thuong-hieu chinh]
+    python3 tools/du-an-moi.py "Toạ đàm lãnh đạo" --slide bai-noi [--chu-de giay-muc] [--en]   # dự án có bài trình chiếu
 
 Cấu trúc tạo ra:
     <thuMucDuAn>/<YYYY-MM tên>/
@@ -14,6 +15,7 @@ Cấu trúc tạo ra:
       nguon/            tư liệu người dùng đưa: ảnh gốc, logo đối tác, văn bản
       anh/              ảnh đã chuẩn hoá, sửa, tách nền (đưa vào khuôn)
       thiet-ke/         file ấn phẩm .json (nguồn sự thật; Bàn thiết kế ghi vào đây)
+      slide/            file bài trình chiếu .json (khi có --slide; tools/slide.py dựng ra PPTX)
       nhap/             bản dựng nháp theo từng ấn phẩm (ve.py --nhap)
     Bản cuối: <thuMucThanhPham>/<YYYY-MM tên>/NN <ấn phẩm>/ (ve.py không --nhap); người dùng duyệt thì tools/dong-goi.py đóng gói và dọn nháp
 """
@@ -73,6 +75,9 @@ def main():
     ap.add_argument('--goc')
     ap.add_argument('--khuon')
     ap.add_argument('--thuong-hieu', help='id trong brand/brand.json > thuongHieu (mặc định: thuongHieuMacDinh)')
+    ap.add_argument('--slide', help='tạo slide/<tên>.json khởi đầu cho một bài trình chiếu')
+    ap.add_argument('--chu-de', help='chủ đề màu cho bài trình chiếu (brand/brand.json > chuDe)')
+    ap.add_argument('--en', action='store_true', help='bài trình chiếu tiếng Anh')
     a = ap.parse_args()
     goc = a.goc or ve.duong_cau_hinh('thuMucDuAn')
     if not goc:
@@ -96,6 +101,19 @@ def main():
         if not os.path.exists(ra):
             json.dump(spec, open(ra, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
             print(f'Ấn phẩm khởi đầu (nội dung mẫu, cần thay): {ra}')
+    if a.slide:
+        os.makedirs(os.path.join(d, 'slide'), exist_ok=True)
+        ra = os.path.join(d, 'slide', f'{a.slide}.json')
+        if not os.path.exists(ra):
+            deck = {'loai': 'trinh-chieu', 'ngonNgu': 'en' if a.en else 'vi', 'tieuDe': a.ten,
+                    'thuongHieu': a.thuong_hieu or ve.thuong_hieu_mac_dinh(), 'phienBan': 1,
+                    'chanTrang': {'chu': '', 'so': True},
+                    'slide': [{'kieu': 'bia', 'kicker': '', 'tieuDe': a.ten, 'phuDe': '', 'nguoi': [], 'ngay': ''},
+                              {'kieu': 'ket', 'tieuDe': '', 'cauHoi': '', 'lienHe': []}]}
+            if a.chu_de:
+                deck['chuDe'] = a.chu_de
+            json.dump(deck, open(ra, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
+            print(f'Bài trình chiếu khởi đầu (điền theo trinh-chieu/README.md): {ra}')
     print(f'Dự án: {d}')
     tp = ve.duong_cau_hinh('thuMucThanhPham', 'XUONG_THANH_PHAM')
     if tp:

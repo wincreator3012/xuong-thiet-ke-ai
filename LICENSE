@@ -31,5 +31,7 @@ Thành phần bên thứ ba giữ giấy phép riêng:
   License 1.1 (fonts/*/OFL.txt), phân phối nguyên bản.
 - Moveable (tools/ban-thiet-ke/vendor/): MIT (LICENSE-moveable.txt).
 - Mô hình phát hiện khuôn mặt YuNet (tools/models/): MIT, từ OpenCV Zoo.
+- PptxGenJS, fontkit (MIT) và sharp (Apache 2.0) cho lõi trình chiếu: không phân phối trong repo,
+  tools/slide.py tự cài vào thư mục tạm ngoài repo khi cần.
 
 Cách ghi công khi dùng lại, chia sẻ: GHI-CONG.md.

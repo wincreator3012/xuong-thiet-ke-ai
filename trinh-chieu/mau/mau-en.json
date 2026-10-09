@@ -1,0 +1,20 @@
+{
+  "_huong-dan": "English sample deck to test the English mode: sentence case, author credit, explainer theme.",
+  "loai": "trinh-chieu",
+  "ngonNgu": "en",
+  "tieuDe": "Learning from experience",
+  "chuDe": "dem-xanh",
+  "chanTrang": { "chu": "Sample Academy · Mindful communication", "so": true },
+  "slide": [
+    { "kieu": "bia", "kicker": "International workshop 2026", "tieuDe": "Learning from experience: *slowing down to see clearly*", "nguoi": ["Dr Minh An Nguyen", "Sample Academy"], "ngay": "17 October 2026 · Hanoi" },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Learning is a cycle, not a straight line",
+      "soDo": { "loai": "vong-lap", "tam": "experiential learning", "buoc": [{ "nhan": "Experience", "phu": "concrete experience" }, { "nhan": "Reflect", "phu": "reflective observation" }, { "nhan": "Conceptualize", "phu": "abstract conceptualization" }, { "nhan": "Experiment", "phu": "active experimentation" }] },
+      "nguon": "Kolb, D. A. (1984). Experiential learning."
+    },
+    { "kieu": "so-do", "tieuDe": "Three zones of arousal", "soDo": { "loai": "pho", "trai": "low arousal", "phai": "high arousal", "doan": [{ "nhan": "Hypoarousal", "phu": "numb, withdrawn" }, { "nhan": "Window of tolerance", "phu": "present, able to think and feel" }, { "nhan": "Hyperarousal", "phu": "anxious, reactive" }], "mucNhan": 1 }, "nguon": "Siegel, D. J. (1999). The developing mind." },
+    { "kieu": "cau-hoi", "cauHoi": "When did you last feel truly heard, and what made the difference?" },
+    { "kieu": "ket", "tieuDe": "Thank you", "cauHoi": "Who will you listen to differently this week?", "lienHe": ["Sample Academy", "sampleacademy.org"] }
+  ]
+}

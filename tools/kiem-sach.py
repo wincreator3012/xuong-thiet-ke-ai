@@ -34,7 +34,7 @@ THU_MUC_TAI_NGUYEN = ('brand', 'fonts', 'in-an', 'phong-cach', 'nghien-cuu', 'mi
                       os.path.join('tools', 'models'), os.path.join('tools', 'ban-thiet-ke'), os.path.join('khuon', '_chung'))
 THU_MUC_SKILL = {'skills', 'skills-nguon'}
 BO_QUA = {'vi-du'}  # ví dụ chủ ý giữ (người dùng đã đồng ý)
-DUOI_MEDIA = {'.png', '.jpg', '.jpeg', '.webp', '.heic', '.gif', '.pdf', '.psd', '.ai', '.mp4', '.mov', '.mp3', '.wav'}
+DUOI_MEDIA = {'.png', '.jpg', '.jpeg', '.webp', '.heic', '.gif', '.pdf', '.psd', '.ai', '.mp4', '.mov', '.mp3', '.wav', '.pptx', '.key', '.odp'}
 NGUONG_LON = 3 * 1024 * 1024
 
 

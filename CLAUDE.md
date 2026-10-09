@@ -1,6 +1,6 @@
 # CLAUDE.md - điểm vào cho trợ lý AI khi làm việc trong Xưởng thiết kế Claude
 
-Đây là **Xưởng thiết kế Claude** (repo `xuong-thiet-ke-ai`): xưởng thiết kế ấn phẩm cùng AI cho chuyên gia, giảng viên, diễn giả, nhà chuyên môn. Người dùng nói nhu cầu bằng lời thường ("làm bộ ảnh thông cáo khoá học cho Facebook và story", "làm phông sân khấu 6x3 m", "vẽ mô hình năm bước của tôi thành ảnh"), duyệt bằng mắt, và tự tinh chỉnh khi muốn trên Bàn thiết kế. Trợ lý AI là người hiểu chuẩn ngành (số lẫn in) để tư vấn và thực thi đúng chuẩn: bài mạng xã hội, story, ảnh bìa, thumbnail, ảnh chia sẻ web, tài liệu in, chứng nhận, thẻ đeo, phông sân khấu, màn LED, standee, và hình minh hoạ tri thức. Người dùng thường mới dùng AI, không làm thiết kế chuyên nghiệp, và không cần biết các công cụ bên dưới.
+Đây là **Xưởng thiết kế Claude** (repo `xuong-thiet-ke-ai`): xưởng thiết kế ấn phẩm cùng AI cho chuyên gia, giảng viên, diễn giả, nhà chuyên môn. Người dùng nói nhu cầu bằng lời thường ("làm bộ ảnh thông cáo khoá học cho Facebook và story", "làm phông sân khấu 6x3 m", "vẽ mô hình năm bước của tôi thành ảnh"), duyệt bằng mắt, và tự tinh chỉnh khi muốn trên Bàn thiết kế. Trợ lý AI là người hiểu chuẩn ngành (số lẫn in) để tư vấn và thực thi đúng chuẩn: bài mạng xã hội, story, ảnh bìa, thumbnail, ảnh chia sẻ web, tài liệu in, chứng nhận, thẻ đeo, phông sân khấu, màn LED, standee, hình minh hoạ tri thức, và bài trình chiếu (slide PPTX sửa được trên Google Slides, PowerPoint, Keynote). Người dùng thường mới dùng AI, không làm thiết kế chuyên nghiệp, và không cần biết các công cụ bên dưới.
 
 Tệp này viết cho Claude (Claude Desktop, Cowork, Claude Code). Trợ lý khác (ChatGPT, Codex, Antigravity, Gemini...) đọc `AGENTS.md` trước rồi làm theo tệp này.
 
@@ -26,9 +26,10 @@ Làm việc bằng nguyên lý, không bằng khuôn cứng. Mọi quyết đị
 | "thiết kế bài đăng", "làm ảnh quảng bá", "poster", "banner", "ảnh bìa", "thumbnail", "resize ra các khổ", "làm bộ ấn phẩm cho chương trình", "mở bàn thiết kế", "sửa ấn phẩm này" | `skills/thiet-ke/` (lõi: brief, thể thức, khuôn, dựng, đa thể thức, Bàn thiết kế, nghiệm thu; mặc định cho mọi ấn phẩm) |
 | "in", "handout", "workbook", "chứng nhận", "danh thiếp", "standee", "phông sân khấu", "backdrop", "màn LED", "photo wall", "thẻ đeo", "gửi nhà in" | `skills/thiet-ke-in-su-kien/` (thể thức vật lý: CMYK, tràn lề, tỉ lệ, LED, đọc từ xa) |
 | "chỉnh ảnh", "ảnh tối, ám màu", "tách nền", "đồng bộ màu bộ ảnh", "chọn ảnh", "vẽ sơ đồ", "minh hoạ mô hình", "hình tượng hoá khái niệm", "infographic" | `skills/thiet-ke-hinh/` (lớp hình: ảnh thật và minh hoạ tri thức) |
+| "làm slide", "tạo deck", "bài trình chiếu", "bài thuyết trình", "slide cho workshop, khoá học, hội thảo", "English slides" | `skills/thiet-ke-slide/` (bài trình chiếu PPTX: brief, dàn ý, sơ đồ gốc sửa được, ghi chú người nói, máy kiểm Google Slides; lõi `trinh-chieu/`, công cụ `tools/slide.py`, chuẩn `chuan/09`) |
 | "nên ghi gì lên ảnh", "viết chữ cho ấn phẩm", "chữ nhiều quá", "đặt tiêu đề poster", "câu kêu gọi", "soát chữ ấn phẩm" | `skills/thiet-ke-chu/` (chữ trên thiết kế: chọn gì lên hình, viết, cắt theo định mức, soát chuẩn ngôn ngữ và đạo đức) |
 
-Ấn phẩm nào cũng đi qua `thiet-ke`; ba skill kia được gọi khi ấn phẩm có phần vật lý, phần hình hoặc phần chữ cần làm kỹ (chữ trên hình gần như luôn cần). Skill nằm trong repo, đọc thẳng từ đây; người dùng có thể cài thêm vào tài khoản Claude theo `skills/README.md`, nhưng bản trong repo luôn là gốc.
+Ấn phẩm nào cũng đi qua `thiet-ke`; ba skill in, hình, chữ được gọi khi ấn phẩm có phần vật lý, phần hình hoặc phần chữ cần làm kỹ (chữ trên hình gần như luôn cần). Bài trình chiếu đi qua `thiet-ke-slide` và gọi `thiet-ke-hinh` cho ảnh thật, hình đặc thù. Skill nằm trong repo, đọc thẳng từ đây; người dùng có thể cài thêm vào tài khoản Claude theo `skills/README.md`, nhưng bản trong repo luôn là gốc.
 
 ## Cách làm việc với người dùng mới
 
@@ -49,7 +50,7 @@ Làm việc bằng nguyên lý, không bằng khuôn cứng. Mọi quyết đị
 6. Một góp ý lặp lần thứ hai: sửa nguồn mặc định (khuôn, `brand/brand.json`, `phong-cach/tu-ngu.json`, `chuan/`) và ghi vào sổ tay góp ý của PHONG-CACH. Đổi giá trị dùng chung trong brand.json: hỏi người dùng trước.
 7. Không xoá tệp của người dùng khi chưa được phép (tệp cần bỏ ở dự án chuyển vào `Du an/_to_delete/`). Không tự commit git.
 8. Sửa tệp có dấu tiếng Việt bằng cách đọc-sửa-ghi trọn tệp (python), đọc lại đoạn vừa ghi để chắc dấu còn nguyên.
-9. Sửa lõi (`he-thong/`, `minh-hoa/`) hay khuôn: `tools/kiem-khuon.py` phải ĐẠT và đã nhìn tờ tổng thể trước khi dùng cho ấn phẩm thật.
+9. Sửa lõi (`he-thong/`, `minh-hoa/`) hay khuôn: `tools/kiem-khuon.py` phải ĐẠT và đã nhìn tờ tổng thể trước khi dùng cho ấn phẩm thật. Sửa lõi trình chiếu (`trinh-chieu/`): `python3 tools/slide.py --kiem` phải ĐẠT và đã nhìn tờ tổng thể các deck mẫu.
 10. Repo sạch: repo chỉ chứa năng lực. Mọi nháp, việc tạm, đầu ra ghi NGOÀI repo (`Du an/<dự án>/`, `Du an/_tam/`, `Thanh pham/`); công cụ tự dừng nếu bị bắt ghi vào repo. Đầu và cuối phiên chạy `python3 tools/kiem-sach.py`; cuối phiên phải ĐẠT mới báo "xong". Chi tiết: `docs/QUY-TRINH-KY-THUAT.md` mục 1 và `skills/_chung/van-hanh.md` mục "Repo sạch".
 11. Khép dự án: người dùng nói "duyệt" thì `python3 tools/dong-goi.py "<dự án>" --lam` (đánh số thư mục ấn phẩm, chép báo cáo nghiệm thu, tạo `DANG.md`), trợ lý điền `DANG.md` (văn bản thay thế, lời đăng gợi ý, lưu ý đăng hoặc gửi in), rồi xin phép xoá một lần và `--don --xoa` (dọn `nhap/`, `thiet-ke/_phien-ban/`, `_to_delete/`; giữ BRIEF, SO-GOP-Y, `nguon/`, `anh/`, `thiet-ke/*.json` để dựng lại khi cần). Chưa duyệt thì không dọn.
 

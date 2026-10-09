@@ -40,12 +40,13 @@ Kết chặng: "Bạn muốn xem xưởng làm ra được những gì không?"
 | Ảnh chân dung, ảnh lớp học chưa đẹp | Khám, chỉnh nhẹ có giới hạn an toàn, tách nền, đồng bộ màu cả bộ | skill `thiet-ke-hinh` | "Ảnh này tối và ám vàng, chỉnh giúp tôi" |
 | Chữ trên ảnh quá nhiều, chưa biết viết gì | Chọn gì lên hình, gì để ở lời đăng; 2-3 phương án tiêu đề; cắt cho vừa từng khổ | skill `thiet-ke-chu` | "Tư vấn chữ cho ấn phẩm này" |
 | Đồ in, đồ sự kiện | Chứng nhận, thẻ đeo, handout, poster, standee, roll-up, phông sân khấu, màn LED, photo wall; file in CMYK đúng chuẩn nhà in | `chung-nhan`, `the-deo`, `backdrop-su-kien`, `photo-wall`; skill `thiet-ke-in-su-kien` | "Làm phông sân khấu 6x3 m và thẻ đeo cho sự kiện" |
+| Bài trình chiếu cho lớp học, hội thảo, Zoom | Slide PPTX sửa được trên Google Slides, PowerPoint, Keynote: sơ đồ gốc (15 kiểu, giảng từng chặng), biểu đồ, ảnh thật, ghi chú người nói, PDF chiếu dự phòng | skill `thiet-ke-slide` | "Làm slide cho buổi toạ đàm từ dàn ý này" |
 | Tự sửa vài chỗ nhỏ | Bàn thiết kế trên trình duyệt: bấm chữ để sửa, kéo thả, đổi cỡ, thay ảnh, xuất ảnh | Bàn thiết kế | "Mở bàn thiết kế cho ấn phẩm này" |
 
 Ba cách kết hợp phổ biến (chọn cách hợp với người dùng):
 
 - **Một chương trình, một bộ nhận diện:** thông cáo, giới thiệu giảng viên, lịch khai giảng, hỏi đáp, rồi phông, thẻ đeo, chứng nhận ngày sự kiện, tất cả cùng một họ màu.
-- **Một mô hình chuyên môn:** sơ đồ tri thức cho bài đăng, bản ngang cho slide, bản in cho handout.
+- **Một mô hình chuyên môn:** sơ đồ tri thức cho bài đăng, cùng sơ đồ trong bài trình chiếu (sửa được nhãn), bản in cho handout.
 - **Một ý chiêm nghiệm:** ảnh trích dẫn kèm câu hỏi mở, lời đăng do bạn viết.
 
 Kết chặng: "Bạn muốn xem một ấn phẩm đi từ đầu tới cuối trông thế nào không?"
@@ -79,7 +80,7 @@ Kết chặng: "Còn vài điều xưởng chưa làm, mình nói thẳng để 
 
 ## Chặng 5. Giới hạn, nói thẳng
 
-Đọc `HUONG-DAN.md` mục "Xưởng không làm gì". Cần nói rõ: không tạo ảnh người, lớp học, sự kiện bằng AI; không sao chép thiết kế của người khác; không tự đăng lên nền tảng nào; không làm slide thuyết trình, video, trang web; ảnh nguồn kém (tối, nhoè, độ phân giải thấp) thì chỉ cứu được một phần; Windows ít được kiểm hơn Mac. Nhờ thứ xưởng không có thì nói thẳng "xưởng chưa có", đề xuất cách gần nhất.
+Đọc `HUONG-DAN.md` mục "Xưởng không làm gì". Cần nói rõ: không tạo ảnh người, lớp học, sự kiện bằng AI; không sao chép thiết kế của người khác; không tự đăng lên nền tảng nào; không làm video, trang web; ảnh nguồn kém (tối, nhoè, độ phân giải thấp) thì chỉ cứu được một phần; Windows ít được kiểm hơn Mac. Nhờ thứ xưởng không có thì nói thẳng "xưởng chưa có", đề xuất cách gần nhất.
 
 Kết chặng: "Giờ mình chọn việc đầu tiên nhé."
 

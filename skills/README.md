@@ -1,6 +1,6 @@
 # Skill của xưởng
 
-Skill là một quy trình chuẩn viết thành tệp `SKILL.md`: trợ lý AI đọc và làm theo từng bước. Xưởng có năm skill:
+Skill là một quy trình chuẩn viết thành tệp `SKILL.md`: trợ lý AI đọc và làm theo từng bước. Xưởng có sáu skill:
 
 | Skill | Dùng khi |
 |---|---|
@@ -9,6 +9,7 @@ Skill là một quy trình chuẩn viết thành tệp `SKILL.md`: trợ lý AI 
 | `thiet-ke-chu/` | chọn và viết chữ trên ấn phẩm |
 | `thiet-ke-hinh/` | ảnh thật và hình minh hoạ tri thức |
 | `thiet-ke-in-su-kien/` | đồ in và đồ sự kiện |
+| `thiet-ke-slide/` | bài trình chiếu (slide PPTX) tiếng Việt, tiếng Anh |
 | `_chung/` | phần vận hành dùng chung (nơi chạy lệnh, repo sạch, bảo trì skill) |
 
 ## Không cần cài gì

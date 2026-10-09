@@ -65,8 +65,9 @@ AI Designer/                      ← thư mục cha bạn tạo, thêm thư m�
 │   ├── khuon/                    ← 12 khuôn đa khổ, nội dung mẫu giả định
 │   ├── chuan/, nghien-cuu/       ← chuẩn nghề và nghiên cứu gốc
 │   ├── he-thong/, minh-hoa/      ← lõi dựng, sơ đồ tri thức
+│   ├── trinh-chieu/              ← lõi bài trình chiếu: PPTX sửa được, 15 loại sơ đồ bằng hình khối gốc
 │   ├── fonts/                    ← 4 họ phông đủ dấu tiếng Việt
-│   ├── skills/                   ← 5 quy trình chuẩn cho trợ lý AI
+│   ├── skills/                   ← 6 quy trình chuẩn cho trợ lý AI
 │   ├── tools/                    ← công cụ dựng, kiểm, cài đặt (trợ lý tự chạy)
 │   └── docs/                     ← tài liệu kỹ thuật cho trợ lý, bài học, cập nhật và đóng góp
 ├── Du an/                        ← mỗi dự án một thư mục: brief, tư liệu, ảnh, bản nháp (việc tạm ở Du an/_tam/)
@@ -86,7 +87,7 @@ Mỗi khuôn là một trang HTML dàn bố cục theo nhóm tỉ lệ (vuông, 
 
 ## Giấy phép
 
-Mã nguồn: MIT ([LICENSE](LICENSE)). Tài liệu, skill, chuẩn thiết kế, nghiên cứu: Creative Commons Attribution 4.0 ([LICENSE-TAI-LIEU.md](LICENSE-TAI-LIEU.md)). Cả hai cho phép dùng, sửa, chia sẻ, kể cả thương mại, với điều kiện giữ dòng ghi công tác giả ([GHI-CONG.md](GHI-CONG.md)). Phông Playfair Display, Lora, Be Vietnam Pro, JetBrains Mono: SIL Open Font License 1.1. Thư viện Moveable: MIT. Mô hình phát hiện khuôn mặt YuNet: MIT. Những gì bạn tạo ra bằng xưởng là của bạn.
+Mã nguồn: MIT ([LICENSE](LICENSE)). Tài liệu, skill, chuẩn thiết kế, nghiên cứu: Creative Commons Attribution 4.0 ([LICENSE-TAI-LIEU.md](LICENSE-TAI-LIEU.md)). Cả hai cho phép dùng, sửa, chia sẻ, kể cả thương mại, với điều kiện giữ dòng ghi công tác giả ([GHI-CONG.md](GHI-CONG.md)). Phông Playfair Display, Lora, Be Vietnam Pro, JetBrains Mono: SIL Open Font License 1.1. Thư viện Moveable: MIT. Mô hình phát hiện khuôn mặt YuNet: MIT. Lõi trình chiếu dùng PptxGenJS, fontkit (MIT) và sharp (Apache 2.0), tự cài ngoài repo khi chạy. Những gì bạn tạo ra bằng xưởng là của bạn.
 
 ## Tác giả
 

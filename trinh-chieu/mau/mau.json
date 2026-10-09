@@ -1,0 +1,287 @@
+{
+  "_huong-dan": "Deck mẫu để kiểm lõi trình chiếu (python3 tools/slide.py --kiem): đủ mọi kiểu slide và mọi loại sơ đồ, nội dung trung tính, người và đơn vị giả định, số liệu giả định có ghi rõ. Không dùng làm nội dung thật.",
+  "loai": "trinh-chieu",
+  "ngonNgu": "vi",
+  "tieuDe": "Học từ trải nghiệm",
+  "tacGia": "TS Nguyễn Minh An",
+  "chuDe": "giay-muc",
+  "chanTrang": { "chu": "Học viện Mẫu · Khoá Giao tiếp tỉnh thức", "so": true },
+  "slide": [
+    {
+      "kieu": "bia",
+      "kicker": "Khoá Giao tiếp tỉnh thức · Buổi 2",
+      "tieuDe": "Học từ trải nghiệm: *đi chậm để thấy rõ*",
+      "phuDe": "Vì sao một buổi học thay đổi được cách ta sống, còn mười buổi nghe giảng thì không",
+      "nguoi": ["TS~Nguyễn~Minh~An", "Giảng viên Học viện Mẫu"],
+      "ngay": "Thứ Bảy, 17/10/2026 · Hà Nội",
+      "ghiChu": "Chào lớp, mời mọi người hít thở ba nhịp trước khi bắt đầu."
+    },
+    { "kieu": "muc-luc", "tieuDe": "Hôm nay chúng ta đi qua bốn chặng", "muc": ["Vòng học từ trải nghiệm", "Lắng nghe ở bốn mức", "Phản hồi không phán xét", "Thực hành và chiêm nghiệm"], "mucNhan": 0 },
+    { "kieu": "chuyen-phan", "so": "01", "tieuDe": "Vòng học từ trải nghiệm", "phuDe": "Trải nghiệm chỉ thành bài học khi ta quay lại nhìn nó" },
+    {
+      "kieu": "so-do",
+      "kicker": "Mô hình",
+      "tieuDe": "Học là một vòng, không phải một đường thẳng",
+      "soDo": {
+        "loai": "vong-lap",
+        "tam": "học từ trải nghiệm",
+        "buoc": [
+          { "nhan": "Trải nghiệm", "phu": "trải nghiệm cụ thể [concrete experience]" },
+          { "nhan": "Quan sát", "phu": "quan sát phản tư [reflective observation]" },
+          { "nhan": "Khái quát", "phu": "khái quát hoá [abstract conceptualization]" },
+          { "nhan": "Thử nghiệm", "phu": "thử nghiệm chủ động [active experimentation]" }
+        ]
+      },
+      "nguon": "Kolb, D. A. (1984). Experiential learning.",
+      "trinhTu": true,
+      "ghiChuTungMuc": ["Chặng 1: điều vừa xảy ra.", "Chặng 2: dừng lại nhìn.", "Chặng 3: rút ra nguyên lý.", "Chặng 4: thử lại theo cách mới."]
+    },
+    {
+      "kieu": "y-chinh",
+      "tieuDe": "Trải nghiệm không tự biến thành bài học",
+      "than": ["Ta cần **khoảng dừng** để nhìn lại điều vừa xảy ra", "Câu hỏi tốt mở ra quan sát mà thói quen che khuất", "Bài học thật là bài học được *thử lại* trong đời sống"],
+      "hinh": { "bieuTuong": "vong-lap", "nhan": "dừng lại, nhìn lại, thử lại" }
+    },
+    {
+      "kieu": "trich-dan",
+      "loi": "Học là quá trình tri thức được tạo ra qua sự chuyển hoá trải nghiệm.",
+      "tacGia": "David A. Kolb (1984, tr. 38)"
+    },
+    { "kieu": "chuyen-phan", "so": "02", "tieuDe": "Lắng nghe ở bốn mức" },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Mỗi mức lắng nghe mở ra một phần khác của người đối diện",
+      "soDo": {
+        "loai": "tang",
+        "kieu": "chong",
+        "tang": [
+          { "nhan": "Tải xuống", "phu": "nghe để xác nhận điều mình đã biết" },
+          { "nhan": "Dữ kiện", "phu": "nghe điều mới, khác với giả định của mình" },
+          { "nhan": "Đồng cảm", "phu": "nghe từ góc nhìn và cảm xúc của người nói" },
+          { "nhan": "Khởi sinh", "phu": "nghe điều đang muốn hình thành giữa hai người" }
+        ]
+      },
+      "nguon": "Scharmer, C. O. (2009). Theory U."
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Thang nhận thức: mức sau xây trên mức trước",
+      "soDo": {
+        "loai": "tang",
+        "kieu": "thap",
+        "tang": [
+          { "nhan": "Sáng tạo", "phu": "kết hợp thành cái mới" },
+          { "nhan": "Đánh giá", "phu": "cân nhắc theo tiêu chí" },
+          { "nhan": "Phân tích", "phu": "tách phần, thấy quan hệ" },
+          { "nhan": "Vận dụng", "phu": "dùng trong tình huống mới" },
+          { "nhan": "Hiểu", "phu": "diễn giải bằng lời của mình" },
+          { "nhan": "Nhớ", "phu": "nhắc lại dữ kiện" }
+        ]
+      },
+      "nguon": "Anderson, L. W. và Krathwohl, D. R. (2001)."
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Năm năng lực cảm xúc xã hội cùng nâng đỡ một~người~học",
+      "soDo": {
+        "loai": "trung-tam",
+        "tam": { "nhan": "Năng lực cảm xúc xã hội", "phu": "[social emotional learning]" },
+        "nhanh": [
+          { "nhan": "Tự nhận thức", "phu": "nhận diện cảm xúc, giá trị của mình" },
+          { "nhan": "Tự quản lý", "phu": "điều hoà cảm xúc và hành vi" },
+          { "nhan": "Nhận thức xã hội", "phu": "đồng cảm với người khác" },
+          { "nhan": "Kỹ năng quan hệ", "phu": "giao tiếp, hợp tác, hoá giải" },
+          { "nhan": "Quyết định có trách nhiệm", "phu": "lựa chọn cân nhắc hệ quả" }
+        ]
+      },
+      "nguon": "CASEL (2020)."
+    },
+    { "kieu": "chuyen-phan", "so": "03", "tieuDe": "Phản hồi không phán xét" },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Bốn bước của một lời phản hồi rõ ràng",
+      "soDo": {
+        "loai": "chuoi",
+        "buoc": [
+          { "nhan": "Quan sát", "phu": "điều thấy, nghe được, không kèm đánh giá" },
+          { "nhan": "Cảm nhận", "phu": "cảm xúc của mình khi đó" },
+          { "nhan": "Nhu cầu", "phu": "điều quan trọng nằm sau cảm xúc" },
+          { "nhan": "Đề nghị", "phu": "một việc cụ thể, làm được" }
+        ]
+      },
+      "chuThich": "Mỗi bước một câu ngắn; bỏ bước nào thì người nghe phải tự đoán.",
+      "nguon": "Rosenberg, M. B. (2003). Nonviolent communication."
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Cùng một tình huống, hai cách nói",
+      "soDo": {
+        "loai": "so-sanh",
+        "trai": { "nhan": "Phán xét", "muc": ["Em lúc nào cũng trễ hạn", "Bài này làm ẩu quá", "Sao em không chịu hỏi?"] },
+        "phai": { "nhan": "Quan sát", "muc": ["Hai lần gần đây bài nộp sau hạn một ngày", "Mục 3 chưa có nguồn cho số liệu", "Anh chưa nghe em hỏi về phần này"] }
+      }
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Điều ta thấy chỉ là phần nổi",
+      "soDo": {
+        "loai": "tang-bang",
+        "noi": { "nhan": "Thấy được", "muc": ["lời nói", "hành vi"] },
+        "chim": { "nhan": "Nằm bên dưới", "muc": ["cảm xúc", "nhu cầu chưa được đáp ứng", "niềm tin, giá trị"] }
+      }
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Cửa sổ dung nạp: vùng ta còn học được",
+      "soDo": {
+        "loai": "pho",
+        "trai": "kích hoạt thấp",
+        "phai": "kích hoạt cao",
+        "doan": [
+          { "nhan": "Giảm kích hoạt", "phu": "tê liệt, rút lui, trống rỗng" },
+          { "nhan": "Cửa sổ dung nạp", "phu": "tỉnh táo, cảm được, nghĩ được" },
+          { "nhan": "Tăng kích hoạt", "phu": "lo âu, giận dữ, phản ứng nhanh" }
+        ],
+        "mucNhan": 1
+      },
+      "nguon": "Siegel, D. J. (1999). The developing mind."
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Người học sống giữa nhiều vòng ảnh hưởng lồng nhau",
+      "soDo": {
+        "loai": "dong-tam",
+        "lop": [
+          { "nhan": "Vi hệ thống", "phu": "gia đình, lớp học, bạn bè" },
+          { "nhan": "Trung hệ thống", "phu": "quan hệ giữa các môi trường gần" },
+          { "nhan": "Ngoại hệ thống", "phu": "nơi làm việc của cha mẹ, chính sách trường" },
+          { "nhan": "Vĩ hệ thống", "phu": "văn hoá, giá trị xã hội" }
+        ]
+      },
+      "nguon": "Bronfenbrenner, U. (1979). The ecology of human development."
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Năng lực là phần giao của ba thành tố",
+      "soDo": {
+        "loai": "venn",
+        "tap": [{ "nhan": "Kiến thức" }, { "nhan": "Kỹ năng" }, { "nhan": "Thái độ" }],
+        "giao": { "nhan": "Năng lực" }
+      }
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Việc quan trọng thường không khẩn cấp",
+      "soDo": {
+        "loai": "ma-tran",
+        "trucNgang": ["Không khẩn cấp", "Khẩn cấp"],
+        "trucDoc": ["Ít quan trọng", "Quan trọng"],
+        "o": [
+          { "nhan": "Lên lịch", "phu": "học, chăm sóc, chuẩn bị" },
+          { "nhan": "Làm ngay", "phu": "việc đến hạn, sự cố" },
+          { "nhan": "Bỏ bớt", "phu": "lướt mạng không mục đích" },
+          { "nhan": "Giao bớt", "phu": "phần lớn tin nhắn, cuộc họp" }
+        ],
+        "mucNhan": 0
+      },
+      "nguon": "Ma trận Eisenhower, phổ biến qua Covey, S. R. (1989)."
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Hồ sơ của một nhóm sau tám tuần (số liệu giả định)",
+      "soDo": {
+        "loai": "radar",
+        "truc": [
+          { "nhan": "Tự nhận thức", "gt": 0.8 },
+          { "nhan": "Tự quản lý", "gt": 0.6 },
+          { "nhan": "Đồng cảm", "gt": 0.75 },
+          { "nhan": "Lắng nghe", "gt": 0.7 },
+          { "nhan": "Phản hồi", "gt": 0.5 },
+          { "nhan": "Hợp tác", "gt": 0.65 }
+        ]
+      },
+      "nguon": "số liệu giả định để kiểm bố cục"
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Năm chặng của khoá học",
+      "soDo": {
+        "loai": "hanh-trinh",
+        "tram": [
+          { "nhan": "Khởi động", "phu": "gặp nhau, đặt ý định" },
+          { "nhan": "Khám phá", "phu": "thử, quan sát, ghi lại" },
+          { "nhan": "Thực hành", "phu": "luyện theo cặp và nhóm" },
+          { "nhan": "Tích hợp", "phu": "đưa vào việc hằng ngày" },
+          { "nhan": "Lan toả", "phu": "chia sẻ với người khác" }
+        ],
+        "mucNhan": 2
+      }
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Thông tin buổi học",
+      "soDo": {
+        "loai": "the-luoi",
+        "the": [
+          { "bieuTuong": "lich", "nhan": "Thứ Bảy, 17/10", "phu": "8 giờ 30 đến 11 giờ 30" },
+          { "bieuTuong": "dia-diem", "nhan": "Phòng 302", "phu": "Học viện Mẫu, Hà Nội" },
+          { "bieuTuong": "nhom", "nhan": "24 học viên", "phu": "chia sáu nhóm bốn người" },
+          { "bieuTuong": "sach", "nhan": "Sổ thực hành", "phu": "mang theo bút và sổ" }
+        ]
+      }
+    },
+    {
+      "kieu": "so-lon",
+      "tieuDe": "Sau tám tuần thực hành (số liệu giả định)",
+      "so": [
+        { "gt": "18/24", "nhan": "học viên viết nhật ký đều", "phu": "ít nhất năm ngày mỗi tuần" },
+        { "gt": "3", "nhan": "buổi phản hồi theo cặp", "phu": "mỗi người, mỗi tuần" }
+      ],
+      "nguon": "số liệu giả định để kiểm bố cục"
+    },
+    {
+      "kieu": "bieu-do",
+      "tieuDe": "Số buổi thực hành mỗi tuần (số liệu giả định)",
+      "bieuDo": { "loai": "cot", "nhan": ["Tuần 1", "Tuần 2", "Tuần 3", "Tuần 4"], "chuoi": [{ "ten": "Buổi", "gt": [2, 3, 4, 5] }] },
+      "nguon": "số liệu giả định để kiểm bố cục"
+    },
+    { "kieu": "chuyen-phan", "so": "04", "tieuDe": "Thực hành và chiêm nghiệm" },
+    {
+      "kieu": "thuc-hanh",
+      "tieuDe": "Phản hồi theo cặp",
+      "buoc": [
+        { "nhan": "Kể", "phu": "một tình huống gần đây bạn muốn góp ý" },
+        { "nhan": "Viết", "phu": "lời góp ý theo bốn bước" },
+        { "nhan": "Nói", "phu": "người kia nghe, không ngắt lời" },
+        { "nhan": "Đổi vai", "phu": "rồi cùng nhìn lại điều đã khác" }
+      ],
+      "thoiGian": "15 phút",
+      "hinhThuc": "theo cặp, mỗi người 7 phút"
+    },
+    {
+      "kieu": "anh",
+      "anh": { "src": "kho:khuon/_chung/anh-mau.jpg", "tieuDiem": [0.5, 0.4] },
+      "kicker": "Từ lớp học",
+      "tieuDe": "Khoảnh khắc lắng nghe",
+      "than": ["Ảnh thật của lớp học, có đồng ý của học viên", "Chữ đặt bên cạnh, không đè lên mặt người"],
+      "altText": "Ảnh mẫu một lớp học"
+    },
+    {
+      "kieu": "hinh",
+      "tieuDe": "Hình đặc thù dựng bằng lõi HTML của xưởng",
+      "anPham": "kho:khuon/so-do-tri-thuc/mau-vong-lap.json",
+      "chuThich": "Hình vẽ sẵn chèn thành ảnh: đẹp nhưng không sửa được nhãn trên Google Slides."
+    },
+    {
+      "kieu": "cau-hoi",
+      "cauHoi": "Lần gần nhất bạn thật sự được lắng nghe là khi nào, và điều gì làm nên khác biệt?",
+      "goiY": ["Viết trong ba phút, không cần câu hoàn chỉnh", "Để ý cơ thể khi nhớ lại khoảnh khắc đó"]
+    },
+    {
+      "kieu": "ket",
+      "tieuDe": "Cảm ơn bạn đã cùng đi chậm",
+      "cauHoi": "Tuần này, bạn muốn thử lắng nghe ai\ntheo một cách khác?",
+      "lienHe": ["Học viện Mẫu", "hocvienmau.vn"]
+    }
+  ]
+}

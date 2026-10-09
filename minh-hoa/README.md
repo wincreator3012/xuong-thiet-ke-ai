@@ -5,4 +5,6 @@
 
 Nguyên lý chọn sơ đồ, ẩn dụ, quy tắc framework có tên: `chuan/06-minh-hoa-tri-thuc.md`.
 
+Slide dùng CÙNG dữ liệu sơ đồ nhưng vẽ bằng hình khối gốc của PPTX (sửa được trên Google Slides): `trinh-chieu/so-do-pptx.js`, có thêm sáu loại chưa có ở đây (`venn`, `dong-tam`, `tang-bang`, `pho`, `xoan-oc`, `isotype`). Đổi nghĩa hay dữ liệu của một loại ở một bên thì đổi bên kia, để poster và slide của cùng framework nói cùng một hình.
+
 Thêm một loại sơ đồ: viết hàm trong `so-do.js` theo mẫu các hàm sẵn có (đơn vị `u` = 1% cạnh ngắn khung, chữ qua `khoiChu` để tự xuống dòng, màu bằng `var(--vai)`), đăng ký trong `LOAI`, thêm `khuon/so-do-tri-thuc/mau-<loai>.json`, chạy `python3 tools/kiem-khuon.py so-do-tri-thuc`, nhìn tờ tổng thể ở các nhóm thể thức, cập nhật bảng ở chuan/06 mục 2.

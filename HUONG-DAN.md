@@ -32,6 +32,7 @@ Công thức: **làm gì + cho ai + đăng ở đâu + chữ nguyên văn (nếu
 | Thẻ đeo | "Làm thẻ đeo cho ban tổ chức và diễn giả sự kiện." | `the-deo` |
 | Phông sân khấu, màn LED, standee | "Làm phông 6x3 m và hình màn LED 1536x768 cho lễ khai giảng." | `backdrop-su-kien` |
 | Photo wall | "Làm photo wall có logo lặp và hashtag." | `photo-wall` |
+| Bài trình chiếu | "Làm slide 20 trang cho buổi toạ đàm từ dàn ý này, tiếng Việt." / "Make English slides from this outline." | (skill slide) |
 | Chỉnh ảnh | "Ảnh này tối và ám vàng, chỉnh giúp tôi." / "Tách nền ảnh chân dung này." | (skill ảnh) |
 | Tư vấn chữ | "Tư vấn chữ cho ấn phẩm này: nên ghi gì lên ảnh, gì để ở lời đăng." | (skill chữ) |
 | Thêm khổ cho ấn phẩm cũ | "Thêm bản story và ảnh bìa sự kiện Facebook cho bộ thông cáo tuần trước." | khuôn cũ |
@@ -121,6 +122,15 @@ Cho trợ lý biết càng sớm càng tốt:
 
 Trợ lý xuất PDF in CMYK đúng chuẩn (tràn lề, vùng an toàn, chữ đen chỉ một màu mực, phông nhúng, tổng mực dưới giới hạn) kèm ghi chú gửi nhà in. Vàng kim in CMYK sẽ thành vàng đất đục: trợ lý sẽ hỏi bạn muốn ép kim, mực nhũ hay đổi màu.
 
+### Bài trình chiếu (slide)
+
+Đưa trợ lý dàn ý, bài viết hay tài liệu, nói người xem là ai, chiếu ở đâu (hội trường, Zoom), tiếng Việt hay Anh. Trợ lý trình **dàn ý** (từng slide, tiêu đề, loại sơ đồ và lý do) để bạn duyệt, rồi dựng và gửi **tờ tổng thể** cùng tệp PPTX nháp. Bản cuối nằm trong `Thanh pham/<dự án>/NN <tên bài>/`: tệp `.pptx` và một PDF chiếu dự phòng.
+
+- Mở bằng Google Slides (tải lên Google Drive): mọi chữ, kể cả nhãn trên sơ đồ, sửa được ngay; phông của xưởng có sẵn trên Google Slides. Mở bằng PowerPoint, Keynote: cài phông một lần (nhờ trợ lý xuất bộ phông TTF).
+- Lời giảng nằm ở ghi chú người nói dưới mỗi slide; mô hình giảng từng chặng thì mỗi chặng một slide, chặng đang nói được tô màu.
+- Dựng slide cần Node.js trên máy chạy lệnh (trợ lý tự cài thư viện vào `Du an/_tam/`); có LibreOffice thì trợ lý xem trước được từng slide trước khi gửi bạn.
+- Sửa trên Google Slides rồi muốn trợ lý làm tiếp: tải bản đã sửa về dạng PPTX gửi trợ lý, để không mất chỗ bạn sửa.
+
 ## 9. Thư mục dự án
 
 Trong thư mục `AI Designer`, cạnh repo:
@@ -149,7 +159,7 @@ Repo không bao giờ chứa nháp hay thành phẩm: trợ lý ghi mọi thứ 
 
 - Không tạo ảnh người, lớp học, sự kiện bằng AI; không sao chép thiết kế, logo, hình minh hoạ của người khác (học nguyên lý từ mẫu thì được).
 - Không bịa số liệu, lời chứng thực, khan hiếm giả.
-- Không tự đăng lên nền tảng nào; không làm slide thuyết trình, video, trang web, sách dàn trang dài.
+- Không tự đăng lên nền tảng nào; không làm video, trang web, sách dàn trang dài (slide thuyết trình thì có: skill `thiet-ke-slide`).
 - Không thay bạn quyết định: hai chốt duyệt là của bạn.
 - Ảnh nguồn kém (tối, nhoè, quá nhỏ) chỉ cứu được một phần; ảnh in khổ lớn cần ảnh gốc đủ lớn.
 - Windows ít được kiểm hơn Mac; trợ lý có thể cần rà soát thêm vài bước cài.

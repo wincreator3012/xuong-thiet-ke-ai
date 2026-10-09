@@ -1,0 +1,264 @@
+{
+  "_huong-dan": "Deck mẫu thứ hai: chủ đề tối toàn bộ (đêm-vàng), bìa có ảnh người tách nền, sơ đồ đặt cạnh chữ, chuỗi dọc nhiều bước, lưới sáu thẻ, biểu đồ đường, một số lớn. Người, đơn vị, số liệu giả định.",
+  "loai": "trinh-chieu",
+  "ngonNgu": "vi",
+  "tieuDe": "Lãnh đạo bằng lắng nghe",
+  "chuDe": "dem-vang",
+  "chanTrang": {
+    "chu": "Học viện Mẫu · Toạ đàm lãnh đạo",
+    "so": true
+  },
+  "slide": [
+    {
+      "kieu": "bia",
+      "kicker": "Toạ đàm lãnh đạo 2026",
+      "tieuDe": "Lãnh đạo bằng *lắng nghe*",
+      "phuDe": "Khi người lãnh đạo nói ít đi, đội ngũ nghĩ nhiều hơn",
+      "nguoi": [
+        "ThS~Trần~Thu~Hà",
+        "Điều phối viên Học viện Mẫu"
+      ],
+      "ngay": "Thứ Sáu, 23/10/2026",
+      "anh": "kho:khuon/_chung/nguoi-mau-tach.png"
+    },
+    {
+      "kieu": "y-chinh",
+      "kicker": "Vì sao",
+      "tieuDe": "Lắng nghe là một kỹ năng lãnh đạo, không phải một tính cách",
+      "than": [
+        "Luyện được như mọi kỹ năng khác",
+        "Có thứ tự: chú ý, phản hồi, hỏi sâu",
+        "Đo được qua cách đội ngũ lên tiếng"
+      ],
+      "hinh": {
+        "soDo": {
+          "loai": "chuoi",
+          "huong": "doc",
+          "buoc": [
+            {
+              "nhan": "Chú ý"
+            },
+            {
+              "nhan": "Phản hồi"
+            },
+            {
+              "nhan": "Hỏi sâu"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Sáu bước của một cuộc trò chuyện một kèm một",
+      "soDo": {
+        "loai": "chuoi",
+        "huong": "doc",
+        "buoc": [
+          {
+            "nhan": "Mở",
+            "phu": "hỏi thăm, đặt khung thời gian"
+          },
+          {
+            "nhan": "Lắng nghe",
+            "phu": "để người kia nói trước"
+          },
+          {
+            "nhan": "Làm rõ",
+            "phu": "nhắc lại bằng lời của mình"
+          },
+          {
+            "nhan": "Hỏi sâu",
+            "phu": "điều gì đang cản trở?"
+          },
+          {
+            "nhan": "Cùng chọn",
+            "phu": "một việc nhỏ cho tuần tới"
+          },
+          {
+            "nhan": "Khép",
+            "phu": "cảm ơn, hẹn lần sau"
+          }
+        ],
+        "mucNhan": 1
+      }
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Điều người lãnh đạo mang vào mỗi buổi gặp",
+      "soDo": {
+        "loai": "the-luoi",
+        "the": [
+          {
+            "bieuTuong": "tim",
+            "nhan": "Sự quan tâm",
+            "phu": "đến con người trước công việc"
+          },
+          {
+            "bieuTuong": "tai",
+            "nhan": "Câu hỏi mở",
+            "phu": "thay cho lời khuyên sẵn"
+          },
+          {
+            "bieuTuong": "dong-ho",
+            "nhan": "Thời gian",
+            "phu": "trọn vẹn, không điện thoại"
+          },
+          {
+            "bieuTuong": "muc-tieu",
+            "nhan": "Mục đích",
+            "phu": "nối việc nhỏ với điều lớn"
+          },
+          {
+            "bieuTuong": "mam",
+            "nhan": "Kiên nhẫn",
+            "phu": "để người kia tự tìm ra"
+          },
+          {
+            "bieuTuong": "dau-tick",
+            "nhan": "Cam kết",
+            "phu": "làm đúng điều đã hứa"
+          }
+        ]
+      }
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Mỗi vòng phản hồi quay lại chỗ cũ, nhưng sâu hơn",
+      "soDo": {
+        "loai": "xoan-oc",
+        "buoc": [
+          {
+            "nhan": "Thử",
+            "phu": "một cách hỏi mới"
+          },
+          {
+            "nhan": "Nhìn lại",
+            "phu": "điều gì đã khác"
+          },
+          {
+            "nhan": "Điều chỉnh",
+            "phu": "giữ cái hợp, bỏ cái thừa"
+          },
+          {
+            "nhan": "Thử lại",
+            "phu": "ở tình huống khó hơn"
+          }
+        ]
+      }
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Ai lên tiếng trong cuộc họp tuần (số liệu giả định)",
+      "soDo": {
+        "loai": "isotype",
+        "bieuTuong": "nguoi",
+        "donVi": "Mỗi hình là một người lên tiếng ít nhất một lần",
+        "hang": [
+          {
+            "nhan": "Tuần đầu",
+            "gt": 3
+          },
+          {
+            "nhan": "Tuần thứ ba",
+            "gt": 6
+          },
+          {
+            "nhan": "Tuần thứ sáu",
+            "gt": 9
+          }
+        ],
+        "mucNhan": 2
+      },
+      "nguon": "số liệu giả định để kiểm bố cục"
+    },
+    {
+      "kieu": "bieu-do",
+      "tieuDe": "Số ý kiến đội ngũ nêu trong họp tuần (số liệu giả định)",
+      "bieuDo": {
+        "loai": "duong",
+        "nhan": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5",
+          "T6"
+        ],
+        "chuoi": [
+          {
+            "ten": "Ý kiến",
+            "gt": [
+              3,
+              4,
+              4,
+              6,
+              7,
+              9
+            ]
+          }
+        ]
+      },
+      "nguon": "số liệu giả định để kiểm bố cục"
+    },
+    {
+      "kieu": "so-lon",
+      "so": [
+        {
+          "gt": "9 / 12",
+          "nhan": "thành viên chủ động đề xuất ít nhất một lần",
+          "phu": "sau sáu tuần (số liệu giả định)"
+        }
+      ],
+      "nguon": "số liệu giả định để kiểm bố cục"
+    },
+    {
+      "kieu": "anh",
+      "benAnh": "phai",
+      "anh": {
+        "src": "kho:khuon/_chung/anh-mau.jpg",
+        "tieuDiem": [
+          0.5,
+          0.35
+        ]
+      },
+      "tieuDe": "Một buổi gặp thật",
+      "than": "Ảnh thật, khoảnh khắc thật: người nói đang lắng nghe, không tạo dáng."
+    },
+    {
+      "kieu": "so-do",
+      "tieuDe": "Hai cách mở đầu buổi họp",
+      "soDo": {
+        "loai": "so-sanh",
+        "muiTen": false,
+        "trai": {
+          "nhan": "Báo cáo",
+          "muc": [
+            "Từng người đọc số liệu",
+            "Lãnh đạo nhận xét cuối"
+          ]
+        },
+        "phai": {
+          "nhan": "Hỏi mở",
+          "muc": [
+            "Tuần này điều gì làm bạn vướng?",
+            "Ai cần hỗ trợ từ ai?"
+          ]
+        }
+      }
+    },
+    {
+      "kieu": "cau-hoi",
+      "cauHoi": "Trong tuần qua, bạn đã nói nhiều hơn hay nghe nhiều hơn?"
+    },
+    {
+      "kieu": "ket",
+      "tieuDe": "Cảm ơn",
+      "cauHoi": "Ngày mai, bạn sẽ hỏi đội ngũ câu gì trước tiên?",
+      "lienHe": [
+        "Học viện Mẫu",
+        "hocvienmau.vn"
+      ]
+    }
+  ]
+}

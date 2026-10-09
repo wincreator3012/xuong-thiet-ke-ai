@@ -18,6 +18,13 @@ Bài học đã chưng cất, mỗi dòng có nguồn (ngày, dự án hoặc th
 - 2026-10-06 - Playfair Display mặc định số kiểu cũ (5.0 lệch dòng) ở mọi chỗ chưa khai báo: đặt `lining-nums` ngay trên `.canvas`.
 - 2026-10-06 - Bộ mẫu dùng chữ phụ 16-20 px (quy về 1080): đẹp khi xem lớn, khó đọc trên điện thoại; khuôn nâng lên 22-26 px và để lõi cảnh báo dưới 24 px.
 
+## Trình chiếu
+
+- 2026-10-09 (bài trình chiếu mở trên Google Drive) - Chữ in hoa có giãn chữ (`charSpacing` của PptxGenJS, ghi thành `spc`) chồng lên nhau và mất khoảng trắng trên Google Slides, còn PowerPoint, LibreOffice vẫn đúng nên kiểm bằng ảnh không thấy: lõi không bao giờ giãn chữ, `tools/slide.py` kiểm thẳng XML và báo `gian-chu` là LỖI.
+- 2026-10-09 (gộp skill slide vào xưởng) - PptxGenJS ghi một `<a:pPr>` cho mỗi đoạn chạy chữ trong cùng đoạn văn: đoạn có chữ đậm, nghiêng nhấn mất gạch đầu dòng trên LibreOffice và sai lược đồ OOXML. `tools/slide.py` giữ `<a:pPr>` đầu tiên của mỗi đoạn và kiểm lại (`xml`).
+- 2026-10-09 - Google Slides bỏ qua "co chữ khi tràn", ba phần mềm dàn khoảng cách dòng theo bội số khác nhau: khoảng cách dòng ghi bằng điểm cố định, lõi đo chữ bằng chính tệp phông của xưởng (biên an toàn khoảng 4%) để báo `tran-chu` trước khi người dùng mở tệp.
+- 2026-10-09 - Phông của xưởng là woff2 tách tệp con (latin, latin-ext, vietnamese): LibreOffice, PowerPoint không đọc được; gộp tệp con thành TTF đủ dấu bằng fontTools (bản xem trước tự cài, máy người dùng dùng `--xuat-phong`).
+
 ## In ấn
 
 - 2026-10-06 (kiểm công cụ) - Ghostscript đổi #000 thành đen 4 màu (C72 M68 Y67 K88); các tuỳ chọn có sẵn không chữa đúng; cách đúng là đổi xám trung tính sang DeviceGray trước khi đổi CMYK (in_an.py).

@@ -15,6 +15,7 @@ Môi trường, lệnh, bản đồ tài nguyên, cổng nghiệm thu và cách 
 | Lõi dựng | `he-thong/khung.js`, `he-thong/khung.css`, `he-thong/bieu-tuong.css` | sửa xong chạy `tools/kiem-khuon.py` |
 | Khuôn | `khuon/<id>/` (danh mục `khuon/README.md`) | 12 khuôn, mỗi khuôn có nội dung mẫu giả định |
 | Sơ đồ tri thức, từ điển ẩn dụ | `minh-hoa/so-do.js`, `minh-hoa/an-du.json` | |
+| Bài trình chiếu (PPTX) | `trinh-chieu/` (lõi, danh mục kiểu slide và sơ đồ ở README), `tools/slide.py`, `chuan/09-trinh-chieu.md` | sửa lõi xong chạy `tools/slide.py --kiem` |
 | Phông | `fonts/` | tĩnh, OFL, đủ dấu tiếng Việt |
 | Dựng, xuất, kiểm | `tools/ve.py` | |
 | PDF in CMYK | `tools/in_an.py` (ve.py `--in` gọi), `tools/cai-gs.sh`, `in-an/icc/` | |
@@ -30,7 +31,7 @@ Môi trường, lệnh, bản đồ tài nguyên, cổng nghiệm thu và cách 
 | Bản khởi đầu phần của người dùng | `brand/brand.mau.json`, `phong-cach/PHONG-CACH.mau.md`, `phong-cach/tu-ngu.mau.json`, `phong-cach/PHAN-TICH-MAU.mau.md`, `minh-hoa/an-du.mau.json` | `tools/cai-dat.py` chép thành tệp không có `.mau` nếu chưa có; bản của người dùng không lên git (`.gitignore`), không bị cập nhật ghi đè |
 | Đường dẫn riêng từng máy | `cau-hinh.json` (tạo bởi `tools/cai-dat.py` từ `cau-hinh.mau.json`, không lên git; đường dẫn tương đối tính từ repo) | `thuMucDuAn` = `../Du an`, `thuMucThanhPham` = `../Thanh pham` |
 
-**Nháp và thành phẩm không bao giờ nằm trong repo.** Người dùng có một thư mục cha (gợi ý tên "AI Designer") chứa repo và hai thư mục làm việc cạnh nó: `Du an/<YYYY-MM tên dự án>/` chứa BRIEF.md, SO-GOP-Y.md, `nguon/`, `anh/`, `thiet-ke/` và bản dựng nháp `nhap/<tên ấn phẩm>/`; `Thanh pham/<tên dự án>/NN <tên ấn phẩm>/` chứa bản cuối (ảnh 2x, JPG, PDF in) do `ve.py` (không `--nhap`) hoặc nút Xuất của Bàn thiết kế ghi ra. `tools/cai-dat.py` tạo sẵn hai thư mục này. Người dùng muốn đẩy sang chỗ khác ở đầu cuộc trò chuyện thì dùng `--goc`, `--ra` cho phiên đó, không sửa `cau-hinh.json`. Cấu trúc dự án ở `tools/du-an-moi.py`.
+**Nháp và thành phẩm không bao giờ nằm trong repo.** Người dùng có một thư mục cha (gợi ý tên "AI Designer") chứa repo và hai thư mục làm việc cạnh nó: `Du an/<YYYY-MM tên dự án>/` chứa BRIEF.md, SO-GOP-Y.md, `nguon/`, `anh/`, `thiet-ke/` và bản dựng nháp `nhap/<tên ấn phẩm>/`; `Thanh pham/<tên dự án>/NN <tên ấn phẩm>/` chứa bản cuối (ảnh 2x, JPG, PDF in) do `ve.py` (không `--nhap`) hoặc nút Xuất của Bàn thiết kế ghi ra. `tools/cai-dat.py` tạo sẵn hai thư mục này. Người dùng muốn đẩy sang chỗ khác ở đầu cuộc trò chuyện thì dùng `--goc`, `--ra` cho phiên đó, không sửa `cau-hinh.json`. Cấu trúc dự án ở `tools/du-an-moi.py`; dự án có bài trình chiếu thêm `slide/<tên>.json` (`--slide`), bản cuối là `<tên>.pptx` và PDF chiếu dự phòng.
 
 ### Repo sạch (bất biến)
 
@@ -99,6 +100,12 @@ python3 tools/anh.py kham <ảnh...> | sua <ảnh> | tach-nen <ảnh> | dong-bo 
 python3 tools/kiem-khuon.py [khuôn...]                              # cổng kiểm kho khuôn (kết quả ở Du an/_tam/kiem-khuon/)
 python3 tools/kiem-tai-lieu.py                                      # cổng kiểm tài liệu, skill
 python3 tools/kiem-sach.py [--xoa]                                  # cổng repo sạch
+python3 tools/slide.py <dự án>/slide/<tên>.json --nhap               # trình chiếu nháp: PPTX + ảnh xem trước + tờ tổng thể + báo cáo (sandbox)
+python3 tools/slide.py <...>.json                                   # bản cuối: PPTX + PDF chiếu dự phòng vào Thanh pham
+python3 tools/slide.py --kiem                                       # cổng kiểm lõi trình chiếu (deck mẫu trinh-chieu/mau/)
+python3 tools/slide.py "<bài có sẵn>.pptx"                           # bài làm ngoài xưởng: kiểm Google Slides, ảnh xem trước, chép chữ và ghi chú ra <tên>-chu.md (vào Du an/_tam/)
+python3 tools/slide.py --xuat-phong "<thư mục ngoài repo>"          # phông TTF đủ dấu để cài cho PowerPoint, Keynote
+python3 tools/du-an-moi.py "Tên dự án" --slide bai-noi [--chu-de giay-muc] [--en]
 python3 tools/dong-goi.py "<dự án>" [--lam | --don [--xoa]]          # người dùng duyệt: đóng gói vào Thành phẩm (số, báo cáo, DANG.md), rồi dọn nháp
 ```
 
@@ -132,8 +139,9 @@ python3 tools/dong-goi.py "<dự án>" [--lam | --don [--xoa]]          # ngư�
 1. `tools/ve.py` không có cảnh báo LỖI (`tran-vung`, `tran-chu`, `loi-js`, `so-do`); cảnh báo khác đã xem và có lý do (`chuan/07`).
 2. Trợ lý NHÌN tờ tổng thể và từng thể thức ở cỡ thật trước khi trình; đọc soát từng âm tiết chữ Việt; tên, chức danh đúng PHONG-CACH mục 1.
 3. In ấn: báo cáo `in_an` đạt (phông nhúng, không RGB, TAC dưới giới hạn, hộp trang đúng).
-4. Sửa lõi hay khuôn: `tools/kiem-khuon.py` ĐẠT trước khi dùng cho ấn phẩm thật. Sửa tài liệu, skill: `tools/kiem-tai-lieu.py` ĐẠT.
+4. Sửa lõi hay khuôn: `tools/kiem-khuon.py` ĐẠT trước khi dùng cho ấn phẩm thật; sửa lõi trình chiếu: `tools/slide.py --kiem` ĐẠT. Sửa tài liệu, skill: `tools/kiem-tai-lieu.py` ĐẠT.
 5. Repo sạch: `python3 tools/kiem-sach.py` ĐẠT. Chạy cuối mọi phiên có chạm vào repo hoặc gửi tệp cho người dùng.
+6. Bài trình chiếu: `tools/slide.py` không còn LỖI (`tran-chu`, `gian-chu`, `xml`, `so-do`, `tu-ngu`...), Claude đã NHÌN ảnh xem trước từng slide (chuan/09 mục 6, 9).
 
 ## 6. Khi một khâu hỏng
 
@@ -150,6 +158,9 @@ python3 tools/dong-goi.py "<dự án>" [--lam | --don [--xoa]]          # ngư�
 | Bàn thiết kế báo "file đã đổi" | trợ lý vừa sửa tệp hoặc dịch vụ đồng bộ đám mây vừa ghi | chọn nạp bản mới, hoặc ghi đè nếu chắc chắn; bản cũ luôn có trong `thiet-ke/_phien-ban/` |
 | Sơ đồ chữ tràn, chồng | dữ liệu quá dài cho khung | rút nhãn; đổi `huong`; đổi kiểu sơ đồ; hoặc tăng vùng sơ đồ ở thể thức đó |
 | Công cụ báo DỪNG vì đầu ra nằm trong repo | ấn phẩm hay `--ra` đang trỏ vào repo (ví dụ chạy thẳng `khuon/<id>/mau.json`) | tạo dự án ở `Du an/` (`du-an-moi.py`) hoặc thêm `--ra "../Du an/_tam/thu"` |
+| Slide mở trên Google Slides bị chồng chữ, mất khoảng trắng | thuộc tính giãn chữ `spc` (charSpacing) | lõi không bao giờ giãn chữ; `tools/slide.py` báo `gian-chu` là LỖI (chuan/09 mục 7) |
+| Slide mở trên PowerPoint, Keynote đổi phông, chữ tràn | máy chưa cài Lora, Playfair Display, Be Vietnam Pro | `python3 tools/slide.py --xuat-phong "<thư mục>"` rồi cài các tệp TTF; Google Slides không cần |
+| Gạch đầu dòng mất ở đoạn có chữ đậm, nghiêng | PptxGenJS ghi nhiều `<a:pPr>` trong một đoạn | `tools/slide.py` tự sửa sau khi dựng; còn báo `xml` thì lõi hỏng |
 | `kiem-sach.py` thấy `Claude outputs/` trong repo | ứng dụng chép tệp gửi vào chat | xin phép xoá rồi `python3 tools/kiem-sach.py --xoa` |
 | macOS chặn tệp `.command` | tệp tải từ mạng chưa được tin cậy | bấm chuột phải, chọn Open, rồi Open lần nữa (một lần) |
 | Windows: `python` không chạy | chưa cài Python hoặc chưa thêm vào PATH | cài từ python.org, đánh dấu "Add python.exe to PATH"; tệp `.bat` tự thử `py` và `python` |

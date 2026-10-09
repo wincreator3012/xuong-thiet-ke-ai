@@ -178,6 +178,8 @@ def trang_thai(in_ra=True):
         print(f'  Máy vẽ:          {ten_may or "KHÔNG CÓ"} ({ghi_chu})')
         print(f'  Thư viện:        Pillow {v(tt["pillow"])}, NumPy {v(tt["numpy"])}, OpenCV {v(tt["opencv"])}, '
               f'pikepdf {v(tt["pikepdf"])}, rembg {v(tt["rembg"])}')
+        nd, lo = shutil.which('node'), shutil.which('soffice') or shutil.which('libreoffice')
+        print(f'  Bài trình chiếu: Node.js {v(nd)}, LibreOffice (xem trước) {v(lo)}' + ('' if nd else ' (cần Node.js để dựng slide: nodejs.org)'))
         print(f'  Dựng thử:        {"ĐẠT" if tt["dungThu"] else "chưa"}')
         con = cho_trong_phong_cach()
         print(f'  Phong cách:      {"đã thiết lập" if tt["daThietLap"] else f"CHƯA ({len(con)} chỗ trống trong phong-cach/PHONG-CACH.md)"}')

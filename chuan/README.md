@@ -12,6 +12,7 @@ Các file ở đây là bản chưng cất, viết để dùng ngay khi làm vi�
 | `05-anh-chan-dung-lop-hoc.md` | chọn ảnh, sửa có trần, tách nền, đồng bộ tông, đạo đức chỉnh ảnh | có ảnh thật |
 | `06-minh-hoa-tri-thuc.md` | chọn kiểu sơ đồ theo logic khái niệm, framework có tên, ẩn dụ phương Đông | có tri thức cần hình tượng hoá |
 | `07-nghiem-thu.md` | lớp máy, lớp người, cách trình người dùng duyệt | trước khi báo xong |
+| `09-trinh-chieu.md` | slide là phần hình của lời giảng, khổ và nơi chiếu, cỡ chữ và định mức tiếng mỗi slide, chọn kiểu slide, hình trên slide, máy kiểm, Google Slides, chữ Việt và Anh, nghiệm thu | khi làm bài trình chiếu (skill thiet-ke-slide) |
 | `08-chu-tren-thiet-ke.md` | ba lớp chữ (hình, caption, alt text), chọn gì lên hình, tiêu đề, lời mời hỗ trợ tự chủ, định mức số tiếng theo thể thức, đạo đức thuyết phục | khi chọn và viết chữ trên ấn phẩm (skill thiet-ke-chu) |
 
 Cập nhật: quy cách nền tảng thay đổi thì sửa `kho-the-thuc.json` (kèm `cap-nhat`) và bảng tương ứng ở chuan/02, ghi một dòng vào `docs/BAI-HOC.md`.
